@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommunityDevelopers2ISADLL;
+using CommunityDevelopers2ISADAO;
 
 namespace CommunityDevelopers2ISAWinForm
 {
@@ -24,8 +25,8 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void FrmForumMain_Load(object sender, EventArgs e)
         {
-            remplirComboBoxCategorie(Controller.GetAllCategories());
-            remplirComboBoxSujet(Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
+            remplirComboBoxCategorie(CategorieDAO.GetAllCategories());
+            remplirComboBoxSujet(SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
             visibiliteModerateur();
         }
 
@@ -74,7 +75,7 @@ namespace CommunityDevelopers2ISAWinForm
                 frmAjoutSujet.categorie = (Categorie)cbBoxCategorie.SelectedItem;
                 frmAjoutSujet.Text = string.Format("Ajouter le sujet dans la categorie {0}", frmAjoutSujet.categorie.Libelle);
                 frmAjoutSujet.ShowDialog();
-                remplirComboBoxSujet(Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue)); 
+                remplirComboBoxSujet(SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue)); 
             }
         }
 
@@ -87,7 +88,7 @@ namespace CommunityDevelopers2ISAWinForm
                 frmAjoutReponse.sujet = (Sujet)cbBoxSujet.SelectedItem;
                 frmAjoutReponse.Text = string.Format("Ajout de la réponse au sujet {0}", frmAjoutReponse.sujet.Titre);
                 frmAjoutReponse.ShowDialog();
-                remplirDataGridReponses(Controller.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue));
+                remplirDataGridReponses(ReponseDAO.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue));
             }
         }
 
@@ -102,7 +103,7 @@ namespace CommunityDevelopers2ISAWinForm
                 frmModifierSujet.sujet = (Sujet)cbBoxSujet.SelectedItem;
                 frmModifierSujet.Text = string.Format("Edit le sujet {0} dans la catégorie {1}", frmModifierSujet.sujet.Titre, frmModifierSujet.categorie.Libelle);
                 frmModifierSujet.ShowDialog();
-                remplirComboBoxSujet(Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
+                remplirComboBoxSujet(SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
             }
         }
 
@@ -112,11 +113,11 @@ namespace CommunityDevelopers2ISAWinForm
             dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if(dr == DialogResult.OK)
             {
-                if(Controller.DeleteSujet((int)cbBoxSujet.SelectedValue) != 1)
+                if(SujetDAO.DeleteSujet((int)cbBoxSujet.SelectedValue) != 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxErreurDeleteSujetText, Properties.Resources.MsgBoxErreurDeleteSujetTitre);
                 }
-                List<Sujet> sujets = Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue);
+                List<Sujet> sujets = SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue);
                 if(sujets != null)
                 {
                     remplirComboBoxSujet(sujets);
@@ -138,11 +139,11 @@ namespace CommunityDevelopers2ISAWinForm
             dr = MessageBox.Show(Properties.Resources.MsgBoxDeletePostText, Properties.Resources.MsgBoxDeletePostTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if(dr == DialogResult.OK)
             {
-                if(Controller.DeleteReponse((int)dataGridViewReponses.CurrentRow.Cells["ID"].Value) != 1)
+                if(ReponseDAO.DeleteReponse((int)dataGridViewReponses.CurrentRow.Cells["ID"].Value) != 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxErreurDeletePostText, Properties.Resources.MsgBoxErreurDeletePostTitre);
                 }
-                List<Reponse> reponses = Controller.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue);
+                List<Reponse> reponses = ReponseDAO.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue);
                 if(reponses != null)
                 {
                     remplirDataGridReponses(reponses);
@@ -163,7 +164,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void cbBoxCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<Sujet> sujets = Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue);
+            List<Sujet> sujets = SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue);
             if (sujets != null)
             {
                 PanelSujetVisible();
@@ -185,7 +186,7 @@ namespace CommunityDevelopers2ISAWinForm
                 if (visibiliteReponse())
                 {
                     PanelReponseVisible();
-                    List<Reponse> reponses = Controller.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue);
+                    List<Reponse> reponses = ReponseDAO.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue);
                     if(reponses != null)
                     {
                         remplirDataGridReponses(reponses);
@@ -231,7 +232,7 @@ namespace CommunityDevelopers2ISAWinForm
         {
             if(cbBoxSujet.SelectedIndex != -1)
             {
-                if(Controller.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue) != null)
+                if(ReponseDAO.GetAllReponseBySujet((int)cbBoxSujet.SelectedValue) != null)
                 {
                     return true;
                 }
@@ -243,7 +244,7 @@ namespace CommunityDevelopers2ISAWinForm
         {
             if(cbBoxCategorie.SelectedIndex != -1)
             {
-                if(Controller.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue) != null)
+                if(SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue) != null)
                 {
                     return true;
                 }

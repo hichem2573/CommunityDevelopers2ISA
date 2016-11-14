@@ -1,4 +1,4 @@
-﻿using CommunityDevelopers2ISAController;
+﻿using CommunityDevelopers2ISADAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +27,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void btValider_Click(object sender, EventArgs e)
         {
-            FrmAccueil.CurrentUtilisateur = Controller.Login(txtBoxLogin.Text, txtBoxPassword.Text);
+            FrmAccueil.CurrentUtilisateur = UtilisateurDAO.Login(txtBoxLogin.Text, txtBoxPassword.Text);
             if (FrmAccueil.CurrentUtilisateur != null)
             {
                 FrmAccueil.Isconnected = true;

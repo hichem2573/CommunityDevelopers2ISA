@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommunityDevelopers2ISADLL;
-using CommunityDevelopers2ISAController;
+using CommunityDevelopers2ISADAO;
 
 namespace CommunityDevelopers2ISAWinForm
 {
@@ -43,7 +43,7 @@ namespace CommunityDevelopers2ISAWinForm
         {
             if(sujet == null)
             {
-                if(Controller.AddSujet(FrmAccueil.CurrentUtilisateur.Id, categorie.Id, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
+                if(SujetDAO.AddSujet(FrmAccueil.CurrentUtilisateur.Id, categorie.Id, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxAddSujetText, Properties.Resources.MsgBoxAddSujetTitre, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -55,7 +55,7 @@ namespace CommunityDevelopers2ISAWinForm
             }
             else
             {
-                if(Controller.ModifierSujet(sujet,txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
+                if(SujetDAO.ModifierSujet(sujet,txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxEditSujetText, Properties.Resources.MsgBoxEditSujetText, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

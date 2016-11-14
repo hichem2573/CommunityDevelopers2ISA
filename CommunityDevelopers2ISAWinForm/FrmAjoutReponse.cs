@@ -1,4 +1,5 @@
 ﻿using CommunityDevelopers2ISAController;
+using CommunityDevelopers2ISADAO;
 using CommunityDevelopers2ISADLL;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace CommunityDevelopers2ISAWinForm
      
         private void btAjoutReponse_Click(object sender, EventArgs e)
         {
-            if (Controller.AddReponse(FrmAccueil.CurrentUtilisateur.Id, sujet.Id, txtBoxReponse.Text) == 1)
+            if (ReponseDAO.AddReponse(FrmAccueil.CurrentUtilisateur.Id, sujet.Id, txtBoxReponse.Text) == 1)
             {
                 MessageBox.Show(Properties.Resources.MsgBoxAddReponseText, Properties.Resources.MsgBoxAddReponseTitre, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
