@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CommunityDevelopers2ISADAO.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InfoConnexion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=176.31.114.215;Initial Catalog=user11;Persist Security Info=True;User ID=user11;Password=147user11</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
