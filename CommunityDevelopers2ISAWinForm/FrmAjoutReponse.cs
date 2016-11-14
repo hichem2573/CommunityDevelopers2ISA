@@ -20,7 +20,7 @@ namespace CommunityDevelopers2ISAWinForm
         {
             InitializeComponent();
         }
-
+        //TODO
         private void btAjoutReponse_Click(object sender, EventArgs e)
         {
             if (Controller.AddReponse(FrmAccueil.CurrentUtilisateur.Id, sujet.Id, txtBoxReponse.Text) == 1)
