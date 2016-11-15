@@ -1,5 +1,4 @@
-﻿using CommunityDevelopers2ISAController;
-using CommunityDevelopers2ISADAO;
+﻿using CommunityDevelopers2ISADAO;
 using CommunityDevelopers2ISADLL;
 using System;
 using System.Collections.Generic;
