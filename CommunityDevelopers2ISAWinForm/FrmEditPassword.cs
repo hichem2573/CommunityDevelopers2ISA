@@ -25,8 +25,9 @@ namespace CommunityDevelopers2ISAWinForm
             //dr = MessageBox.Show(Properties.Resources.MsgBoxConfirmChangementPasswordText, Properties.Resources.MsgBoxConfirmChangementPasswordTitre, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             //    if (dr == DialogResult.Yes)
             //    {
-
+                        //TODO
             //    }
+            //MessageBox.Show(Properties.Resources.MsgBoxErreurNewPasswordText, Properties.Resources.MsgBoxErreurNewPasswordTitre, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)
@@ -37,13 +38,13 @@ namespace CommunityDevelopers2ISAWinForm
         private void txtBoxNewPassword_TextChanged(object sender, EventArgs e)
         {
             btValider.Enabled = !(string.IsNullOrWhiteSpace(txtBoxNewPassword.Text) || string.IsNullOrWhiteSpace(txtBoxConfirmPassword.Text)) && txtBoxNewPassword.Text == txtBoxConfirmPassword.Text;
-            //MessageBox.Show(Properties.Resources.MsgBoxErreurNewPasswordText, Properties.Resources.MsgBoxErreurNewPasswordTitre, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            
         }
 
         private void txtBoxConfirmPassword_TextChanged(object sender, EventArgs e)
         {
             btValider.Enabled = !(string.IsNullOrWhiteSpace(txtBoxNewPassword.Text) || string.IsNullOrWhiteSpace(txtBoxConfirmPassword.Text)) && txtBoxNewPassword.Text == txtBoxConfirmPassword.Text;
-            //MessageBox.Show(Properties.Resources.MsgBoxErreurNewPasswordText, Properties.Resources.MsgBoxErreurNewPasswordTitre, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            
         }
 
     }

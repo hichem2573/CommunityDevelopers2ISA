@@ -170,7 +170,7 @@ namespace CommunityDevelopers2ISADAO
         public static int ModifierSujet(Sujet sujet, string newTitre, string newDescription)
         {
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandText = "EditSujet";
+            cmd.CommandText = "ModifierSujet";
             cmd.CommandType = CommandType.StoredProcedure;
 
             SqlParameter parmIdSujet = cmd.CreateParameter();

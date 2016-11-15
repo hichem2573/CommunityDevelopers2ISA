@@ -105,7 +105,7 @@ namespace CommunityDevelopers2ISAWinForm
                 remplirComboBoxSujet(SujetDAO.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
             }
         }
-
+        
         private void btDeleteSujet_Click(object sender, EventArgs e)
         {
             DialogResult dr = new DialogResult();
