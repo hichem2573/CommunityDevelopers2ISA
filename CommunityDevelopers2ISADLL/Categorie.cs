@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@ namespace CommunityDevelopers2ISADLL
     /// La classe catégorie, se compose d'un identifiant unique pour chaque rubrique
     /// Le nom de celle-ci (libelle) et une description pour chaque catégorie
     /// </summary>
+    [Serializable]
+    [DataContract]
     public class Categorie
     {
         #region "Property et Attributs"
@@ -18,6 +21,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -29,6 +33,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Libelle;
 
+        [DataMember]
         public string Libelle
         {
             get { return _Libelle; }
@@ -40,6 +45,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Desc;
 
+        [DataMember]
         public string Desc
         {
             get { return _Desc; }

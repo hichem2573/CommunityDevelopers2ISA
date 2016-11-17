@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@ namespace CommunityDevelopers2ISADLL
     /// La classe Utilisateur permet à un utilisateur de s'identifier avec 
     /// son login (nom) et son mot de passe
     /// </summary>
+    [Serializable]
+    [DataContract]
     public class Utilisateur
     {
 
@@ -20,6 +23,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -31,6 +35,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Login;
 
+        [DataMember]
         public string Login
         {
             get { return _Login; }
@@ -41,6 +46,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Mdp;
 
+        [DataMember]
         public string Mdp
         {
             get { return _Mdp; }
@@ -52,6 +58,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private bool _IsRmode;
 
+        [DataMember]
         public bool IsRmode
         {
             get { return _IsRmode; }

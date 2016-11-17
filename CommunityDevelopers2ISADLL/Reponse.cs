@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@ namespace CommunityDevelopers2ISADLL
     /// La classe reponse permet de voir toutes les reponse, concernant un sujet donnée 
     /// d'une rubrique donnée
     /// </summary>
+    [Serializable]
+    [DataContract]
     public class Reponse
     {
         #region "Property et Attributs"
@@ -18,6 +21,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -29,6 +33,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Texte;
 
+        [DataMember]
         public string Texte
         {
             get { return _Texte; }
@@ -40,6 +45,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private Sujet _Sujet;
 
+        [DataMember]
         public Sujet Sujet
         {
             get { return _Sujet; }
@@ -51,6 +57,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private DateTime _Date;
 
+        [DataMember]
         public DateTime Date
         {
             get { return _Date; }
@@ -62,6 +69,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private Utilisateur _Utilisateur;
 
+        [DataMember]
         public Utilisateur Utilisateur
         {
             get { return _Utilisateur; }
@@ -73,6 +81,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Auteur;
 
+        [DataMember]
         public string Auteur
         {
             get { return _Auteur; }

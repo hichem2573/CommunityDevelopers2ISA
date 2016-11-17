@@ -15,7 +15,7 @@ namespace CommunityDevelopers2ISAWinForm
     public partial class FrmAjoutSujet : Form
     {
         internal Categorie categorie;
-        internal Sujet idsujet;
+        internal Sujet sujet;
 
         public FrmAjoutSujet()
         {
@@ -24,7 +24,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void FrmAjoutSujet_Load(object sender, EventArgs e)
         {
-            if(idsujet == null)
+            if(sujet == null)
             {
                 
                 txtBoxTitreSujet.Text = string.Empty;
@@ -33,15 +33,15 @@ namespace CommunityDevelopers2ISAWinForm
             }
             else
             {
-                txtBoxTitreSujet.Text = idsujet.Titre;
-                txtBoxDescSujet.Text = idsujet.Desc;
+                txtBoxTitreSujet.Text = sujet.Titre;
+                txtBoxDescSujet.Text = sujet.Desc;
                 btValidation.Text = "Validate change";
             }
         }
 
         private void btValidation_Click(object sender, EventArgs e)
         {
-            if(idsujet == null)
+            if(sujet == null)
             {
                 if (Outils.AddSujet(FrmAccueil.CurrentUtilisateur.Id, categorie.Id, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
                 {
@@ -53,18 +53,18 @@ namespace CommunityDevelopers2ISAWinForm
                     MessageBox.Show(Properties.Resources.MsgBoxErreurAddSujetText, Properties.Resources.MsgBoxErreurAddSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
             }
-            //else
-            //{
+            else
+            {
 
-            //    if(Outils.ModifierSujet(Sujet idsujet,txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
-            //    {
-            //        MessageBox.Show(Properties.Resources.MsgBoxEditSujetText, Properties.Resources.MsgBoxEditSujetText, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(Properties.Resources.MsgBoxErreurEditSujetText, Properties.Resources.MsgBoxErreurEditSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            //    }
-            //}
+                if (Outils.ModifierSujet(sujet.Id, sujet.Titre, sujet.Desc, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
+                {
+                    MessageBox.Show(Properties.Resources.MsgBoxEditSujetText, Properties.Resources.MsgBoxEditSujetText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(Properties.Resources.MsgBoxErreurEditSujetText, Properties.Resources.MsgBoxErreurEditSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)

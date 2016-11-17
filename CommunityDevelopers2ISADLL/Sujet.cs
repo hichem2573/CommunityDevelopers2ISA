@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,8 @@ namespace CommunityDevelopers2ISADLL
     /// Pemet de voir les reponses, concernant un sujet
     /// Elle comporte un identifiant, titre du sujet, la description, la rubrique et les reponses
     /// </summary>
+    [Serializable]
+    [DataContract]
     public class Sujet
     {
         #region "Property et Attributs"
@@ -19,6 +22,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -29,6 +33,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Desc;
 
+        [DataMember]
         public string Desc
         {
             get { return _Desc; }
@@ -40,6 +45,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private DateTime _Date;
 
+        [DataMember]
         public DateTime Date
         {
             get { return _Date; }
@@ -51,6 +57,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private Categorie _Categorie;
 
+        [DataMember]
         public Categorie Categorie
         {
             get { return _Categorie; }
@@ -62,6 +69,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Titre;
 
+        [DataMember]
         public string Titre
         {
             get { return _Titre; }
@@ -73,6 +81,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private List<Reponse> _Reponse;
 
+        [DataMember]
         public List<Reponse> Reponses
         {
             get { return _Reponse; }
