@@ -1,5 +1,4 @@
-﻿using CommunityDevelopers2ISADLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -28,7 +27,7 @@ namespace CommunityDevelopers2ISADAO
         /// </summary>
         /// <param name="idsujet">L'identifiant du sujet</param>
         /// <returns>Le sujet</returns>
-        public static Sujet GetSujetByID(int idsujet)
+        public static DataTable GetSujetByID(int idsujet)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "GetSujetByID";
@@ -42,21 +41,14 @@ namespace CommunityDevelopers2ISADAO
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("Sujet");
             da.Fill(dt);
+            return dt;
 
-            if (dt.Rows.Count == 1)
-            {
-                DataRow row = dt.Rows[0];
-                Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), CategorieDAO.GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
-
-                return sujet;
-            }
-            return null;
         }
         /// <summary>
         /// La méthode GetAllSujets, retourne tous les sujets
         /// </summary>
         /// <returns>Tous les sujets</returns>
-        public static List<Sujet> GetAllSujets()
+        public static DataTable GetAllSujets()
         {
             //con.Open();
             SqlCommand cmd = con.CreateCommand();
@@ -67,18 +59,8 @@ namespace CommunityDevelopers2ISADAO
             DataTable dt = new DataTable("TousLesSujet");
             da.Fill(dt);
             //con.Close();
+            return dt;
 
-            if (dt.Rows.Count >= 1)
-            {
-                List<Sujet> _Sujets = new List<Sujet>();
-                foreach (DataRow row in dt.Rows)
-                {
-                     Sujet sujet =(new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), CategorieDAO.GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
-                    _Sujets.Add(sujet);
-                }
-                return _Sujets;
-            }
-            return null;
         }
 
         /// <summary>
@@ -87,7 +69,7 @@ namespace CommunityDevelopers2ISADAO
         /// </summary>
         /// <param name="idcategorie">L'identifiant de la categorie</param>
         /// <returns>La liste des sujets d'une categorie</returns>
-        public static List<Sujet> GetSujetsByCategorieID(int idcategorie)
+        public static DataTable GetSujetsByCategorieID(int idcategorie)
         {
             //con.Open();
             SqlCommand cmd = con.CreateCommand();
@@ -103,18 +85,8 @@ namespace CommunityDevelopers2ISADAO
             DataTable dt = new DataTable("TousLesSujet");
             da.Fill(dt);
             //con.Close();
+            return dt;
 
-            if (dt.Rows.Count >= 1)
-            {
-                List<Sujet> _Sujets = new List<Sujet>();
-                foreach (DataRow row in dt.Rows)
-                {
-                    Sujet sujet =(new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), CategorieDAO.GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
-                    _Sujets.Add(sujet);
-                }
-                return _Sujets;
-            }
-            return null;
         }
 
         /// <summary>
@@ -167,7 +139,7 @@ namespace CommunityDevelopers2ISADAO
         /// <param name="newTitre">Le nouveau titre du sujet</param>
         /// <param name="newDescription">La nouvelle description</param>
         /// <returns>le nombre de ligne modifier, nbligne = 1 si tout va bien</returns>
-        public static int ModifierSujet(Sujet sujet, string newTitre, string newDescription)
+        public static int ModifierSujet(int idsujet, string oldTitre, string oldDescription, string newTitre, string newDescription)
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "ModifierSujet";
@@ -175,7 +147,7 @@ namespace CommunityDevelopers2ISADAO
 
             SqlParameter parmIdSujet = cmd.CreateParameter();
             parmIdSujet.ParameterName = "@ID_SUJET";
-            parmIdSujet.Value = sujet.Id;
+            parmIdSujet.Value = idsujet;
             cmd.Parameters.Add(parmIdSujet);
 
             SqlParameter parmNewTitre = cmd.CreateParameter();
@@ -185,7 +157,7 @@ namespace CommunityDevelopers2ISADAO
 
             SqlParameter parmOldTitre = cmd.CreateParameter();
             parmOldTitre.ParameterName = "@OLD_TITRE";
-            parmOldTitre.Value = sujet.Titre;
+            parmOldTitre.Value = oldTitre;
             cmd.Parameters.Add(parmOldTitre);
 
             SqlParameter parmNewDescr = cmd.CreateParameter();
@@ -195,7 +167,7 @@ namespace CommunityDevelopers2ISADAO
 
             SqlParameter parmOldDescr = cmd.CreateParameter();
             parmOldDescr.ParameterName = "@OLD_DESC";
-            parmOldDescr.Value = sujet.Desc;
+            parmOldDescr.Value = oldDescription;
             cmd.Parameters.Add(parmOldDescr);
 
             con.Open();

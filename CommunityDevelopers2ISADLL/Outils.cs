@@ -44,12 +44,117 @@ namespace CommunityDevelopers2ISADLL
         #endregion
 
         #region "Utilisateurs"
+        public static Utilisateur Login(string login, string password)
+        {
+            DataTable dt = UtilisateurDAO.Login(login, password);
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+                return GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString()));
+            }
+            return null;
+        }
+
+        public static Utilisateur GetUtilisateurByID(int iduser)
+        {
+            DataTable dt = UtilisateurDAO.GetUtilisateurByID(iduser);
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+                Utilisateur user = new Utilisateur(int.Parse(row["ID_UTILISATEUR"].ToString()), row["LOGIN"].ToString(), row["PASSWORD"].ToString(), (bool)row["ROLEMODERA"]);
+                return user;
+            }
+            return null;
+        }
+
+        public static List<Utilisateur> GetAllUtilisateur()
+        {
+            DataTable dt = UtilisateurDAO.GetAllUtilisateur();
+            if (dt.Rows.Count >= 1)
+            {
+                List<Utilisateur> _Utilisateurs = new List<Utilisateur>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Utilisateur user = new Utilisateur(int.Parse(row["ID_UTILISATEUR"].ToString()), row["LOGIN"].ToString(), row["PASSWORD"].ToString(), (bool)row["ROLEMODERA"]);
+                    _Utilisateurs.Add(user);
+                }
+                return _Utilisateurs;
+            }
+            return null;
+        }
+
+        public static int EditPassword(int iduser, string password)
+        {
+            return UtilisateurDAO.EditPassword(iduser, password);
+        }
         #endregion
 
         #region "Sujets"
+        public static Sujet GetSujetByID(int idsujet)
+        {
+            DataTable dt = SujetDAO.GetSujetByID(idsujet);
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+                Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
+
+                return sujet;
+            }
+            return null;
+        }
+
+        public static List<Sujet> GetAllSujets()
+        {
+            DataTable dt = SujetDAO.GetAllSujets();
+
+            if (dt.Rows.Count >= 1)
+            {
+                List<Sujet> _Sujets = new List<Sujet>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
+                    _Sujets.Add(sujet);
+                }
+                return _Sujets;
+            }
+            return null;
+        }
+
+        public static List<Sujet> GetSujetsByCategorieID(int idcategorie)
+        {
+            DataTable dt = SujetDAO.GetSujetsByCategorieID(idcategorie);
+            if (dt.Rows.Count >= 1)
+            {
+                List<Sujet> _Sujets = new List<Sujet>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
+                    _Sujets.Add(sujet);
+                }
+                return _Sujets;
+            }
+            return null;
+        }
+
+        public static int AddSujet(int idUtilisateur, int idCategorie, string titre, string description)
+        {
+            return SujetDAO.AddSujet(idUtilisateur, idCategorie, titre, description);
+        }
+
+        public static int ModifierSujet(int idsujet, string oldTitre, string oldDescription, string newTitre, string newDescription)
+        {
+            return SujetDAO.ModifierSujet(idsujet, oldTitre, oldDescription, newTitre, newDescription);
+        }
+
+        public static int DeleteSujet(int idSujet)
+        {
+            return SujetDAO.DeleteSujet(idSujet);
+        }
+
         #endregion
 
         #region "Réponses"
+
         #endregion
 
     }
