@@ -70,7 +70,7 @@
             this.grBoxNewPassword.Size = new System.Drawing.Size(316, 209);
             this.grBoxNewPassword.TabIndex = 1;
             this.grBoxNewPassword.TabStop = false;
-            this.grBoxNewPassword.Text = "Nouveau Password : ";
+            this.grBoxNewPassword.Text = "New Password : ";
             // 
             // txtBoxConfirmPassword
             // 
@@ -131,7 +131,7 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(96, 40);
             this.btAnnuler.TabIndex = 5;
-            this.btAnnuler.Text = "&Annuler";
+            this.btAnnuler.Text = "&Cancel";
             this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
@@ -145,7 +145,7 @@
             this.btValider.Name = "btValider";
             this.btValider.Size = new System.Drawing.Size(91, 40);
             this.btValider.TabIndex = 4;
-            this.btValider.Text = "&Valider";
+            this.btValider.Text = "&Validate";
             this.btValider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btValider.UseVisualStyleBackColor = true;
             this.btValider.Click += new System.EventHandler(this.btValider_Click);

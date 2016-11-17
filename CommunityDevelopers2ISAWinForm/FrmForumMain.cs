@@ -99,8 +99,8 @@ namespace CommunityDevelopers2ISAWinForm
             using(FrmAjoutSujet frmModifierSujet = new FrmAjoutSujet())
             {
                 frmModifierSujet.categorie = (Categorie)cbBoxCategorie.SelectedItem;
-                frmModifierSujet.sujet = (Sujet)cbBoxSujet.SelectedItem;
-                frmModifierSujet.Text = string.Format("Edit le sujet {0} dans la catégorie {1}", frmModifierSujet.sujet.Titre, frmModifierSujet.categorie.Libelle);
+                frmModifierSujet.idsujet = (Sujet)cbBoxSujet.SelectedItem;
+                frmModifierSujet.Text = string.Format("Edit le sujet {0} dans la catégorie {1}", frmModifierSujet.idsujet.Titre, frmModifierSujet.categorie.Libelle);
                 frmModifierSujet.ShowDialog();
                 remplirComboBoxSujet(Outils.GetSujetsByCategorieID((int)cbBoxCategorie.SelectedValue));
             }

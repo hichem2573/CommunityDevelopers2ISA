@@ -1,5 +1,4 @@
 ﻿using CommunityDevelopers2ISADLL;
-using CommunityDevelopers2ISAOutils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +27,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void btValider_Click(object sender, EventArgs e)
         {
-            FrmAccueil.CurrentUtilisateur = Outil.Login(txtBoxLogin.Text, txtBoxPassword.Text);
+            FrmAccueil.CurrentUtilisateur = Outils.Login(txtBoxLogin.Text, txtBoxPassword.Text);
             if (FrmAccueil.CurrentUtilisateur != null)
             {
                 FrmAccueil.Isconnected = true;

@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAWinF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAServiceREST", "CommunityDevelopers2ISAServiceREST\CommunityDevelopers2ISAServiceREST.csproj", "{98E1823A-199C-47B8-BAB9-7F40CF8B5139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAOutils", "CommunityDevelopers2ISAOutils\CommunityDevelopers2ISAOutils.csproj", "{F628C5CD-8CA6-4A3C-A21D-07B32179E97E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{98E1823A-199C-47B8-BAB9-7F40CF8B5139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98E1823A-199C-47B8-BAB9-7F40CF8B5139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98E1823A-199C-47B8-BAB9-7F40CF8B5139}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F628C5CD-8CA6-4A3C-A21D-07B32179E97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F628C5CD-8CA6-4A3C-A21D-07B32179E97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F628C5CD-8CA6-4A3C-A21D-07B32179E97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F628C5CD-8CA6-4A3C-A21D-07B32179E97E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

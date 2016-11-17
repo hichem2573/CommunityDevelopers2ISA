@@ -155,6 +155,31 @@ namespace CommunityDevelopers2ISADLL
 
         #region "Réponses"
 
+        public static List<Reponse> GetAllReponseBySujet(int idSujet)
+        {
+            DataTable dt = ReponseDAO.GetAllReponseBySujet(idSujet);
+            if (dt.Rows.Count >= 1)
+            {
+                List<Reponse> _Reponses = new List<Reponse>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Reponse reponse = new Reponse(int.Parse(row["ID_REPONSE"].ToString()), row["TEXT_REPONSE"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()), GetSujetByID(idSujet), GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())));
+                    _Reponses.Add(reponse);
+                }
+                return _Reponses;
+            }
+            return null;
+        }
+
+        public static int AddReponse(int idUtilisateur, int idSujet, string texte)
+        {
+            return ReponseDAO.AddReponse(idUtilisateur, idSujet, texte);
+        }
+
+        public static int DeleteReponse(int idReponse)
+        {
+            return ReponseDAO.DeleteReponse(idReponse);
+        }
         #endregion
 
     }

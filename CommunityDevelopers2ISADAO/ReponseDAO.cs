@@ -1,5 +1,4 @@
-﻿using CommunityDevelopers2ISADLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -29,7 +28,7 @@ namespace CommunityDevelopers2ISADAO
         /// </summary>
         /// <param name="idSujet">L'identifiant du sujet</param>
         /// <returns>Les reponses, concernant un sujet dont l'id est passé en param</returns>
-        public static List<Reponse> GetAllReponseBySujet(int idSujet)
+        public static DataTable GetAllReponseBySujet(int idSujet)
         {
 
             SqlCommand cmd = con.CreateCommand();
@@ -45,17 +44,7 @@ namespace CommunityDevelopers2ISADAO
             DataTable dt = new DataTable("Reponses");
             da.Fill(dt);
 
-            if (dt.Rows.Count >= 1)
-            {
-                List<Reponse> _Reponses = new List<Reponse>();
-                foreach (DataRow row in dt.Rows)
-                {
-                    Reponse reponse = new Reponse(int.Parse(row["ID_REPONSE"].ToString()), row["TEXT_REPONSE"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()),SujetDAO.GetSujetByID(idSujet) ,UtilisateurDAO.GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())));
-                    _Reponses.Add(reponse);
-                }
-                return _Reponses;
-            }
-            return null;
+            return dt;
         }
 
         /// <summary>

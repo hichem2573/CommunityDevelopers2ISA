@@ -82,7 +82,7 @@
             this.gpAuthentification.Size = new System.Drawing.Size(378, 292);
             this.gpAuthentification.TabIndex = 0;
             this.gpAuthentification.TabStop = false;
-            this.gpAuthentification.Text = "Authentification";
+            this.gpAuthentification.Text = "Identify";
             // 
             // txtBoxPassword
             // 
@@ -140,7 +140,7 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(111, 38);
             this.btAnnuler.TabIndex = 9;
-            this.btAnnuler.Text = "&Annuler";
+            this.btAnnuler.Text = "&Cancel";
             this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
@@ -154,7 +154,7 @@
             this.btValider.Name = "btValider";
             this.btValider.Size = new System.Drawing.Size(102, 38);
             this.btValider.TabIndex = 8;
-            this.btValider.Text = "&Valider";
+            this.btValider.Text = "&Validate";
             this.btValider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btValider.UseVisualStyleBackColor = true;
             this.btValider.Click += new System.EventHandler(this.btValider_Click);

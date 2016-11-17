@@ -52,11 +52,11 @@
             this.btEntrer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEntrer.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.quitte;
             this.btEntrer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEntrer.Location = new System.Drawing.Point(87, 314);
+            this.btEntrer.Location = new System.Drawing.Point(68, 314);
             this.btEntrer.Name = "btEntrer";
-            this.btEntrer.Size = new System.Drawing.Size(131, 44);
+            this.btEntrer.Size = new System.Drawing.Size(150, 44);
             this.btEntrer.TabIndex = 1;
-            this.btEntrer.Text = "&Accès au forum";
+            this.btEntrer.Text = "&Access to the forum";
             this.btEntrer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEntrer.UseVisualStyleBackColor = true;
             this.btEntrer.Click += new System.EventHandler(this.btEntrer_Click);
@@ -68,9 +68,10 @@
             this.btQuitter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQuitter.Location = new System.Drawing.Point(483, 314);
             this.btQuitter.Name = "btQuitter";
-            this.btQuitter.Size = new System.Drawing.Size(127, 44);
+            this.btQuitter.Size = new System.Drawing.Size(135, 44);
             this.btQuitter.TabIndex = 2;
-            this.btQuitter.Text = "&Quitter";
+            this.btQuitter.Text = "&Exit";
+            this.btQuitter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btQuitter.UseVisualStyleBackColor = true;
             this.btQuitter.Click += new System.EventHandler(this.btQuitter_Click);
             // 

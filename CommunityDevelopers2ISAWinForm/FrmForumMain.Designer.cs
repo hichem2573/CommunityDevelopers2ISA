@@ -77,7 +77,7 @@
             this.tlPanelFrmForumMain.ColumnCount = 3;
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.33957F));
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.66042F));
-            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.tlPanelFrmForumMain.Controls.Add(this.dataGridViewReponses, 1, 2);
             this.tlPanelFrmForumMain.Controls.Add(this.plAuthentification, 1, 3);
             this.tlPanelFrmForumMain.Controls.Add(this.tblPanelCategorie, 0, 0);
@@ -108,7 +108,7 @@
             this.dataGridViewReponses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewReponses.Location = new System.Drawing.Point(241, 117);
             this.dataGridViewReponses.Name = "dataGridViewReponses";
-            this.dataGridViewReponses.Size = new System.Drawing.Size(598, 317);
+            this.dataGridViewReponses.Size = new System.Drawing.Size(597, 317);
             this.dataGridViewReponses.TabIndex = 0;
             this.dataGridViewReponses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReponses_CellClick);
             this.dataGridViewReponses.SelectionChanged += new System.EventHandler(this.dataGridViewReponses_SelectionChanged);
@@ -121,7 +121,7 @@
             this.plAuthentification.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plAuthentification.Location = new System.Drawing.Point(241, 440);
             this.plAuthentification.Name = "plAuthentification";
-            this.plAuthentification.Size = new System.Drawing.Size(598, 66);
+            this.plAuthentification.Size = new System.Drawing.Size(597, 66);
             this.plAuthentification.TabIndex = 2;
             // 
             // btLogout
@@ -129,7 +129,7 @@
             this.btLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btLogout.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.logout;
             this.btLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogout.Location = new System.Drawing.Point(415, 16);
+            this.btLogout.Location = new System.Drawing.Point(414, 16);
             this.btLogout.Name = "btLogout";
             this.btLogout.Size = new System.Drawing.Size(119, 41);
             this.btLogout.TabIndex = 5;
@@ -142,7 +142,7 @@
             this.btEditPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditPassword.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.edit;
             this.btEditPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditPassword.Location = new System.Drawing.Point(232, 16);
+            this.btEditPassword.Location = new System.Drawing.Point(231, 16);
             this.btEditPassword.Name = "btEditPassword";
             this.btEditPassword.Size = new System.Drawing.Size(119, 41);
             this.btEditPassword.TabIndex = 6;
@@ -156,7 +156,7 @@
             this.btLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btLogin.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.login;
             this.btLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogin.Location = new System.Drawing.Point(54, 16);
+            this.btLogin.Location = new System.Drawing.Point(53, 16);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(119, 41);
             this.btLogin.TabIndex = 3;
@@ -185,7 +185,7 @@
             this.gpBoxCategorie.Size = new System.Drawing.Size(226, 85);
             this.gpBoxCategorie.TabIndex = 0;
             this.gpBoxCategorie.TabStop = false;
-            this.gpBoxCategorie.Text = "Categorie :";
+            this.gpBoxCategorie.Text = "Category :";
             // 
             // cbBoxCategorie
             // 
@@ -208,7 +208,7 @@
             this.tblPanelAdministration.Name = "tblPanelAdministration";
             this.tblPanelAdministration.RowCount = 1;
             this.tblPanelAdministration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPanelAdministration.Size = new System.Drawing.Size(598, 91);
+            this.tblPanelAdministration.Size = new System.Drawing.Size(597, 91);
             this.tblPanelAdministration.TabIndex = 5;
             // 
             // gpBoxAdministration
@@ -219,7 +219,7 @@
             this.gpBoxAdministration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxAdministration.Location = new System.Drawing.Point(3, 3);
             this.gpBoxAdministration.Name = "gpBoxAdministration";
-            this.gpBoxAdministration.Size = new System.Drawing.Size(592, 85);
+            this.gpBoxAdministration.Size = new System.Drawing.Size(591, 85);
             this.gpBoxAdministration.TabIndex = 0;
             this.gpBoxAdministration.TabStop = false;
             this.gpBoxAdministration.Text = "Administration :";
@@ -229,11 +229,11 @@
             this.btDeleteReponse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btDeleteReponse.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.message_supprimez;
             this.btDeleteReponse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDeleteReponse.Location = new System.Drawing.Point(442, 21);
+            this.btDeleteReponse.Location = new System.Drawing.Point(441, 21);
             this.btDeleteReponse.Name = "btDeleteReponse";
             this.btDeleteReponse.Size = new System.Drawing.Size(127, 48);
             this.btDeleteReponse.TabIndex = 11;
-            this.btDeleteReponse.Text = "Delete &Reponse";
+            this.btDeleteReponse.Text = "Delete &Answer";
             this.btDeleteReponse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btDeleteReponse.UseVisualStyleBackColor = true;
             this.btDeleteReponse.Click += new System.EventHandler(this.btDeleteReponse_Click);
@@ -243,11 +243,11 @@
             this.btDeleteSujet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btDeleteSujet.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.supprimer;
             this.btDeleteSujet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDeleteSujet.Location = new System.Drawing.Point(229, 21);
+            this.btDeleteSujet.Location = new System.Drawing.Point(228, 21);
             this.btDeleteSujet.Name = "btDeleteSujet";
             this.btDeleteSujet.Size = new System.Drawing.Size(127, 48);
             this.btDeleteSujet.TabIndex = 10;
-            this.btDeleteSujet.Text = "&Delete Sujet";
+            this.btDeleteSujet.Text = "&Delete Subject";
             this.btDeleteSujet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btDeleteSujet.UseVisualStyleBackColor = true;
             this.btDeleteSujet.Click += new System.EventHandler(this.btDeleteSujet_Click);
@@ -257,11 +257,11 @@
             this.btEditSujet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditSujet.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.edit_sujet;
             this.btEditSujet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditSujet.Location = new System.Drawing.Point(16, 21);
+            this.btEditSujet.Location = new System.Drawing.Point(15, 21);
             this.btEditSujet.Name = "btEditSujet";
             this.btEditSujet.Size = new System.Drawing.Size(127, 48);
             this.btEditSujet.TabIndex = 9;
-            this.btEditSujet.Text = "&Edit Sujet";
+            this.btEditSujet.Text = "&Edit Subject";
             this.btEditSujet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditSujet.UseVisualStyleBackColor = true;
             this.btEditSujet.Click += new System.EventHandler(this.btEditSujet_Click);
@@ -292,7 +292,7 @@
             this.gpBoxSujet.Size = new System.Drawing.Size(226, 100);
             this.gpBoxSujet.TabIndex = 0;
             this.gpBoxSujet.TabStop = false;
-            this.gpBoxSujet.Text = "Sujet :";
+            this.gpBoxSujet.Text = "Subject :";
             // 
             // cbBoxSujet
             // 
@@ -327,7 +327,7 @@
             this.gpBoxDescSujet.Size = new System.Drawing.Size(226, 151);
             this.gpBoxDescSujet.TabIndex = 2;
             this.gpBoxDescSujet.TabStop = false;
-            this.gpBoxDescSujet.Text = "Description Sujet ;";
+            this.gpBoxDescSujet.Text = "Description Subject ;";
             // 
             // txtBoxDescSujet
             // 
@@ -343,9 +343,9 @@
             // 
             this.plAddSujetAddReponse.Controls.Add(this.gpBoxAjoutSujetReponse);
             this.plAddSujetAddReponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plAddSujetAddReponse.Location = new System.Drawing.Point(845, 117);
+            this.plAddSujetAddReponse.Location = new System.Drawing.Point(844, 117);
             this.plAddSujetAddReponse.Name = "plAddSujetAddReponse";
-            this.plAddSujetAddReponse.Size = new System.Drawing.Size(219, 317);
+            this.plAddSujetAddReponse.Size = new System.Drawing.Size(220, 317);
             this.plAddSujetAddReponse.TabIndex = 7;
             // 
             // gpBoxAjoutSujetReponse
@@ -355,7 +355,7 @@
             this.gpBoxAjoutSujetReponse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxAjoutSujetReponse.Location = new System.Drawing.Point(0, 0);
             this.gpBoxAjoutSujetReponse.Name = "gpBoxAjoutSujetReponse";
-            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(219, 317);
+            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(220, 317);
             this.gpBoxAjoutSujetReponse.TabIndex = 0;
             this.gpBoxAjoutSujetReponse.TabStop = false;
             this.gpBoxAjoutSujetReponse.Text = "Ajouter un sujet, Ajouter une reponse :";
@@ -365,11 +365,11 @@
             this.btPosterReponse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btPosterReponse.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.ajouter_un_message;
             this.btPosterReponse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPosterReponse.Location = new System.Drawing.Point(43, 191);
+            this.btPosterReponse.Location = new System.Drawing.Point(44, 191);
             this.btPosterReponse.Name = "btPosterReponse";
             this.btPosterReponse.Size = new System.Drawing.Size(135, 47);
             this.btPosterReponse.TabIndex = 8;
-            this.btPosterReponse.Text = "&Poster Reponse";
+            this.btPosterReponse.Text = "&Post Answer";
             this.btPosterReponse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btPosterReponse.UseVisualStyleBackColor = true;
             this.btPosterReponse.Click += new System.EventHandler(this.btPosterReponse_Click);
@@ -379,11 +379,11 @@
             this.btAjouterSujet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAjouterSujet.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.ajouter;
             this.btAjouterSujet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAjouterSujet.Location = new System.Drawing.Point(43, 70);
+            this.btAjouterSujet.Location = new System.Drawing.Point(44, 70);
             this.btAjouterSujet.Name = "btAjouterSujet";
             this.btAjouterSujet.Size = new System.Drawing.Size(135, 47);
             this.btAjouterSujet.TabIndex = 7;
-            this.btAjouterSujet.Text = "&Ajouter Sujet";
+            this.btAjouterSujet.Text = "&Add Subject";
             this.btAjouterSujet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAjouterSujet.UseVisualStyleBackColor = true;
             this.btAjouterSujet.Click += new System.EventHandler(this.btAjouterSujet_Click);
@@ -392,9 +392,9 @@
             // 
             this.pnlQuitter.Controls.Add(this.btQuitter);
             this.pnlQuitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlQuitter.Location = new System.Drawing.Point(845, 440);
+            this.pnlQuitter.Location = new System.Drawing.Point(844, 440);
             this.pnlQuitter.Name = "pnlQuitter";
-            this.pnlQuitter.Size = new System.Drawing.Size(219, 66);
+            this.pnlQuitter.Size = new System.Drawing.Size(220, 66);
             this.pnlQuitter.TabIndex = 8;
             // 
             // btQuitter
@@ -402,11 +402,11 @@
             this.btQuitter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQuitter.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.quitter;
             this.btQuitter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQuitter.Location = new System.Drawing.Point(56, 16);
+            this.btQuitter.Location = new System.Drawing.Point(57, 16);
             this.btQuitter.Name = "btQuitter";
             this.btQuitter.Size = new System.Drawing.Size(115, 41);
             this.btQuitter.TabIndex = 4;
-            this.btQuitter.Text = "&Quitter";
+            this.btQuitter.Text = "E&xit";
             this.btQuitter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btQuitter.UseVisualStyleBackColor = true;
             this.btQuitter.Click += new System.EventHandler(this.btQuitter_Click);
