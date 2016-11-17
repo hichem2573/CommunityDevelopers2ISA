@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using CommunityDevelopers2ISADLL;
 
 namespace CommunityDevelopers2ISAServiceREST
 {
@@ -12,22 +13,21 @@ namespace CommunityDevelopers2ISAServiceREST
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class ServiceREST : ICommunityDevelopers2ISAREST
     {
-        //public string GetData(int value)
-        //{
-        //    return string.Format("You entered: {0}", value);
-        //}
+        public List<Categorie> GetAllCategories()
+        {
+            throw new NotImplementedException();
+        }
 
-        //public CompositeType GetDataUsingDataContract(CompositeType composite)
-        //{
-        //    if (composite == null)
-        //    {
-        //        throw new ArgumentNullException("composite");
-        //    }
-        //    if (composite.BoolValue)
-        //    {
-        //        composite.StringValue += "Suffix";
-        //    }
-        //    return composite;
-        //}
+        public string GetData(int value)
+        {
+            return string.Format("You entered: {0}", value);
+        }
+
+       
+
+        public List<Sujet> GetSujetsByCategorieID(int idcategorie)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

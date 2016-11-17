@@ -14,16 +14,16 @@ namespace CommunityDevelopers2ISAServiceREST
     public interface ICommunityDevelopers2ISAREST
     {
 
-    //    [OperationContract]
-    //    [WebGet(UriTemplate = "Categorie")]
-    //    List<Categorie> GetAllCategories();
+        [OperationContract]
+        [WebGet(UriTemplate = "Categorie")]
+        List<Categorie> GetAllCategories();
 
-    //    [OperationContract]
-    //    [WebGet(UriTemplate = "Sujet/{idcategorie}")]
-    //    List<Sujet> GetSujetsByCategorieID(int idcategorie);
+        [OperationContract]
+        [WebGet(UriTemplate = "Sujet/{idcategorie}")]
+        List<Sujet> GetSujetsByCategorieID(int idcategorie);
 
-    //    // TODO: ajoutez vos opérations de service ici
-    //}
+        // TODO: ajoutez vos opérations de service ici
+    }
 
 
     //// Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
@@ -46,5 +46,5 @@ namespace CommunityDevelopers2ISAServiceREST
     //        get { return stringValue; }
     //        set { stringValue = value; }
     //    }
-    }
 }
+

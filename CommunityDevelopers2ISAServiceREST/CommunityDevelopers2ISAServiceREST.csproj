@@ -115,10 +115,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommunityDevelopers2ISADAO\CommunityDevelopers2ISADAO.csproj">
-      <Project>{4193d4fb-6503-4316-b092-60c4e4f73248}</Project>
-      <Name>CommunityDevelopers2ISADAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj">
       <Project>{ea7d37f8-940a-43ea-bad6-b42f111625a8}</Project>
       <Name>CommunityDevelopers2ISADLL</Name>
