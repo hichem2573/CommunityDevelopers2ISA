@@ -14,37 +14,37 @@ namespace CommunityDevelopers2ISAServiceREST
     public interface ICommunityDevelopers2ISAREST
     {
 
-        [OperationContract]
-        [WebGet(UriTemplate = "Categorie")]
-        List<Categorie> GetAllCategories();
+    //    [OperationContract]
+    //    [WebGet(UriTemplate = "Categorie")]
+    //    List<Categorie> GetAllCategories();
 
-        [OperationContract]
-        [WebGet(UriTemplate = "Sujet/{idcategorie}")]
-        List<Sujet> GetSujetsByCategorieID(int idcategorie);
+    //    [OperationContract]
+    //    [WebGet(UriTemplate = "Sujet/{idcategorie}")]
+    //    List<Sujet> GetSujetsByCategorieID(int idcategorie);
 
-        // TODO: ajoutez vos opérations de service ici
-    }
+    //    // TODO: ajoutez vos opérations de service ici
+    //}
 
 
-    // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+    //// Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
+    //[DataContract]
+    //public class CompositeType
+    //{
+    //    bool boolValue = true;
+    //    string stringValue = "Hello ";
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+    //    [DataMember]
+    //    public bool BoolValue
+    //    {
+    //        get { return boolValue; }
+    //        set { boolValue = value; }
+    //    }
 
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+    //    [DataMember]
+    //    public string StringValue
+    //    {
+    //        get { return stringValue; }
+    //        set { stringValue = value; }
+    //    }
     }
 }

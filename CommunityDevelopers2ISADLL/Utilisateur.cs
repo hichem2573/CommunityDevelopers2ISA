@@ -58,6 +58,8 @@ namespace CommunityDevelopers2ISADLL
             set { _IsRmode = value; }
         }
 
+        
+
         #endregion
 
         #region "Constructeurs"
@@ -79,7 +81,7 @@ namespace CommunityDevelopers2ISADLL
         #endregion
 
         #region "Méthodes"
-
+          
         #endregion
 
 
@@ -90,4 +92,6 @@ namespace CommunityDevelopers2ISADLL
         #region "Méthodes à implementer pour les interfaces"
         #endregion
     }
+
+   
 }
