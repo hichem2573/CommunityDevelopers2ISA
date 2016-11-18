@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityDevelopers2ISADLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,13 +22,19 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void btValider_Click(object sender, EventArgs e)
         {
-            //DialogResult dr = new DialogResult();
-            //dr = MessageBox.Show(Properties.Resources.MsgBoxConfirmChangementPasswordText, Properties.Resources.MsgBoxConfirmChangementPasswordTitre, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            //    if (dr == DialogResult.Yes)
-            //    {
-                        //TODO
-            //    }
-            //MessageBox.Show(Properties.Resources.MsgBoxErreurNewPasswordText, Properties.Resources.MsgBoxErreurNewPasswordTitre, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+            btValider.Visible = false;
+            DialogResult dres = new DialogResult();
+            dres = MessageBox.Show(Properties.Resources.MsgBoxConfirmChangementPasswordText, Properties.Resources.MsgBoxConfirmChangementPasswordTitre, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dres == DialogResult.Yes && (txtBoxNewPassword.TextLength != txtBoxConfirmPassword.TextLength) || !(string.IsNullOrWhiteSpace(txtBoxNewPassword.Text) || string.IsNullOrWhiteSpace(txtBoxConfirmPassword.Text)))
+            {
+                
+                Outils.EditPassword(FrmAccueil.CurrentUtilisateur.Id, txtBoxNewPassword.Text);
+                btValider.Visible = true;
+                this.Close();
+
+            }
+       
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)

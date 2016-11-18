@@ -8,9 +8,16 @@ using System.Threading.Tasks;
 
 namespace CommunityDevelopers2ISADLL
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Outils
     {
         #region "Categories"
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<Categorie> GetAllCategories()
         {
             DataTable dt = CategorieDAO.GetAllCategories();
@@ -28,6 +35,11 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idCategorie"></param>
+        /// <returns></returns>
         public static Categorie GetCategorieByID(int idCategorie)
         {
             DataTable dt = CategorieDAO.GetCategorieByID(idCategorie);
@@ -42,7 +54,12 @@ namespace CommunityDevelopers2ISADLL
         }
 
         #endregion
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         #region "Utilisateurs"
         public static Utilisateur Login(string login, string password)
         {
@@ -55,6 +72,11 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="iduser"></param>
+        /// <returns></returns>
         public static Utilisateur GetUtilisateurByID(int iduser)
         {
             DataTable dt = UtilisateurDAO.GetUtilisateurByID(iduser);
@@ -67,6 +89,10 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<Utilisateur> GetAllUtilisateur()
         {
             DataTable dt = UtilisateurDAO.GetAllUtilisateur();
@@ -90,6 +116,12 @@ namespace CommunityDevelopers2ISADLL
         #endregion
 
         #region "Sujets"
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idsujet"></param>
+        /// <returns></returns>
         public static Sujet GetSujetByID(int idsujet)
         {
             DataTable dt = SujetDAO.GetSujetByID(idsujet);
@@ -103,6 +135,10 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<Sujet> GetAllSujets()
         {
             DataTable dt = SujetDAO.GetAllSujets();
@@ -120,6 +156,11 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idcategorie"></param>
+        /// <returns></returns>
         public static List<Sujet> GetSujetsByCategorieID(int idcategorie)
         {
             DataTable dt = SujetDAO.GetSujetsByCategorieID(idcategorie);
@@ -136,16 +177,38 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idUtilisateur"></param>
+        /// <param name="idCategorie"></param>
+        /// <param name="titre"></param>
+        /// <param name="description"></param>
+        /// <returns></returns>
         public static int AddSujet(int idUtilisateur, int idCategorie, string titre, string description)
         {
             return SujetDAO.AddSujet(idUtilisateur, idCategorie, titre, description);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idsujet"></param>
+        /// <param name="oldTitre"></param>
+        /// <param name="oldDescription"></param>
+        /// <param name="newTitre"></param>
+        /// <param name="newDescription"></param>
+        /// <returns></returns>
         public static int ModifierSujet(int idsujet, string oldTitre, string oldDescription, string newTitre, string newDescription)
         {
             return SujetDAO.ModifierSujet(idsujet, oldTitre, oldDescription, newTitre, newDescription);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idSujet"></param>
+        /// <returns></returns>
         public static int DeleteSujet(int idSujet)
         {
             return SujetDAO.DeleteSujet(idSujet);
@@ -155,6 +218,11 @@ namespace CommunityDevelopers2ISADLL
 
         #region "Réponses"
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idSujet"></param>
+        /// <returns></returns>
         public static List<Reponse> GetAllReponseBySujet(int idSujet)
         {
             DataTable dt = ReponseDAO.GetAllReponseBySujet(idSujet);
@@ -171,11 +239,23 @@ namespace CommunityDevelopers2ISADLL
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idUtilisateur"></param>
+        /// <param name="idSujet"></param>
+        /// <param name="texte"></param>
+        /// <returns></returns>
         public static int AddReponse(int idUtilisateur, int idSujet, string texte)
         {
             return ReponseDAO.AddReponse(idUtilisateur, idSujet, texte);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idReponse"></param>
+        /// <returns></returns>
         public static int DeleteReponse(int idReponse)
         {
             return ReponseDAO.DeleteReponse(idReponse);
