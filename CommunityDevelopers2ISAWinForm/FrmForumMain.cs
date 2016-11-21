@@ -172,6 +172,7 @@ namespace CommunityDevelopers2ISAWinForm
             else
             {
                 PanelSujetInvisible();
+                PanelReponseInvisible();
             }
         }
 
@@ -315,5 +316,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         }
         #endregion
+
+ 
     }
 }
