@@ -82,7 +82,7 @@ namespace CommunityDevelopers2ISADLL
         {
             this.Id = id;
             this.Login = login;
-            this.Login = mdp;
+            this.Mdp = mdp;
             this.IsRmode = isRmodo;
         }
         #endregion

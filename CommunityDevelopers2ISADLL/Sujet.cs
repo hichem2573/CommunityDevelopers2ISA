@@ -88,6 +88,29 @@ namespace CommunityDevelopers2ISADLL
             set { _Reponse = value; }
         }
 
+        /// <summary>
+        /// L'utilisateur qui a crée et posté la reponse
+        /// </summary>
+        private Utilisateur _Utilisateur;
+
+        [DataMember]
+        public Utilisateur Utilisateur
+        {
+            get { return _Utilisateur; }
+            set { _Utilisateur = value; }
+        }
+
+        /// <summary>
+        /// L'auteur de la reponse
+        /// </summary>
+        private string _Auteur;
+
+        [DataMember]
+        public string Auteur
+        {
+            get { return _Auteur; }
+            set { _Auteur = value; }
+        }
         #endregion
 
         #region "Constructeurs"
@@ -108,6 +131,13 @@ namespace CommunityDevelopers2ISADLL
             this.Date = DateTime.Now;
         }
 
+        public Sujet(int id, string titre, string description, DateTime date, Utilisateur utilisateur, Categorie categorie) : this(id, titre, description, categorie)
+        {
+            this.Date = date;
+            this.Utilisateur = utilisateur;
+            this.Auteur = utilisateur.Login;
+        }
+
         /// <summary>
         /// Constructeur d'un objet sujet, ayant des reponse
         /// </summary>
@@ -123,6 +153,10 @@ namespace CommunityDevelopers2ISADLL
         #endregion
 
         #region "Méthodes"
+        public string GetNomUtilisateur()
+        {
+            return Utilisateur.Login;
+        }
         #endregion
 
         #region "Méthodes héritées et substituées "

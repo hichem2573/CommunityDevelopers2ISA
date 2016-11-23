@@ -128,8 +128,8 @@ namespace CommunityDevelopers2ISADLL
             if (dt.Rows.Count == 1)
             {
                 DataRow row = dt.Rows[0];
-                Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
-
+                //Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
+                Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()), GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
                 return sujet;
             }
             return null;
@@ -148,7 +148,8 @@ namespace CommunityDevelopers2ISADLL
                 List<Sujet> _Sujets = new List<Sujet>();
                 foreach (DataRow row in dt.Rows)
                 {
-                    Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
+                    Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()), GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
+                    //Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
                     _Sujets.Add(sujet);
                 }
                 return _Sujets;
@@ -169,7 +170,9 @@ namespace CommunityDevelopers2ISADLL
                 List<Sujet> _Sujets = new List<Sujet>();
                 foreach (DataRow row in dt.Rows)
                 {
-                    Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
+                    //Reponse reponse = new Reponse(int.Parse(row["ID_REPONSE"].ToString()), row["TEXT_REPONSE"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()), GetSujetByID(idSujet), GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())));
+                    Sujet sujet = new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(), DateTime.Parse(row["DATECREATION"].ToString()), GetUtilisateurByID(int.Parse(row["ID_UTILISATEUR"].ToString())), GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString())));
+                    //Sujet sujet = (new Sujet(int.Parse(row["ID_SUJET"].ToString()), row["TITRE"].ToString(), row["DESCRIPTION"].ToString(),  GetCategorieByID(int.Parse(row["ID_CATEGORIE"].ToString()))));
                     _Sujets.Add(sujet);
                 }
                 return _Sujets;

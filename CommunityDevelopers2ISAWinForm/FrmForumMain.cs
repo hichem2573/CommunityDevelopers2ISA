@@ -182,7 +182,7 @@ namespace CommunityDevelopers2ISAWinForm
             {
                 PanelSujetVisible();
                 Sujet sujet = (Sujet)cbBoxSujet.SelectedItem;
-                txtBoxDescSujet.Text = sujet.Desc;
+                txtBoxDescSujet.Text = sujet.Desc + Environment.NewLine + "Créer par : " + sujet.Auteur + Environment.NewLine + "Date de création : " + sujet.Date;
                 if (visibiliteReponse())
                 {
                     PanelReponseVisible();
@@ -315,8 +315,8 @@ namespace CommunityDevelopers2ISAWinForm
         {
 
         }
+
         #endregion
 
- 
     }
 }
