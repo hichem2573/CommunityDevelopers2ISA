@@ -64,6 +64,7 @@ namespace CommunityDevelopers2ISAWinForm
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxErreurEditSujetText, Properties.Resources.MsgBoxErreurEditSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
+                this.Close();
             }
         }
 

@@ -31,6 +31,7 @@ namespace CommunityDevelopers2ISAWinForm
             {
                 MessageBox.Show(Properties.Resources.MsgBoxErreurAddReponseText, Properties.Resources.MsgBoxErreurAddReponseTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
+            this.Close();
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)
