@@ -5,16 +5,16 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityDevelopers2ISADLL
+namespace CommunityDeveloppers2ISAWinPhoneDAL
 {
     /// <summary>
     /// La classe Utilisateur permet à un utilisateur de s'identifier avec 
     /// son login (nom) et son mot de passe
     /// </summary>
-
-    public class Utilisateur
+    [Serializable]
+    [DataContract]
+    class UtilisateurDAL
     {
-
         #region "Property et Attributs"
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
-
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -34,7 +34,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Login;
 
-
+        [DataMember]
         public string Login
         {
             get { return _Login; }
@@ -45,7 +45,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Mdp;
 
-
+        [DataMember]
         public string Mdp
         {
             get { return _Mdp; }
@@ -57,14 +57,14 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private bool _IsRmode;
 
-
+        [DataMember]
         public bool IsRmode
         {
             get { return _IsRmode; }
             set { _IsRmode = value; }
         }
 
-        
+
 
         #endregion
 
@@ -77,7 +77,7 @@ namespace CommunityDevelopers2ISADLL
         /// <param name="login">le login de l'utilisateur (ici son nom)</param>
         /// <param name="mdp">Le mot de passe de l'utilisateur</param>
         /// <param name="isRmodo">Le role de l'utilisateur, soit utilisateur connecté soit modérateur</param>
-        public Utilisateur(int id, string login, string mdp, bool isRmodo)
+        public UtilisateurDAL(int id, string login, string mdp, bool isRmodo)
         {
             this.Id = id;
             this.Login = login;
@@ -87,7 +87,7 @@ namespace CommunityDevelopers2ISADLL
         #endregion
 
         #region "Méthodes"
-          
+
         #endregion
 
 
@@ -98,6 +98,4 @@ namespace CommunityDevelopers2ISADLL
         #region "Méthodes à implementer pour les interfaces"
         #endregion
     }
-
-   
 }

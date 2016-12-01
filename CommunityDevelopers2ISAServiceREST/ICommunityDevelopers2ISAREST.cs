@@ -1,5 +1,4 @@
-﻿using CommunityDevelopers2ISADLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,17 +14,18 @@ namespace CommunityDevelopers2ISAServiceREST
     {
 
         [OperationContract]
-        [WebGet(UriTemplate = "Categorie")]
-        List<Categorie> GetAllCategories();
+        [WebGet(UriTemplate = "CategorieDAL")]
+        List<CategorieDAL> GetAllCategories();
+        
 
         [OperationContract]
-        [WebGet(UriTemplate = "Sujet/{idcategorie}")]
-        List<Sujet> GetSujetsByCategorieID(int idcategorie);
+        [WebGet(UriTemplate = "SujetDAL/{idcategorie}")]
+        List<SujetDAL> GetSujetsByCategorieID(int idcategorie);
 
         [OperationContract]
-        [WebGet(UriTemplate = "Reponse/{idsujet}")]
+        [WebGet(UriTemplate = "ReponseDAL/{idsujet}")]
 
-        List<Reponse> GetRecentAnswersBySujet(int idsujet);
+        List<ReponseDAL> GetRecentAnswersBySujet(int idsujet);
         // TODO: ajoutez vos opérations de service ici
     }  
 }

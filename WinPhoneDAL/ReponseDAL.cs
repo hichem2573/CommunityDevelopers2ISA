@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityDevelopers2ISADLL
+namespace CommunityDeveloppers2ISAWinPhoneDAL
 {
     /// <summary>
     /// La classe reponse permet de voir toutes les reponse, concernant un sujet donnée 
     /// d'une rubrique donnée
     /// </summary>
-
-    public class Reponse
+    [Serializable]
+    [DataContract]
+    class ReponseDAL
     {
         #region "Property et Attributs"
         /// <summary>
@@ -19,7 +21,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
- 
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -31,6 +33,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Texte;
 
+        [DataMember]
         public string Texte
         {
             get { return _Texte; }
@@ -40,9 +43,10 @@ namespace CommunityDevelopers2ISADLL
         /// <summary>
         ///Le sujet auquel appartient la reponse
         /// </summary>
-        private Sujet _Sujet;
+        private SujetDAL _Sujet;
 
-        public Sujet Sujet
+        [DataMember]
+        public SujetDAL Sujet
         {
             get { return _Sujet; }
             set { _Sujet = value; }
@@ -53,6 +57,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private DateTime _Date;
 
+        [DataMember]
         public DateTime Date
         {
             get { return _Date; }
@@ -62,10 +67,10 @@ namespace CommunityDevelopers2ISADLL
         /// <summary>
         /// L'utilisateur qui a crée et posté la reponse
         /// </summary>
-        private Utilisateur _Utilisateur;
+        private UtilisateurDAL _Utilisateur;
 
-     
-        public Utilisateur Utilisateur
+        [DataMember]
+        public UtilisateurDAL Utilisateur
         {
             get { return _Utilisateur; }
             set { _Utilisateur = value; }
@@ -76,7 +81,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Auteur;
 
-    
+        [DataMember]
         public string Auteur
         {
             get { return _Auteur; }
@@ -95,7 +100,7 @@ namespace CommunityDevelopers2ISADLL
         /// <param name="date">La date de création </param>
         /// <param name="utilisateur">L'utilisateur qui a crée et posté la reponse</param>
         /// <param name="sujet">Le sujet auquel appartient la reponse</param>
-        public Reponse(int id, string texte, DateTime date,Sujet sujet, Utilisateur utilisateur )
+        public ReponseDAL(int id, string texte, DateTime date, SujetDAL sujet, UtilisateurDAL utilisateur)
         {
             this.Id = id;
             this.Texte = texte;
@@ -110,7 +115,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         /// <param name="id"></param>
         /// <param name="text"></param>
-        public Reponse(int id, string text)
+        public ReponseDAL(int id, string text)
         {
             this.Id = id;
             this.Texte = text;

@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityDevelopers2ISADLL
+namespace CommunityDeveloppers2ISAWinPhoneDAL
 {
+
     /// <summary>
     /// La classe sujet, permet de voir tous les sujets d'une rubrique
     /// Pemet de voir les reponses, concernant un sujet
     /// Elle comporte un identifiant, titre du sujet, la description, la rubrique et les reponses
     /// </summary>
-
-    public class Sujet
+    [Serializable]
+    [DataContract]
+    public class SujetDAL
     {
         #region "Property et Attributs"
         /// <summary>
@@ -20,7 +23,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private int _Id;
 
-
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -31,6 +34,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Desc;
 
+        [DataMember]
         public string Desc
         {
             get { return _Desc; }
@@ -42,6 +46,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private DateTime _Date;
 
+        [DataMember]
         public DateTime Date
         {
             get { return _Date; }
@@ -51,10 +56,10 @@ namespace CommunityDevelopers2ISADLL
         /// <summary>
         /// La categorie à la quelle appartient le sujet
         /// </summary>
-        private Categorie _Categorie;
+        private CategorieDAL _Categorie;
 
-
-        public Categorie Categorie
+        [DataMember]
+        public CategorieDAL Categorie
         {
             get { return _Categorie; }
             set { _Categorie = value; }
@@ -65,7 +70,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Titre;
 
-
+        [DataMember]
         public string Titre
         {
             get { return _Titre; }
@@ -75,10 +80,10 @@ namespace CommunityDevelopers2ISADLL
         /// <summary>
         /// La liste des réponses, concernant un sujet
         /// </summary>
-        private List<Reponse> _Reponse;
+        private List<ReponseDAL> _Reponse;
 
-
-        public List<Reponse> Reponses
+        [DataMember]
+        public List<ReponseDAL> Reponse
         {
             get { return _Reponse; }
             set { _Reponse = value; }
@@ -87,10 +92,10 @@ namespace CommunityDevelopers2ISADLL
         /// <summary>
         /// L'utilisateur qui a crée et posté la reponse
         /// </summary>
-        private Utilisateur _Utilisateur;
+        private UtilisateurDAL _Utilisateur;
 
-
-        public Utilisateur Utilisateur
+        [DataMember]
+        public UtilisateurDAL Utilisateur
         {
             get { return _Utilisateur; }
             set { _Utilisateur = value; }
@@ -101,7 +106,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Auteur;
 
-
+        [DataMember]
         public string Auteur
         {
             get { return _Auteur; }
@@ -117,17 +122,17 @@ namespace CommunityDevelopers2ISADLL
         /// <param name="titre">Le titre du sujet</param>
         /// <param name="description">La description du sujet</param>
         /// <param name="categorie">La categorie à la quelle appatient le sujet</param>
-        public Sujet(int id, string titre, string description, Categorie categorie)
+        public SujetDAL(int id, string titre, string description, CategorieDAL categorie)
         {
             this.Id = id;
             this.Titre = titre;
             this.Desc = description;
-            this.Categorie = categorie;
+            this.CategorieDal = categorie;
             this.Reponses = new List<Reponse>();
             this.Date = DateTime.Now;
         }
 
-        public Sujet(int id, string titre, string description, DateTime date, Utilisateur utilisateur, Categorie categorie) : this(id, titre, description, categorie)
+        public SujetDAL(int id, string titre, string description, DateTime date, UtilisateurDAL utilisateur, CategorieDAL categorie) : this(id, titre, description, categorie)
         {
             this.Date = date;
             this.Utilisateur = utilisateur;
@@ -142,7 +147,7 @@ namespace CommunityDevelopers2ISADLL
         /// <param name="titre">Le titre du sujet</param>
         /// <param name="categorie">La categorie à la quelle appartient le sujet</param>
         /// <param name="Reponses">Les reponses du sujet</param>
-        public Sujet(int id, string description, string titre, Categorie categorie, List<Reponse> Reponses): this(id, titre, description, categorie)
+        public SujetDAL(int id, string description, string titre, CategorieDAL categorie, List<Reponse> Reponses): this(id, titre, description, categorie)
         {
             this.Reponses = Reponses;
         }

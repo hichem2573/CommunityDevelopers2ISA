@@ -115,9 +115,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj">
-      <Project>{ea7d37f8-940a-43ea-bad6-b42f111625a8}</Project>
-      <Name>CommunityDevelopers2ISADLL</Name>
+    <ProjectReference Include="..\WinPhoneDAL\CommunityDeveloppers2ISADAL.csproj">
+      <Project>{ea6e9430-df53-4715-8620-77330182aa87}</Project>
+      <Name>CommunityDeveloppers2ISADAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

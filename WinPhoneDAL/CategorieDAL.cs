@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityDevelopers2ISADLL
+namespace CommunityDeveloppers2ISAWinPhoneDAL
 {
     /// <summary>
     /// La classe catégorie, se compose d'un identifiant unique pour chaque rubrique
     /// Le nom de celle-ci (libelle) et une description pour chaque catégorie
     /// </summary>
-    
-    public class Categorie
+    [Serializable]
+    [DataContract]
+    class CategorieDAL
     {
+        
         #region "Property et Attributs"
         /// <summary>
         /// L'identifiant de la rubrique
         /// </summary>
         private int _Id;
 
-
+        [DataMember]
         public int Id
         {
             get { return _Id; }
@@ -43,7 +46,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Desc;
 
-        
+        [DataMember]
         public string Desc
         {
             get { return _Desc; }
@@ -60,7 +63,7 @@ namespace CommunityDevelopers2ISADLL
         /// <param name="id">L'identifiant de la categorie</param>
         /// <param name="libelle">Le libelle (Nom) de la categorie</param>
         /// <param name="desc">La description de la categorie</param>
-        public Categorie(int id, string libelle, string desc):this(id,libelle)
+        public CategorieDAL(int id, string libelle, string desc):this(id,libelle)
         {
             _Desc = desc;
         }
@@ -70,7 +73,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         /// <param name="id">L'identifiant de la categorie</param>
         /// <param name="libelle">Le nom de la categorie</param>
-        public Categorie(int id, string libelle)
+        public CategorieDAL(int id, string libelle)
         {
             this.Id = id;
             this.Libelle = libelle;
