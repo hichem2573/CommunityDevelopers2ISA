@@ -31,7 +31,7 @@ namespace CommunityDevelopers2ISADLL
         /// </summary>
         private string _Libelle;
 
-        [DataMember]
+
         public string Libelle
         {
             get { return _Libelle; }
