@@ -54,13 +54,14 @@ namespace CommunityDevelopers2ISADLL
         }
 
         #endregion
+
+        #region "Utilisateurs"
         /// <summary>
         /// 
         /// </summary>
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        #region "Utilisateurs"
         public static Utilisateur Login(string login, string password)
         {
             DataTable dt = UtilisateurDAO.Login(login, password);

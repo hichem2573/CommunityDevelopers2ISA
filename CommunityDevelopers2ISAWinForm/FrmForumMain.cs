@@ -311,10 +311,7 @@ namespace CommunityDevelopers2ISAWinForm
         #endregion
 
         #region "Sans Nom"
-        private void dataGridViewReponses_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+   
 
         #endregion
 
