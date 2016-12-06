@@ -26,6 +26,8 @@ namespace DALWinPhone
             set { _Id = value; }
         }
 
+
+
         /// <summary>
         /// Le nom de la categorie
         /// </summary>
