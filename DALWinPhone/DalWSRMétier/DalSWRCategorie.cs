@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DALWinPhone
 {
+    /// <summary>
+    /// TODO
+    /// </summary>
     [DataContract]
     public class DalSWRCategorie
     {
