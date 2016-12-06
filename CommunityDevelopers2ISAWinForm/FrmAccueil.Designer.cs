@@ -56,7 +56,7 @@
             this.btEntrer.Name = "btEntrer";
             this.btEntrer.Size = new System.Drawing.Size(150, 44);
             this.btEntrer.TabIndex = 1;
-            this.btEntrer.Text = "&Access to the forum";
+            this.btEntrer.Text = "&Accès au Forum";
             this.btEntrer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEntrer.UseVisualStyleBackColor = true;
             this.btEntrer.Click += new System.EventHandler(this.btEntrer_Click);
@@ -70,7 +70,7 @@
             this.btQuitter.Name = "btQuitter";
             this.btQuitter.Size = new System.Drawing.Size(135, 44);
             this.btQuitter.TabIndex = 2;
-            this.btQuitter.Text = "&Exit";
+            this.btQuitter.Text = "&Quitter";
             this.btQuitter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btQuitter.UseVisualStyleBackColor = true;
             this.btQuitter.Click += new System.EventHandler(this.btQuitter_Click);
@@ -86,7 +86,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAccueil";
-            this.Text = "CommunityDevelopers2ISA";
+            this.Text = "2ISA\'s Developers Community";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

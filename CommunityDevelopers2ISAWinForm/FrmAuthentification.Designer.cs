@@ -82,7 +82,7 @@
             this.gpAuthentification.Size = new System.Drawing.Size(378, 292);
             this.gpAuthentification.TabIndex = 0;
             this.gpAuthentification.TabStop = false;
-            this.gpAuthentification.Text = "Identify";
+            this.gpAuthentification.Text = "Identification";
             // 
             // txtBoxPassword
             // 
@@ -108,18 +108,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(32, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Password :";
+            this.label2.Text = "Mot de Passe :";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Location = new System.Drawing.Point(32, 81);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(39, 13);
+            this.lblLogin.Size = new System.Drawing.Size(49, 13);
             this.lblLogin.TabIndex = 0;
-            this.lblLogin.Text = "Login :";
+            this.lblLogin.Text = "Pseudo :";
             // 
             // plValidation
             // 
@@ -140,7 +140,7 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(111, 38);
             this.btAnnuler.TabIndex = 9;
-            this.btAnnuler.Text = "&Cancel";
+            this.btAnnuler.Text = "&Annuler";
             this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
@@ -154,7 +154,7 @@
             this.btValider.Name = "btValider";
             this.btValider.Size = new System.Drawing.Size(102, 38);
             this.btValider.TabIndex = 8;
-            this.btValider.Text = "&Validate";
+            this.btValider.Text = "&Valider";
             this.btValider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btValider.UseVisualStyleBackColor = true;
             this.btValider.Click += new System.EventHandler(this.btValider_Click);
@@ -170,7 +170,7 @@
             this.MaximumSize = new System.Drawing.Size(461, 462);
             this.MinimumSize = new System.Drawing.Size(400, 401);
             this.Name = "FrmAuthentification";
-            this.Text = "CommunityDevelopers2ISA";
+            this.Text = "FrmAuthentification";
             this.tlPanelAuthentification.ResumeLayout(false);
             this.plLoginPassword.ResumeLayout(false);
             this.gpAuthentification.ResumeLayout(false);

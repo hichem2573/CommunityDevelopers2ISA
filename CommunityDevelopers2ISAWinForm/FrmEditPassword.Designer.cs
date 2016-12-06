@@ -70,7 +70,7 @@
             this.grBoxNewPassword.Size = new System.Drawing.Size(316, 209);
             this.grBoxNewPassword.TabIndex = 1;
             this.grBoxNewPassword.TabStop = false;
-            this.grBoxNewPassword.Text = "New Password : ";
+            this.grBoxNewPassword.Text = "Nouveau Mot de Passe : ";
             // 
             // txtBoxConfirmPassword
             // 
@@ -98,9 +98,9 @@
             this.lblComfirmPassword.AutoSize = true;
             this.lblComfirmPassword.Location = new System.Drawing.Point(27, 148);
             this.lblComfirmPassword.Name = "lblComfirmPassword";
-            this.lblComfirmPassword.Size = new System.Drawing.Size(98, 13);
+            this.lblComfirmPassword.Size = new System.Drawing.Size(83, 13);
             this.lblComfirmPassword.TabIndex = 2;
-            this.lblComfirmPassword.Text = "Comfirm password :";
+            this.lblComfirmPassword.Text = "Comfirmer MPD:";
             // 
             // lblNewPassword
             // 
@@ -108,9 +108,9 @@
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Location = new System.Drawing.Point(27, 48);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(83, 13);
+            this.lblNewPassword.Size = new System.Drawing.Size(84, 13);
             this.lblNewPassword.TabIndex = 0;
-            this.lblNewPassword.Text = "New password :";
+            this.lblNewPassword.Text = "Nouveau MPD :";
             // 
             // pnlValidation
             // 
@@ -131,7 +131,7 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(96, 40);
             this.btAnnuler.TabIndex = 5;
-            this.btAnnuler.Text = "&Cancel";
+            this.btAnnuler.Text = "&Annuler";
             this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
@@ -145,7 +145,7 @@
             this.btValider.Name = "btValider";
             this.btValider.Size = new System.Drawing.Size(91, 40);
             this.btValider.TabIndex = 4;
-            this.btValider.Text = "&Validate";
+            this.btValider.Text = "&Valider";
             this.btValider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btValider.UseVisualStyleBackColor = true;
             this.btValider.Click += new System.EventHandler(this.btValider_Click);
@@ -161,7 +161,7 @@
             this.MaximumSize = new System.Drawing.Size(338, 340);
             this.MinimumSize = new System.Drawing.Size(328, 330);
             this.Name = "FrmEditPassword";
-            this.Text = "FrmEditPassword";
+            this.Text = "FrmModification MPD";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.grBoxNewPassword.ResumeLayout(false);
             this.grBoxNewPassword.PerformLayout();

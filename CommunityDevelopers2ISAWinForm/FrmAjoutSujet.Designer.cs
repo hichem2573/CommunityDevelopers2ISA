@@ -73,7 +73,7 @@
             this.grBoxTitreSujet.Size = new System.Drawing.Size(374, 80);
             this.grBoxTitreSujet.TabIndex = 0;
             this.grBoxTitreSujet.TabStop = false;
-            this.grBoxTitreSujet.Text = "Topic : ";
+            this.grBoxTitreSujet.Text = "Titre : ";
             // 
             // txtBoxTitreSujet
             // 
@@ -82,7 +82,7 @@
             this.txtBoxTitreSujet.Name = "txtBoxTitreSujet";
             this.txtBoxTitreSujet.Size = new System.Drawing.Size(368, 20);
             this.txtBoxTitreSujet.TabIndex = 0;
-            this.txtBoxTitreSujet.Text = "Add title";
+            this.txtBoxTitreSujet.Text = " Veuillez saisir votre titre";
             // 
             // grBoxDescSujet
             // 
@@ -93,7 +93,7 @@
             this.grBoxDescSujet.Size = new System.Drawing.Size(374, 149);
             this.grBoxDescSujet.TabIndex = 1;
             this.grBoxDescSujet.TabStop = false;
-            this.grBoxDescSujet.Text = "Description  of the Subject : ";
+            this.grBoxDescSujet.Text = "Description  du Sujet : ";
             // 
             // txtBoxDescSujet
             // 
@@ -125,7 +125,7 @@
             this.btValidation.Name = "btValidation";
             this.btValidation.Size = new System.Drawing.Size(131, 46);
             this.btValidation.TabIndex = 0;
-            this.btValidation.Text = "&Validate";
+            this.btValidation.Text = "&Valider";
             this.btValidation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btValidation.UseVisualStyleBackColor = true;
             this.btValidation.Click += new System.EventHandler(this.btValidation_Click);
@@ -140,7 +140,7 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(140, 46);
             this.btAnnuler.TabIndex = 1;
-            this.btAnnuler.Text = "&Cancel";
+            this.btAnnuler.Text = "&Annuler";
             this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);

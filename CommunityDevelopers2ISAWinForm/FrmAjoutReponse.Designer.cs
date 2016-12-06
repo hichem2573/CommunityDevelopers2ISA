@@ -68,7 +68,7 @@
             this.groupBox1.Size = new System.Drawing.Size(326, 169);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Text of the answer : ";
+            this.groupBox1.Text = "Texte de la réponse: ";
             // 
             // txtBoxReponse
             // 
@@ -100,7 +100,7 @@
             this.btAjoutReponse.Name = "btAjoutReponse";
             this.btAjoutReponse.Size = new System.Drawing.Size(139, 38);
             this.btAjoutReponse.TabIndex = 0;
-            this.btAjoutReponse.Text = "&Add Answer";
+            this.btAjoutReponse.Text = "&Ajouter la réponse";
             this.btAjoutReponse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAjoutReponse.UseVisualStyleBackColor = true;
             this.btAjoutReponse.Click += new System.EventHandler(this.btAjoutReponse_Click);
@@ -115,7 +115,8 @@
             this.btAnnuler.Name = "btAnnuler";
             this.btAnnuler.Size = new System.Drawing.Size(130, 38);
             this.btAnnuler.TabIndex = 1;
-            this.btAnnuler.Text = "&Cancel";
+            this.btAnnuler.Text = "&Annuler";
+            this.btAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAnnuler.UseVisualStyleBackColor = true;
             this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
             // 
