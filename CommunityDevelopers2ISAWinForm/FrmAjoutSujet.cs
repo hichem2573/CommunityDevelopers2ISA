@@ -35,7 +35,7 @@ namespace CommunityDevelopers2ISAWinForm
             {
                 txtBoxTitreSujet.Text = sujet.Titre;
                 txtBoxDescSujet.Text = sujet.Desc;
-                btValidation.Text = "Valider la modifi";
+                btValidation.Text = "Valider la modif";
             }
         }
 

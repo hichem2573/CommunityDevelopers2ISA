@@ -78,7 +78,22 @@ namespace CommunityDevelopers2ISAWinForm
             }
         }
 
-       
+
+        private void dataGridViewReponses_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int IndexCurrentRow = e.RowIndex;
+
+            DataGridViewRow row = dataGridViewReponses.Rows[IndexCurrentRow];
+            using (FrmReponse frmReponse = new FrmReponse())
+            {
+                frmReponse.txtBoxReponse.TEXT = row.Cells["Texte"].Value.ToString();
+                frmReponse.lbl
+
+                frmReponse.ShowDialog();
+            }
+
+        }
+
 
         private void btPosterReponse_Click(object sender, EventArgs e)
         {
@@ -311,9 +326,12 @@ namespace CommunityDevelopers2ISAWinForm
         #endregion
 
         #region "Sans Nom"
-   
+        //frmReponse.txtBoxReponse.Text = row.Cells["Texte"].Value.ToString();
+        //frmReponse.lblNomAuteur.Text += row.Cells["NomAuteur"].Value.ToString();
+        //frmReponse.lblDatePost.Text += row.Cells["Date"].Value.ToString();
 
         #endregion
+
 
     }
 }

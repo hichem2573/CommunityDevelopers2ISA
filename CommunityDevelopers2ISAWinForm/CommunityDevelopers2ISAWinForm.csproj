@@ -97,6 +97,12 @@
     <Compile Include="FrmForumMain.Designer.cs">
       <DependentUpon>FrmForumMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReponse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReponse.Designer.cs">
+      <DependentUpon>FrmReponse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjoutSujet.resx">
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmForumMain.resx">
       <DependentUpon>FrmForumMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReponse.resx">
+      <DependentUpon>FrmReponse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
