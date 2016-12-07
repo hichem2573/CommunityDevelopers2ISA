@@ -77,7 +77,7 @@
             this.tlPanelFrmForumMain.ColumnCount = 3;
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.33957F));
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.66042F));
-            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
             this.tlPanelFrmForumMain.Controls.Add(this.dataGridViewReponses, 1, 2);
             this.tlPanelFrmForumMain.Controls.Add(this.plAuthentification, 1, 3);
             this.tlPanelFrmForumMain.Controls.Add(this.tblPanelCategorie, 0, 0);
@@ -104,11 +104,13 @@
             this.dataGridViewReponses.AllowUserToResizeColumns = false;
             this.dataGridViewReponses.AllowUserToResizeRows = false;
             this.dataGridViewReponses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewReponses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewReponses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReponses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewReponses.Location = new System.Drawing.Point(239, 117);
+            this.dataGridViewReponses.Location = new System.Drawing.Point(238, 117);
             this.dataGridViewReponses.Name = "dataGridViewReponses";
-            this.dataGridViewReponses.Size = new System.Drawing.Size(591, 317);
+            this.dataGridViewReponses.ReadOnly = true;
+            this.dataGridViewReponses.Size = new System.Drawing.Size(590, 317);
             this.dataGridViewReponses.TabIndex = 0;
             this.dataGridViewReponses.SelectionChanged += new System.EventHandler(this.dataGridViewReponses_SelectionChanged);
             // 
@@ -118,9 +120,9 @@
             this.plAuthentification.Controls.Add(this.btEditPassword);
             this.plAuthentification.Controls.Add(this.btLogin);
             this.plAuthentification.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plAuthentification.Location = new System.Drawing.Point(239, 440);
+            this.plAuthentification.Location = new System.Drawing.Point(238, 440);
             this.plAuthentification.Name = "plAuthentification";
-            this.plAuthentification.Size = new System.Drawing.Size(591, 66);
+            this.plAuthentification.Size = new System.Drawing.Size(590, 66);
             this.plAuthentification.TabIndex = 2;
             // 
             // btLogout
@@ -160,7 +162,7 @@
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(119, 41);
             this.btLogin.TabIndex = 3;
-            this.btLogin.Text = "&Connecter";
+            this.btLogin.Text = "&Se Connecter";
             this.btLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
@@ -175,7 +177,7 @@
             this.tblPanelCategorie.Name = "tblPanelCategorie";
             this.tblPanelCategorie.RowCount = 1;
             this.tblPanelCategorie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPanelCategorie.Size = new System.Drawing.Size(230, 91);
+            this.tblPanelCategorie.Size = new System.Drawing.Size(229, 91);
             this.tblPanelCategorie.TabIndex = 4;
             // 
             // gpBoxCategorie
@@ -183,10 +185,10 @@
             this.gpBoxCategorie.Controls.Add(this.cbBoxCategorie);
             this.gpBoxCategorie.Location = new System.Drawing.Point(3, 3);
             this.gpBoxCategorie.Name = "gpBoxCategorie";
-            this.gpBoxCategorie.Size = new System.Drawing.Size(224, 85);
+            this.gpBoxCategorie.Size = new System.Drawing.Size(223, 85);
             this.gpBoxCategorie.TabIndex = 0;
             this.gpBoxCategorie.TabStop = false;
-            this.gpBoxCategorie.Text = "Categorie :";
+            this.gpBoxCategorie.Text = "Categories :";
             // 
             // cbBoxCategorie
             // 
@@ -195,7 +197,7 @@
             this.cbBoxCategorie.FormattingEnabled = true;
             this.cbBoxCategorie.Location = new System.Drawing.Point(3, 16);
             this.cbBoxCategorie.Name = "cbBoxCategorie";
-            this.cbBoxCategorie.Size = new System.Drawing.Size(218, 21);
+            this.cbBoxCategorie.Size = new System.Drawing.Size(217, 21);
             this.cbBoxCategorie.TabIndex = 0;
             this.cbBoxCategorie.SelectedIndexChanged += new System.EventHandler(this.cbBoxCategorie_SelectedIndexChanged);
             // 
@@ -205,11 +207,11 @@
             this.tblPanelAdministration.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblPanelAdministration.Controls.Add(this.gpBoxAdministration, 0, 0);
             this.tblPanelAdministration.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPanelAdministration.Location = new System.Drawing.Point(239, 3);
+            this.tblPanelAdministration.Location = new System.Drawing.Point(238, 3);
             this.tblPanelAdministration.Name = "tblPanelAdministration";
             this.tblPanelAdministration.RowCount = 1;
             this.tblPanelAdministration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPanelAdministration.Size = new System.Drawing.Size(591, 91);
+            this.tblPanelAdministration.Size = new System.Drawing.Size(590, 91);
             this.tblPanelAdministration.TabIndex = 5;
             // 
             // gpBoxAdministration
@@ -220,7 +222,7 @@
             this.gpBoxAdministration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxAdministration.Location = new System.Drawing.Point(3, 3);
             this.gpBoxAdministration.Name = "gpBoxAdministration";
-            this.gpBoxAdministration.Size = new System.Drawing.Size(585, 85);
+            this.gpBoxAdministration.Size = new System.Drawing.Size(584, 85);
             this.gpBoxAdministration.TabIndex = 0;
             this.gpBoxAdministration.TabStop = false;
             this.gpBoxAdministration.Text = "Administration :";
@@ -281,7 +283,7 @@
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.37855F));
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.62145F));
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tlPanelSujet.Size = new System.Drawing.Size(230, 317);
+            this.tlPanelSujet.Size = new System.Drawing.Size(229, 317);
             this.tlPanelSujet.TabIndex = 6;
             // 
             // gpBoxSujet
@@ -290,7 +292,7 @@
             this.gpBoxSujet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxSujet.Location = new System.Drawing.Point(3, 3);
             this.gpBoxSujet.Name = "gpBoxSujet";
-            this.gpBoxSujet.Size = new System.Drawing.Size(224, 100);
+            this.gpBoxSujet.Size = new System.Drawing.Size(223, 100);
             this.gpBoxSujet.TabIndex = 0;
             this.gpBoxSujet.TabStop = false;
             this.gpBoxSujet.Text = "Sujets :";
@@ -302,7 +304,7 @@
             this.cbBoxSujet.FormattingEnabled = true;
             this.cbBoxSujet.Location = new System.Drawing.Point(3, 16);
             this.cbBoxSujet.Name = "cbBoxSujet";
-            this.cbBoxSujet.Size = new System.Drawing.Size(218, 21);
+            this.cbBoxSujet.Size = new System.Drawing.Size(217, 21);
             this.cbBoxSujet.TabIndex = 1;
             this.cbBoxSujet.SelectedIndexChanged += new System.EventHandler(this.cbBoxSujet_SelectedIndexChanged);
             // 
@@ -314,7 +316,7 @@
             this.lblPasDeSujet.ForeColor = System.Drawing.Color.White;
             this.lblPasDeSujet.Location = new System.Drawing.Point(3, 263);
             this.lblPasDeSujet.Name = "lblPasDeSujet";
-            this.lblPasDeSujet.Size = new System.Drawing.Size(224, 54);
+            this.lblPasDeSujet.Size = new System.Drawing.Size(223, 54);
             this.lblPasDeSujet.TabIndex = 1;
             this.lblPasDeSujet.Text = "Désolé ! La Categorie, ne contient aucun sujet";
             this.lblPasDeSujet.Visible = false;
@@ -325,7 +327,7 @@
             this.gpBoxDescSujet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxDescSujet.Location = new System.Drawing.Point(3, 109);
             this.gpBoxDescSujet.Name = "gpBoxDescSujet";
-            this.gpBoxDescSujet.Size = new System.Drawing.Size(224, 151);
+            this.gpBoxDescSujet.Size = new System.Drawing.Size(223, 151);
             this.gpBoxDescSujet.TabIndex = 2;
             this.gpBoxDescSujet.TabStop = false;
             this.gpBoxDescSujet.Text = "Description Sujet ;";
@@ -338,16 +340,16 @@
             this.txtBoxDescSujet.Multiline = true;
             this.txtBoxDescSujet.Name = "txtBoxDescSujet";
             this.txtBoxDescSujet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxDescSujet.Size = new System.Drawing.Size(218, 132);
+            this.txtBoxDescSujet.Size = new System.Drawing.Size(217, 132);
             this.txtBoxDescSujet.TabIndex = 2;
             // 
             // plAddSujetAddReponse
             // 
             this.plAddSujetAddReponse.Controls.Add(this.gpBoxAjoutSujetReponse);
             this.plAddSujetAddReponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plAddSujetAddReponse.Location = new System.Drawing.Point(836, 117);
+            this.plAddSujetAddReponse.Location = new System.Drawing.Point(834, 117);
             this.plAddSujetAddReponse.Name = "plAddSujetAddReponse";
-            this.plAddSujetAddReponse.Size = new System.Drawing.Size(228, 317);
+            this.plAddSujetAddReponse.Size = new System.Drawing.Size(230, 317);
             this.plAddSujetAddReponse.TabIndex = 7;
             // 
             // gpBoxAjoutSujetReponse
@@ -357,17 +359,17 @@
             this.gpBoxAjoutSujetReponse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxAjoutSujetReponse.Location = new System.Drawing.Point(0, 0);
             this.gpBoxAjoutSujetReponse.Name = "gpBoxAjoutSujetReponse";
-            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(228, 317);
+            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(230, 317);
             this.gpBoxAjoutSujetReponse.TabIndex = 0;
             this.gpBoxAjoutSujetReponse.TabStop = false;
-            this.gpBoxAjoutSujetReponse.Text = "Add subject, Add answer :";
+            this.gpBoxAjoutSujetReponse.Text = "Ajout Sujet ou réponse";
             // 
             // btPosterReponse
             // 
             this.btPosterReponse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btPosterReponse.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.ajouter_un_message;
             this.btPosterReponse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPosterReponse.Location = new System.Drawing.Point(48, 191);
+            this.btPosterReponse.Location = new System.Drawing.Point(49, 191);
             this.btPosterReponse.Name = "btPosterReponse";
             this.btPosterReponse.Size = new System.Drawing.Size(135, 47);
             this.btPosterReponse.TabIndex = 8;
@@ -381,7 +383,7 @@
             this.btAjouterSujet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAjouterSujet.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.ajouter;
             this.btAjouterSujet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAjouterSujet.Location = new System.Drawing.Point(48, 70);
+            this.btAjouterSujet.Location = new System.Drawing.Point(49, 70);
             this.btAjouterSujet.Name = "btAjouterSujet";
             this.btAjouterSujet.Size = new System.Drawing.Size(135, 47);
             this.btAjouterSujet.TabIndex = 7;
@@ -394,9 +396,9 @@
             // 
             this.pnlQuitter.Controls.Add(this.btQuitter);
             this.pnlQuitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlQuitter.Location = new System.Drawing.Point(836, 440);
+            this.pnlQuitter.Location = new System.Drawing.Point(834, 440);
             this.pnlQuitter.Name = "pnlQuitter";
-            this.pnlQuitter.Size = new System.Drawing.Size(228, 66);
+            this.pnlQuitter.Size = new System.Drawing.Size(230, 66);
             this.pnlQuitter.TabIndex = 8;
             // 
             // btQuitter
@@ -404,7 +406,7 @@
             this.btQuitter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btQuitter.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.quitter;
             this.btQuitter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQuitter.Location = new System.Drawing.Point(61, 16);
+            this.btQuitter.Location = new System.Drawing.Point(62, 16);
             this.btQuitter.Name = "btQuitter";
             this.btQuitter.Size = new System.Drawing.Size(115, 41);
             this.btQuitter.TabIndex = 4;
@@ -418,7 +420,7 @@
             this.lblPasDeReponse.AutoSize = true;
             this.lblPasDeReponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasDeReponse.ForeColor = System.Drawing.Color.White;
-            this.lblPasDeReponse.Location = new System.Drawing.Point(239, 97);
+            this.lblPasDeReponse.Location = new System.Drawing.Point(238, 97);
             this.lblPasDeReponse.Name = "lblPasDeReponse";
             this.lblPasDeReponse.Size = new System.Drawing.Size(443, 17);
             this.lblPasDeReponse.TabIndex = 9;

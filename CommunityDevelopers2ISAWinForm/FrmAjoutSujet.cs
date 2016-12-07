@@ -29,13 +29,13 @@ namespace CommunityDevelopers2ISAWinForm
                 
                 txtBoxTitreSujet.Text = string.Empty;
                 txtBoxDescSujet.Text = string.Empty;
-                btValidation.Text = "Validate add";
+                btValidation.Text = "Valider l'ajout";
             }
             else
             {
                 txtBoxTitreSujet.Text = sujet.Titre;
                 txtBoxDescSujet.Text = sujet.Desc;
-                btValidation.Text = "Validate change";
+                btValidation.Text = "Valider la modifi";
             }
         }
 
