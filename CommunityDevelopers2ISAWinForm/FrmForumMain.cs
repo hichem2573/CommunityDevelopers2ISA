@@ -81,14 +81,14 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void dataGridViewReponses_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int IndexCurrentRow = e.RowIndex;
+            int CurrentRow = e.RowIndex;
 
-            DataGridViewRow row = dataGridViewReponses.Rows[IndexCurrentRow];
+            DataGridViewRow row = dataGridViewReponses.Rows[CurrentRow];
             using (FrmReponse frmReponse = new FrmReponse())
             {
-                frmReponse.txtBoxReponse.TEXT = row.Cells["Texte"].Value.ToString();
-                frmReponse.lbl
-
+                frmReponse.txtBoxReponse.Text = row.Cells["Texte"].Value.ToString();
+                frmReponse.lblAuteur.Text += row.Cells["Auteur"].Value.ToString();
+                frmReponse.lblDatecreation.Text += row.Cells["Date"].Value.ToString();
                 frmReponse.ShowDialog();
             }
 
@@ -326,9 +326,7 @@ namespace CommunityDevelopers2ISAWinForm
         #endregion
 
         #region "Sans Nom"
-        //frmReponse.txtBoxReponse.Text = row.Cells["Texte"].Value.ToString();
-        //frmReponse.lblNomAuteur.Text += row.Cells["NomAuteur"].Value.ToString();
-        //frmReponse.lblDatePost.Text += row.Cells["Date"].Value.ToString();
+       
 
         #endregion
 

@@ -28,101 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbLPReponse = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tLPReponse = new System.Windows.Forms.TableLayoutPanel();
             this.txtBoxReponse = new System.Windows.Forms.TextBox();
+            this.tLP = new System.Windows.Forms.TableLayoutPanel();
             this.lblAuteur = new System.Windows.Forms.Label();
-            this.lblDateCreation = new System.Windows.Forms.Label();
-            this.tbLPReponse.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.lblDatecreation = new System.Windows.Forms.Label();
+            this.tLPReponse.SuspendLayout();
+            this.tLP.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbLPReponse
+            // tLPReponse
             // 
-            this.tbLPReponse.ColumnCount = 3;
-            this.tbLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 373F));
-            this.tbLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tbLPReponse.Controls.Add(this.tableLayoutPanel1, 1, 2);
-            this.tbLPReponse.Controls.Add(this.txtBoxReponse, 1, 1);
-            this.tbLPReponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbLPReponse.Location = new System.Drawing.Point(0, 0);
-            this.tbLPReponse.Name = "tbLPReponse";
-            this.tbLPReponse.RowCount = 4;
-            this.tbLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.80315F));
-            this.tbLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 299F));
-            this.tbLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tbLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tbLPReponse.Size = new System.Drawing.Size(403, 353);
-            this.tbLPReponse.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblDateCreation, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblAuteur, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 315);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(367, 26);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tLPReponse.ColumnCount = 3;
+            this.tLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.027933F));
+            this.tLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.97207F));
+            this.tLPReponse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tLPReponse.Controls.Add(this.txtBoxReponse, 1, 1);
+            this.tLPReponse.Controls.Add(this.tLP, 1, 0);
+            this.tLPReponse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tLPReponse.Location = new System.Drawing.Point(0, 0);
+            this.tLPReponse.Name = "tLPReponse";
+            this.tLPReponse.RowCount = 3;
+            this.tLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.46988F));
+            this.tLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.53012F));
+            this.tLPReponse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tLPReponse.Size = new System.Drawing.Size(398, 353);
+            this.tLPReponse.TabIndex = 0;
             // 
             // txtBoxReponse
             // 
             this.txtBoxReponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxReponse.Location = new System.Drawing.Point(17, 16);
+            this.txtBoxReponse.Location = new System.Drawing.Point(22, 61);
             this.txtBoxReponse.Multiline = true;
             this.txtBoxReponse.Name = "txtBoxReponse";
-            this.txtBoxReponse.Size = new System.Drawing.Size(367, 293);
-            this.txtBoxReponse.TabIndex = 1;
+            this.txtBoxReponse.Size = new System.Drawing.Size(352, 268);
+            this.txtBoxReponse.TabIndex = 0;
+            // 
+            // tLP
+            // 
+            this.tLP.ColumnCount = 2;
+            this.tLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tLP.Controls.Add(this.lblDatecreation, 1, 0);
+            this.tLP.Controls.Add(this.lblAuteur, 0, 0);
+            this.tLP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tLP.Location = new System.Drawing.Point(22, 3);
+            this.tLP.Name = "tLP";
+            this.tLP.RowCount = 1;
+            this.tLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tLP.Size = new System.Drawing.Size(352, 52);
+            this.tLP.TabIndex = 1;
             // 
             // lblAuteur
             // 
             this.lblAuteur.AutoSize = true;
-            this.lblAuteur.Location = new System.Drawing.Point(3, 6);
-            this.lblAuteur.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.lblAuteur.Location = new System.Drawing.Point(3, 19);
+            this.lblAuteur.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
             this.lblAuteur.Name = "lblAuteur";
-            this.lblAuteur.Size = new System.Drawing.Size(44, 13);
+            this.lblAuteur.Size = new System.Drawing.Size(59, 13);
             this.lblAuteur.TabIndex = 0;
-            this.lblAuteur.Text = "Auteur :";
+            this.lblAuteur.Text = "Créer par : ";
             // 
-            // lblDateCreation
+            // lblDatecreation
             // 
-            this.lblDateCreation.AutoSize = true;
-            this.lblDateCreation.Location = new System.Drawing.Point(191, 6);
-            this.lblDateCreation.Margin = new System.Windows.Forms.Padding(8, 6, 3, 0);
-            this.lblDateCreation.Name = "lblDateCreation";
-            this.lblDateCreation.Size = new System.Drawing.Size(74, 13);
-            this.lblDateCreation.TabIndex = 1;
-            this.lblDateCreation.Text = "Date création:";
+            this.lblDatecreation.AutoSize = true;
+            this.lblDatecreation.Location = new System.Drawing.Point(179, 19);
+            this.lblDatecreation.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
+            this.lblDatecreation.Name = "lblDatecreation";
+            this.lblDatecreation.Size = new System.Drawing.Size(80, 13);
+            this.lblDatecreation.TabIndex = 1;
+            this.lblDatecreation.Text = "Date création : ";
             // 
             // FrmReponse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(403, 353);
-            this.Controls.Add(this.tbLPReponse);
+            this.ClientSize = new System.Drawing.Size(398, 353);
+            this.Controls.Add(this.tLPReponse);
             this.Name = "FrmReponse";
             this.Text = "FrmReponse";
-            this.tbLPReponse.ResumeLayout(false);
-            this.tbLPReponse.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tLPReponse.ResumeLayout(false);
+            this.tLPReponse.PerformLayout();
+            this.tLP.ResumeLayout(false);
+            this.tLP.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tbLPReponse;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txtBoxReponse;
-        private System.Windows.Forms.Label lblDateCreation;
-        private System.Windows.Forms.Label lblAuteur;
+        private System.Windows.Forms.TableLayoutPanel tLPReponse;
+        internal System.Windows.Forms.TextBox txtBoxReponse;
+        private System.Windows.Forms.TableLayoutPanel tLP;
+        internal System.Windows.Forms.Label lblAuteur;
+        internal System.Windows.Forms.Label lblDatecreation;
     }
 }
