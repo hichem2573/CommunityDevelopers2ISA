@@ -18,6 +18,7 @@ namespace CommunityDevelopers2ISAWinForm
         public FrmForumMain()
         {
             InitializeComponent();
+            dataGridViewReponses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         #region "Load"
@@ -93,6 +94,8 @@ namespace CommunityDevelopers2ISAWinForm
             }
 
         }
+
+
 
 
         private void btPosterReponse_Click(object sender, EventArgs e)
@@ -323,13 +326,10 @@ namespace CommunityDevelopers2ISAWinForm
             btDeleteSujet.Enabled = false;
         }
 
+
+
         #endregion
 
-        #region "Sans Nom"
        
-
-        #endregion
-
-
     }
 }

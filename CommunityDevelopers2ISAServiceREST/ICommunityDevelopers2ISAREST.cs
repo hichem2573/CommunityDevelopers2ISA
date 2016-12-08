@@ -1,4 +1,4 @@
-﻿using DALWinPhone;
+﻿using CommunityDevelopers2ISADAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +11,22 @@ namespace CommunityDevelopers2ISAServiceREST
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IService1" à la fois dans le code et le fichier de configuration.
     [ServiceContract]
-    public interface IDALWinPhone
+    public interface ICommunityDevelopers2ISADAL
     {
         //TODO
         [OperationContract]
-        [WebGet(UriTemplate = "DalSWRCategorie")]
-        List<DalSWRCategorie> GetAllCategories();
+        [WebGet(UriTemplate = "Categorie")]
+        List<Categorie> GetAllCategories();
         
 
         [OperationContract]
-        [WebGet(UriTemplate = "SujetDAL/{idcategorie}")]
-        List<DalWSRSujet> GetSujetsByCategorieID(int idcategorie);
+        [WebGet(UriTemplate = "Sujet/{idcategorie}")]
+        List<Sujet> GetSujetsByCategorieID(int idcategorie);
 
         [OperationContract]
-        [WebGet(UriTemplate = "ReponseDAL/{idsujet}")]
+        [WebGet(UriTemplate = "Reponse/{idsujet}")]
 
-        List<DalWSRReponse> GetRecentAnswersBySujet(int idsujet);
+        List<Reponse> GetRecentAnswersBySujet(int idsujet);
         // TODO: ajoutez vos opérations de service ici
     }  
 }
