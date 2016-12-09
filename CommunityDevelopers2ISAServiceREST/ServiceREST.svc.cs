@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using CommunityDevelopers2ISADAL;
+using CommunityDevelopers2ISADLL;
 
 namespace CommunityDevelopers2ISAServiceREST
 {
@@ -13,21 +14,45 @@ namespace CommunityDevelopers2ISAServiceREST
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class ServiceREST : ICommunityDevelopers2ISADAL
     {
-
-        public List<Reponse> GetRecentAnswersBySujet(int idsujet)
+        public List<Categorie> GetAllCategories()
         {
-            throw new NotImplementedException();
+            return Outils.GetAllCategories();
         }
 
-
-        List<Categorie> ICommunityDevelopers2ISADAL.GetAllCategories()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idsujet"></param>
+        /// <returns></returns>
+        public List<Reponse> GetAllReponseBySujet(string idsujet)
         {
-            throw new NotImplementedException();
+            int res; 
+
+            if (int.TryParse(idsujet , out res))
+            {
+                return Outils.GetAllReponseBySujet(res);
+            }
+            else
+            {
+                return null; 
+            }
+
         }
 
-        List<Sujet> ICommunityDevelopers2ISADAL.GetSujetsByCategorieID(int idcategorie)
+        public List<Sujet> GetSujetsByCategorieID(string idcategorie)
         {
-            throw new NotImplementedException();
+            int res;
+
+            if (int.TryParse(idcategorie, out res))
+            {
+                return Outils.GetSujetsByCategorieID(res);
+            }
+            else
+            {
+                return null; 
+            }
         }
     }
+
+
 }

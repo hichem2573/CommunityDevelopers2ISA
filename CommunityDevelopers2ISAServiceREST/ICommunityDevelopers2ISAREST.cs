@@ -21,13 +21,13 @@ namespace CommunityDevelopers2ISAServiceREST
 
         [OperationContract]
         [WebGet(UriTemplate = "Sujet/{idcategorie}")]
-        List<Sujet> GetSujetsByCategorieID(int idcategorie);
+        List<Sujet> GetSujetsByCategorieID(string idcategorie);
 
         [OperationContract]
         [WebGet(UriTemplate = "Reponse/{idsujet}")]
 
-        List<Reponse> GetRecentAnswersBySujet(int idsujet);
-        // TODO: ajoutez vos opérations de service ici
+        List<Reponse> GetAllReponseBySujet(string idsujet);
+        
     }  
 }
 

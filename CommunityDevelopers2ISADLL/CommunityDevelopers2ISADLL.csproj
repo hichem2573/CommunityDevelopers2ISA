@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categorie.cs" />
     <Compile Include="Outils.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reponse.cs" />
-    <Compile Include="Sujet.cs" />
-    <Compile Include="Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj">
+      <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
+      <Name>CommunityDevelopers2ISADAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CommunityDevelopers2ISADAO\CommunityDevelopers2ISADAO.csproj">
       <Project>{4193D4FB-6503-4316-B092-60C4E4F73248}</Project>
       <Name>CommunityDevelopers2ISADAO</Name>
