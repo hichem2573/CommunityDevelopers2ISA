@@ -13,7 +13,7 @@ namespace ConsumeWebServiceRest
 {
     public class ConsumeWSR
     {
-        private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/RESTService.svc/Categorie";
+        private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/ServiceREST.svc/";
         private List<Categorie> _rubriques = new List<Categorie>();
 
         public List<Categorie> Rubriques
