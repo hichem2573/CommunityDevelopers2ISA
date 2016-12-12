@@ -17,15 +17,15 @@ namespace CommunityDeveloppers2ISAWinPhone
 
         #region "Constructeur"
 
-        internal ViewModelCategorie (Categorie categorie, ConsumeWSR cdDAL)
+        internal ViewModelCategorie(Categorie categorie, ConsumeWSR cdDAL)
         {
             _idCategorie = categorie.Id;
             _Libelle = categorie.Libelle;
             _cdDAL = cdDAL;
-
+        }
             #endregion
 
-            #region "P¨ropriétés Bindables"
+        #region "Propriétés Bindables"
 
         public int IdCategorie
         {

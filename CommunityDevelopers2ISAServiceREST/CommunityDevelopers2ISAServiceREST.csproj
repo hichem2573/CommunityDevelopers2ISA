@@ -120,10 +120,6 @@
       <Project>{211fcb08-fc13-4f0d-aabf-c1d81bda0625}</Project>
       <Name>CommunityDevelopers2ISADAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommunityDevelopers2ISADAO\CommunityDevelopers2ISADAO.csproj">
-      <Project>{4193d4fb-6503-4316-b092-60c4e4f73248}</Project>
-      <Name>CommunityDevelopers2ISADAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj">
       <Project>{EA7D37F8-940A-43EA-BAD6-B42F111625A8}</Project>
       <Name>CommunityDevelopers2ISADLL</Name>

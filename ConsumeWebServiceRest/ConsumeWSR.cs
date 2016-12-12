@@ -57,7 +57,7 @@ namespace ConsumeWebServiceRest
             {
                 if (s.Length > 0)
                 {
-                    return _rubriques = (List<Categorie>)new DataContractSerializer(typeof(List<Categorie>)).ReadObject(s);
+                    return _categories = (List<Categorie>)new DataContractSerializer(typeof(List<Categorie>)).ReadObject(s);
                 }
                 return null;
             }
