@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDeveloppers2ISAWin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeWebServiceRest", "ConsumeWebServiceRest\ConsumeWebServiceRest.csproj", "{419930F1-BEA8-438B-A595-A0786C19B260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISADAL", "CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj", "{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAMetiers", "CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj", "{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

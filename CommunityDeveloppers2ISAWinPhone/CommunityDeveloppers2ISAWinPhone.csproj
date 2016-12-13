@@ -80,9 +80,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj">
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj">
       <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
-      <Name>CommunityDevelopers2ISADAL</Name>
+      <Name>CommunityDevelopers2ISAMetiers</Name>
     </ProjectReference>
     <ProjectReference Include="..\ConsumeWebServiceRest\ConsumeWebServiceRest.csproj">
       <Project>{419930F1-BEA8-438B-A595-A0786C19B260}</Project>

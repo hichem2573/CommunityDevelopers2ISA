@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace CommunityDevelopers2ISADAL
+namespace CommunityDevelopers2ISAMetiers
 {
     [DataContract]
     public class Categorie

@@ -189,9 +189,9 @@
     <None Include="Resources\reseau-recevoir-transmettre-icone-8164-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj">
-      <Project>{211fcb08-fc13-4f0d-aabf-c1d81bda0625}</Project>
-      <Name>CommunityDevelopers2ISADAL</Name>
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj">
+      <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
+      <Name>CommunityDevelopers2ISAMetiers</Name>
     </ProjectReference>
     <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj">
       <Project>{EA7D37F8-940A-43EA-BAD6-B42F111625A8}</Project>

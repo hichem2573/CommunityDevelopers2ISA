@@ -8,8 +8,8 @@
     <ProjectGuid>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommunityDevelopers2ISADAL</RootNamespace>
-    <AssemblyName>CommunityDevelopers2ISADAL</AssemblyName>
+    <RootNamespace>CommunityDevelopers2ISAMetiers</RootNamespace>
+    <AssemblyName>CommunityDevelopers2ISAMetiers</AssemblyName>
     <DefaultLanguage>fr-FR</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

@@ -1,4 +1,4 @@
-﻿using CommunityDevelopers2ISADAL;
+﻿using CommunityDevelopers2ISAMetiers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace CommunityDevelopers2ISAServiceREST
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IService1" à la fois dans le code et le fichier de configuration.
     [ServiceContract]
-    public interface ICommunityDevelopers2ISADAL
+    public interface ICommunityDevelopers2ISAREST
     {
         //TODO
         [OperationContract]

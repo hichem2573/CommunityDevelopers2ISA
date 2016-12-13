@@ -50,9 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj">
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj">
       <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
-      <Name>CommunityDevelopers2ISADAL</Name>
+      <Name>CommunityDevelopers2ISAMetiers</Name>
     </ProjectReference>
     <ProjectReference Include="..\CommunityDevelopers2ISADAO\CommunityDevelopers2ISADAO.csproj">
       <Project>{4193D4FB-6503-4316-B092-60C4E4F73248}</Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Phone.UI.Input;
@@ -58,5 +59,6 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             await _monitorViewModel.GetCategorie();
         }
+
     }
- }
+}

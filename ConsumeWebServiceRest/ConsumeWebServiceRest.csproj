@@ -43,9 +43,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISADAL.csproj">
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj">
       <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
-      <Name>CommunityDevelopers2ISADAL</Name>
+      <Name>CommunityDevelopers2ISAMetiers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
