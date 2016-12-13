@@ -7,8 +7,8 @@
     <ProjectGuid>{EA7D37F8-940A-43EA-BAD6-B42F111625A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommunityDevelopers2ISADLL</RootNamespace>
-    <AssemblyName>CommunityDevelopers2ISADLL</AssemblyName>
+    <RootNamespace>CommunityDevelopers2ISABLL</RootNamespace>
+    <AssemblyName>CommunityDevelopers2ISABLL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

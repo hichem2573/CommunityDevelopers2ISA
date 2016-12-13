@@ -60,5 +60,6 @@ namespace CommunityDeveloppers2ISAWinPhone
             await _monitorViewModel.GetCategorie();
         }
 
+
     }
 }

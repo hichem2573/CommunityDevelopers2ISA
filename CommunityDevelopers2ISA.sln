@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISADLL", "CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj", "{EA7D37F8-940A-43EA-BAD6-B42F111625A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISABLL", "CommunityDevelopers2ISADLL\CommunityDevelopers2ISABLL.csproj", "{EA7D37F8-940A-43EA-BAD6-B42F111625A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISADAO", "CommunityDevelopers2ISADAO\CommunityDevelopers2ISADAO.csproj", "{4193D4FB-6503-4316-B092-60C4E4F73248}"
 EndProject

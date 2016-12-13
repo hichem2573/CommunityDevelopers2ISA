@@ -193,9 +193,9 @@
       <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
       <Name>CommunityDevelopers2ISAMetiers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISADLL.csproj">
+    <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISABLL.csproj">
       <Project>{EA7D37F8-940A-43EA-BAD6-B42F111625A8}</Project>
-      <Name>CommunityDevelopers2ISADLL</Name>
+      <Name>CommunityDevelopers2ISABLL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
