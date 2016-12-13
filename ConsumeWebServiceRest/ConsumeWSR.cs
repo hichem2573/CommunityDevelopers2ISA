@@ -14,7 +14,9 @@ namespace ConsumeWebServiceRest
     public class ConsumeWSR
     {
         private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/ServiceREST.svc/Categorie";
+        
         private List<Categorie> _categories = new List<Categorie>();
+        
 
         public List<Categorie> Categories
         {
@@ -49,8 +51,6 @@ namespace ConsumeWebServiceRest
             }
         }
 
-
-
         private List<Categorie> DeserializeHttpContent(HttpContent content)
         {
             using (Stream s = content.ReadAsStreamAsync().Result)
@@ -62,5 +62,8 @@ namespace ConsumeWebServiceRest
                 return null;
             }
         }
+
+
+
     }
 }
