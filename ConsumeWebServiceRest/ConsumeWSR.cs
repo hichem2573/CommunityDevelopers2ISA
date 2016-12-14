@@ -14,8 +14,11 @@ namespace ConsumeWebServiceRest
     public class ConsumeWSR
     {
         private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/ServiceREST.svc/Categorie";
-        
+        private const string ADR_GET_SUJET = "http://user11.isa.org/ServiceREST.svn/Sujet/IdCategorie";
+        private const string ADR_GET_REPONSE = "http://user11.2isa.org/ServiceREST.svn/Reponse/Idsujet";
         private List<Categorie> _categories = new List<Categorie>();
+        private List<Sujet> _sujets = new List<Sujet>();
+        private List<Reponse> _reponses = new List<Reponse>();
         
 
         public List<Categorie> Categories
@@ -63,7 +66,82 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        public List<Sujet> sujets
+        {
+            get { return _sujets; }
+        }
+
+        public async Task<List<Sujet>> getSujet()
+        {
+            using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
+            {
+                // Permet de supprimer la mise en cache. En WindowsPhone, deux requêtes successives identiques retournent le résultat de la première 
+                // qui a été mis en cache
+                client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
+
+                // Appel du service Rest (en asynchrone)
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET, CancellationToken.None))
+                {
+                    if (wcfResponse.IsSuccessStatusCode)
+                    {
+                        // Désérialisation de la réponse du service
+                        return DeserializeHttpContentSujet(wcfResponse.Content);
+                    }
+
+                }
+                return null;
+            }
+        }
+
+        private List<Sujet> DeserializeHttpContentSujet(HttpContent content)
+        {
+            using (Stream s = content.ReadAsStreamAsync().Result)
+            {
+                if (s.Length > 0)
+                {
+                    return _sujets = (List<Sujet>)new DataContractSerializer(typeof(List<Sujet>)).ReadObject(s);
+                }
+                return null;
+            }
+        }
 
 
+        public List<Reponse> reponses
+        {
+            get { return _reponses; }
+        }
+        public async Task<List<Reponse>> getReponse()
+        {
+            using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
+            {
+                // Permet de supprimer la mise en cache. En WindowsPhone, deux requêtes successives identiques retournent le résultat de la première 
+                // qui a été mis en cache
+                client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
+
+                // Appel du service Rest (en asynchrone)
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET, CancellationToken.None))
+                {
+                    if (wcfResponse.IsSuccessStatusCode)
+                    {
+                        // Désérialisation de la réponse du service
+                        return DeserializeHttpContentReponse(wcfResponse.Content);
+                    }
+
+                }
+                return null;
+            }
+        }
+
+        private List<Reponse> DeserializeHttpContentReponse(HttpContent content)
+        {
+            using (Stream s = content.ReadAsStreamAsync().Result)
+            {
+                if (s.Length > 0)
+                {
+                    return _reponses = (List<Reponse>)new DataContractSerializer(typeof(List<Reponse>)).ReadObject(s);
+                }
+                return null;
+            }
+        }
     }
 }

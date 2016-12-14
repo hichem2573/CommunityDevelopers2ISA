@@ -10,8 +10,8 @@ using CommunityDevelopers2ISADLL;
 
 namespace CommunityDevelopers2ISAServiceREST
 {
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" dans le code, le fichier svc et le fichier de configuration.
-    // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
+    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "ServiceREST" dans le code, le fichier svc et le fichier de configuration.
+    // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou ServiceREST.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class ServiceREST : ICommunityDevelopers2ISAREST
     {
         public List<Categorie> GetAllCategories()

@@ -20,6 +20,7 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             _cdDAL = new ConsumeWSR();
             _colViewModelCategorie = new ObservableCollection<ViewModelCategorie>();
+           
         }
 
         #region "Propriétés Bindables"
@@ -28,6 +29,8 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             get { return new ReadOnlyObservableCollection<ViewModelCategorie>(_colViewModelCategorie); }
         }
+
+
 
         #endregion
 
@@ -41,6 +44,7 @@ namespace CommunityDeveloppers2ISAWinPhone
 
         private void MAJ_Categories(List<Categorie> categories)
         {
+            _colViewModelCategorie.Clear();
             foreach(Categorie categorie in categories)
             {
                 ViewModelCategorie categorieVM = new ViewModelCategorie(categorie, _cdDAL);

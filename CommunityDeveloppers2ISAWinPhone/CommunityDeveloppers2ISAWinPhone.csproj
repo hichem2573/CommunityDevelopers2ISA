@@ -96,6 +96,7 @@
     <Compile Include="MVVM\ViewModels\MonitorViewModel.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelBase.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelCategorie.cs" />
+    <Compile Include="MVVM\ViewModels\ViewModelReponse.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelSujet.cs" />
     <Compile Include="MVVM\Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

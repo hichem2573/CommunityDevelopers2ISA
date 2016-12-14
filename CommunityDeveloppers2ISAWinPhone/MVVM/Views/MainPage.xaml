@@ -22,7 +22,7 @@
             
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" HorizontalAlignment="Center" Content="Choisissez votre catégorie" Click="btClick"/>
+        <Button x:Name="btCategorie" Grid.Row="0" HorizontalAlignment="Center" Content="Choisissez votre catégorie" Click="btCategorie_Click"/>
 
         <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Categorie}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
@@ -37,10 +37,10 @@
             </ListView.ItemContainerTransitions>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Click="ListView_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="22" Text="{Binding Libelle}" VerticalAlignment="Center"/>
+                                <TextBlock FontSize="22" Text="{Binding Libelle}" VerticalAlignment="Center" />
                             </StackPanel>
                         </Button.Content>
                     </Button>

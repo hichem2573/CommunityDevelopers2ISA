@@ -55,11 +55,17 @@ namespace CommunityDeveloppers2ISAWinPhone
             e.Handled = true;
         }
 
-        private async void btClick(object sender, RoutedEventArgs e)
+        private async void btCategorie_Click(object sender, RoutedEventArgs e)
         {
+            btCategorie.Visibility = Visibility.Collapsed;
             await _monitorViewModel.GetCategorie();
+            btCategorie.Visibility = Visibility.Visible;
         }
 
-
+        private void ListView_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModelCategorie ViewModelcategorie = (ViewModelCategorie)((Button)sender).DataContext;
+            Frame.Navigate(typeof(SujetPage), ViewModelcategorie);
+        }
     }
 }

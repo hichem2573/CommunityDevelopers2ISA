@@ -2,6 +2,7 @@
 using ConsumeWebServiceRest;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace CommunityDeveloppers2ISAWinPhone
         private int _idCategorie;
         private string _Libelle;
 
+        private ObservableCollection<ViewModelSujet> _colViewModelSujets;
+        
+
         #region "Constructeur"
 
         internal ViewModelCategorie(Categorie categorie, ConsumeWSR cdDAL)
@@ -22,6 +26,8 @@ namespace CommunityDeveloppers2ISAWinPhone
             _idCategorie = categorie.Id;
             _Libelle = categorie.Libelle;
             _cdDAL = cdDAL;
+            _colViewModelSujets = new ObservableCollection<ViewModelSujet>();
+
         }
             #endregion
 
@@ -46,6 +52,11 @@ namespace CommunityDeveloppers2ISAWinPhone
                 RaisePropertyChanged();
             }
         }
+        #endregion
+        public ReadOnlyObservableCollection<ViewModelSujet> Sujet
+        {
+            get { return new ReadOnlyObservableCollection<ViewModelSujet>(_colViewModelSujets); }
+        }
 
         #region "Méthodes"
 
@@ -53,8 +64,26 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             return Libelle;
         }
-        #endregion
 
+        public async Task GetSujet()
+        {
+            List<Sujet> sujets = await _cdDAL.getSujet();
+            MAJ_Sujets(sujets);
+        }
+
+        private void MAJ_Sujets(List<Sujet> sujets)
+        {
+            _colViewModelSujets.Clear();
+            foreach (Sujet sujet in sujets)
+            {
+                ViewModelSujet sujetVM = new ViewModelSujet(sujet, _cdDAL);
+
+                if (!_colViewModelSujets.Contains(sujetVM))
+                {
+                    _colViewModelSujets.Add(sujetVM);
+                }
+            }
+        }
         #endregion
     }
 }

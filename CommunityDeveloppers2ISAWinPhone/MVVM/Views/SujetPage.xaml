@@ -8,7 +8,48 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+     <!--<Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal">
+            <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" Click="mnuSynchro_Click" />
+            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="Cancel"  Label="Quit" Margin="55,0,0,0" Click="mnuQuitter_Click" />
+        </CommandBar>
+        </Page.BottomAppBar>-->
 
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des sujets" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
+
+        <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Sujet}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <AddDeleteThemeTransition/>
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
+                                <TextBlock FontSize="20" Text="{Binding Auteur}" VerticalAlignment="Center"/>
+                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBlock x:Name="txtErreur" Grid.Row="2" Text="Erreur de connexion " />
     </Grid>
 </Page>
