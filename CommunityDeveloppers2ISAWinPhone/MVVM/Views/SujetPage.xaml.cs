@@ -23,8 +23,7 @@ namespace CommunityDeveloppers2ISAWinPhone
     /// </summary>
     public sealed partial class SujetPage : Page
     {
-        private static MonitorViewModel _monitorViewModel = new MonitorViewModel();
-
+        private ViewModelCategorie _ViewModelcategorie = null;
         public SujetPage()
         {
             this.InitializeComponent();
@@ -38,8 +37,13 @@ namespace CommunityDeveloppers2ISAWinPhone
         /// Ce paramètre est généralement utilisé pour configurer la page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // Binding de la source de données (MonitorViewModel) avec le contexte de la page
-            DataContext = _monitorViewModel;
+            // On récupère le ViewModel (ViewModelCategorie). UserViewModel est la source de données
+           
+            _ViewModelcategorie = (ViewModelCategorie)e.Parameter;
+
+            // Binding de la source de données (ViewModelCategorie) avec le contexte de la page
+            DataContext = _ViewModelcategorie;
+
 
             // On s'abonne à l'événement système 'HardwareButtons_BackPressed'          
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
@@ -48,6 +52,7 @@ namespace CommunityDeveloppers2ISAWinPhone
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
             e.Handled = true;
+            Frame.Navigate(typeof(MainPage));
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -55,14 +60,9 @@ namespace CommunityDeveloppers2ISAWinPhone
             HardwareButtons.BackPressed -= HardwareButtons_BackPressed;
         }
 
-        //private async void mnuSynchro_Click(object sender, RoutedEventArgs e)
-        //{
-        //    await _monitorViewModel.
-        //}
-
-        //private void mnuQuitter_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
+        private void mnuFermer_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

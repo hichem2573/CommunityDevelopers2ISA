@@ -7,15 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-     <!--<Page.BottomAppBar>
+    <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
-            <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" Click="mnuSynchro_Click" />
-            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="Cancel"  Label="Quit" Margin="55,0,0,0" Click="mnuQuitter_Click" />
+            <AppBarButton x:Name="mnuFermer" x:Uid="DetailsPage_MnuFerm" Icon="Back" Label="Ferm" Click="mnuFermer_Click"/>
+           <!-- <AppBarButton x:Name="mnuSynchro" x:Uid="DetailsPage_MnuSync" Icon="Refresh" Label="Synchro" IsEnabled="{Binding IsLogged}" Click="mnuSynchro_Click"/>-->
         </CommandBar>
-        </Page.BottomAppBar>-->
+    </Page.BottomAppBar>
 
-        <Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
