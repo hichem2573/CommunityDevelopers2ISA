@@ -40,7 +40,7 @@ namespace CommunityDeveloppers2ISAWinPhone
             // On récupère le ViewModel (ViewModelCategorie). UserViewModel est la source de données
            
             _ViewModelcategorie = (ViewModelCategorie)e.Parameter;
-            await _ViewModelcategorie.GetSujetByCategorieID();
+            await _ViewModelcategorie.getSujetByCategorieID();
             // Binding de la source de données (ViewModelCategorie) avec le contexte de la page
             DataContext = _ViewModelcategorie;
 
@@ -64,5 +64,8 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             Frame.Navigate(typeof(MainPage));
         }
+
     }
 }
+    
+

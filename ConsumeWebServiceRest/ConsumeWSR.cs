@@ -110,7 +110,7 @@ namespace ConsumeWebServiceRest
         {
             get { return _reponses; }
         }
-        public async Task<List<Reponse>> getReponse()
+        public async Task<List<Reponse>> getReponseBySujet(int idsujet)
         {
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
             {
@@ -119,7 +119,7 @@ namespace ConsumeWebServiceRest
                 client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
 
                 // Appel du service Rest (en asynchrone)
-                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET, CancellationToken.None))
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_REPONSE, CancellationToken.None))
                 {
                     if (wcfResponse.IsSuccessStatusCode)
                     {

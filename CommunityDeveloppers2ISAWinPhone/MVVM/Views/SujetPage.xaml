@@ -20,8 +20,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des sujets" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
+       
+       
+        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des sujets" Grid.ColumnSpan="2" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
 
         <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Sujet}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
@@ -38,13 +39,23 @@
                 <DataTemplate>
                     <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
                         <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
+                            <StackPanel  Orientation="Horizontal">
+                                
+                                   <ListBox x:Name="ListeDeschamps">
+                                    <ListBoxItem x:Name="Titre" Content="{Binding Titre}" FontSize="13"/>
+                                    <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
+                                    <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
+                            <!-- <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
                                 <TextBlock FontSize="20" Text="{Binding Auteur}" VerticalAlignment="Center"/>
-                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>
+                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>-->    
+                                </ListBox>
+
+                                
+
                             </StackPanel>
                         </Button.Content>
                     </Button>
+                  
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -11,13 +11,13 @@ namespace CommunityDeveloppers2ISAWinPhone
 {
     public class ViewModelSujet : ViewModelBase
     {
-        //private ConsumeWSR _cdDAL;
+        private ConsumeWSR _cdDAL;
         private int _idSujet;
         private string _Titre;
         private string _Auteur;
         private DateTime _Date;
 
-        private ObservableCollection<ViewModelReponse> _colViewModelReponses;
+       // private ObservableCollection<ViewModelReponse> _colViewModelReponses;
 
 
         internal ViewModelSujet(Sujet sujet, ConsumeWSR cdDAl)
@@ -26,7 +26,8 @@ namespace CommunityDeveloppers2ISAWinPhone
             _Titre = sujet.Titre;
             _Auteur = sujet.Auteur;
             _Date = sujet.Date;
-            _colViewModelReponses = new ObservableCollection<ViewModelReponse>();
+            _cdDAL = cdDAl;
+           
         }
 
         public int IdSujet
@@ -69,11 +70,5 @@ namespace CommunityDeveloppers2ISAWinPhone
             }
         }
 
-        public ReadOnlyObservableCollection<ViewModelReponse> Reponses
-        {
-            get { return new ReadOnlyObservableCollection<ViewModelReponse>(_colViewModelReponses); }
-        }
-
-       
     }
 }
