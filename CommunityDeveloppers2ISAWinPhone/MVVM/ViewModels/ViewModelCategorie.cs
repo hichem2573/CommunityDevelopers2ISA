@@ -65,9 +65,9 @@ namespace CommunityDeveloppers2ISAWinPhone
             return Libelle;
         }
 
-        public async Task GetSujet()
+        public async Task GetSujetByCategorieID()
         {
-            List<Sujet> sujets = await _cdDAL.getSujet();
+            List<Sujet> sujets = await _cdDAL.getSujetByCategorieID(IdCategorie);
             MAJ_Sujets(sujets);
         }
 

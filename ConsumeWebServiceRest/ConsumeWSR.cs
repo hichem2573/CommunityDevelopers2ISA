@@ -14,8 +14,8 @@ namespace ConsumeWebServiceRest
     public class ConsumeWSR
     {
         private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/ServiceREST.svc/Categorie";
-        private const string ADR_GET_SUJET = "http://user11.isa.org/ServiceREST.svn/Sujet/IdCategorie";
-        private const string ADR_GET_REPONSE = "http://user11.2isa.org/ServiceREST.svn/Reponse/Idsujet";
+        private const string ADR_GET_SUJET = "http://user11.2isa.org/ServiceREST.svc/Sujet/";
+        private const string ADR_GET_REPONSE = "http://user11.2isa.org/ServiceREST.svc/Reponse/";
         private List<Categorie> _categories = new List<Categorie>();
         private List<Sujet> _sujets = new List<Sujet>();
         private List<Reponse> _reponses = new List<Reponse>();
@@ -71,7 +71,7 @@ namespace ConsumeWebServiceRest
             get { return _sujets; }
         }
 
-        public async Task<List<Sujet>> getSujet()
+        public async Task<List<Sujet>> getSujetByCategorieID(int idcategorie)
         {
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
             {
@@ -80,7 +80,7 @@ namespace ConsumeWebServiceRest
                 client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
 
                 // Appel du service Rest (en asynchrone)
-                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET, CancellationToken.None))
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET+idcategorie.ToString(), CancellationToken.None))
                 {
                     if (wcfResponse.IsSuccessStatusCode)
                     {

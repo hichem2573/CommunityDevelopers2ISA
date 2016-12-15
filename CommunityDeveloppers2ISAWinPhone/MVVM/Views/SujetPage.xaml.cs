@@ -35,12 +35,12 @@ namespace CommunityDeveloppers2ISAWinPhone
         /// </summary>
         /// <param name="e">Données d'événement décrivant la manière dont l'utilisateur a accédé à cette page.
         /// Ce paramètre est généralement utilisé pour configurer la page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             // On récupère le ViewModel (ViewModelCategorie). UserViewModel est la source de données
            
             _ViewModelcategorie = (ViewModelCategorie)e.Parameter;
-
+            await _ViewModelcategorie.GetSujetByCategorieID();
             // Binding de la source de données (ViewModelCategorie) avec le contexte de la page
             DataContext = _ViewModelcategorie;
 
