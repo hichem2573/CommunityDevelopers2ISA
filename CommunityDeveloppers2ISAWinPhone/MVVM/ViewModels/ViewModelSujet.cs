@@ -17,17 +17,18 @@ namespace CommunityDeveloppers2ISAWinPhone
         private string _Auteur;
         private DateTime _Date;
 
-       // private ObservableCollection<ViewModelReponse> _colViewModelReponses;
+        private ObservableCollection<ViewModelReponse> _colViewModelReponses;
 
 
-        internal ViewModelSujet(Sujet sujet, ConsumeWSR cdDAl)
+        internal ViewModelSujet(Sujet sujet, ConsumeWSR cdDAL)
         {
             _idSujet = sujet.Id;
             _Titre = sujet.Titre;
             _Auteur = sujet.Auteur;
             _Date = sujet.Date;
-            _cdDAL = cdDAl;
+            _cdDAL = cdDAL;
            
+            _colViewModelReponses = new ObservableCollection<ViewModelReponse>();
         }
 
         public int IdSujet
@@ -35,8 +36,12 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _idSujet; }
             private set
             {
-                _idSujet = value;
-                RaisePropertyChanged();
+                if(_idSujet != value)
+                {
+                    _idSujet = value;
+                    RaisePropertyChanged();
+                }
+                
             }
         }
 
@@ -45,8 +50,12 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _Titre; }
             private set
             {
-                _Titre = value;
-                RaisePropertyChanged();
+                if(_Titre != value)
+                {
+                    _Titre = value;
+                    RaisePropertyChanged();
+                }
+                
             }
         }
 
@@ -55,8 +64,12 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _Auteur; }
             private set
             {
-                _Auteur = value;
-                RaisePropertyChanged();
+                if(_Auteur != value)
+                {
+                    _Auteur = value;
+                    RaisePropertyChanged();
+                }
+                
             }
         }
 
@@ -65,10 +78,41 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _Date; }
             private set
             {
-                _Date = value;
-                RaisePropertyChanged();
+                if(_Date != value)
+                {
+                    _Date = value;
+                    RaisePropertyChanged();
+                }
+               
             }
         }
+
+        public ReadOnlyObservableCollection<ViewModelReponse> Reponse
+        {
+            get { return new ReadOnlyObservableCollection<ViewModelReponse>(_colViewModelReponses); }
+        }
+
+        #region "Méthodes"
+
+        public async Task getReponseBySujet()
+        {
+            List<Reponse> reponses = await _cdDAL.getReponseBySujet(IdSujet);
+            MAJ_Reponses(reponses);
+        }
+
+        private void MAJ_Reponses(List<Reponse> reponses)
+        {
+            _colViewModelReponses.Clear();
+            foreach (Reponse reponse in reponses)
+            {
+                ViewModelReponse reponseVM = new ViewModelReponse(reponse, _cdDAL);
+                if (!_colViewModelReponses.Contains(reponseVM))
+                {
+                    _colViewModelReponses.Add(reponseVM);
+                }
+            }
+        }
+        #endregion
 
     }
 }

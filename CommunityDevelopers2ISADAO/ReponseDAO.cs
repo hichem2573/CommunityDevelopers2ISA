@@ -40,11 +40,19 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idSujet;
             cmd.Parameters.Add(parm);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Reponses");
-            da.Fill(dt);
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Reponses");
+                da.Fill(dt);
 
-            return dt;
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         /// <summary>
@@ -76,11 +84,19 @@ namespace CommunityDevelopers2ISADAO
             parmText.Value = texte;
             cmd.Parameters.Add(parmText);
 
-            con.Open();
-            //Excute une action T-SQL sur la connection et retourne le nombres de lignes affectées
-            int nbLigne = cmd.ExecuteNonQuery();
-            con.Close();
-            return nbLigne;
+            try
+            {
+                con.Open();
+                //Excute une action T-SQL sur la connection et retourne le nombres de lignes affectées
+                int nbLigne = cmd.ExecuteNonQuery();
+                con.Close();
+                return nbLigne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
         }
 
         /// <summary>
@@ -100,10 +116,18 @@ namespace CommunityDevelopers2ISADAO
             parmIdReponse.Value = idReponse;
             cmd.Parameters.Add(parmIdReponse);
 
-            con.Open();
-            int nbLigne = cmd.ExecuteNonQuery();
-            con.Close();
-            return nbLigne;
+            try
+            {
+                con.Open();
+                int nbLigne = cmd.ExecuteNonQuery();
+                con.Close();
+                return nbLigne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
         }
         #endregion
 

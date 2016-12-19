@@ -15,7 +15,7 @@ namespace CommunityDeveloppers2ISAWinPhone
         private ConsumeWSR _cdDAL;
         private int _idCategorie;
         private string _Libelle;
-
+       
         private ObservableCollection<ViewModelSujet> _colViewModelSujets;
         
 
@@ -38,8 +38,12 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _idCategorie; }
             private set
             {
-                _idCategorie = value;
-                RaisePropertyChanged();
+                if(_idCategorie !=value)
+                {
+                    _idCategorie = value;
+                    RaisePropertyChanged();
+                }
+               
             }
         }
 
@@ -48,10 +52,16 @@ namespace CommunityDeveloppers2ISAWinPhone
             get { return _Libelle; }
             private set
             {
-                _Libelle = value;
-                RaisePropertyChanged();
+                if(_Libelle != value)
+                {
+                     _Libelle = value;
+                      RaisePropertyChanged();
+                }
+               
             }
         }
+
+       
         #endregion
         public ReadOnlyObservableCollection<ViewModelSujet> Sujet
         {
@@ -69,20 +79,29 @@ namespace CommunityDeveloppers2ISAWinPhone
         {
             List<Sujet> sujets = await _cdDAL.getSujetByCategorieID(IdCategorie);
             MAJ_Sujets(sujets);
+   
         }
 
         private void MAJ_Sujets(List<Sujet> sujets)
         {
-            _colViewModelSujets.Clear();
-            foreach (Sujet sujet in sujets)
+            if(sujets != null)
             {
-                ViewModelSujet sujetVM = new ViewModelSujet(sujet, _cdDAL);
-
-                if (!_colViewModelSujets.Contains(sujetVM))
+                _colViewModelSujets.Clear();
+                foreach (Sujet sujet in sujets)
                 {
-                    _colViewModelSujets.Add(sujetVM);
+                    ViewModelSujet sujetVM = new ViewModelSujet(sujet, _cdDAL);
+
+                    if (!_colViewModelSujets.Contains(sujetVM))
+                    {
+                        _colViewModelSujets.Add(sujetVM);
+                    }
                 }
             }
+            else
+            {
+                return ;
+            }
+            
         }
         #endregion
     }

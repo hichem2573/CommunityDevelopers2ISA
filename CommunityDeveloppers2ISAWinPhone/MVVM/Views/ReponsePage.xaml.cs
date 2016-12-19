@@ -21,10 +21,10 @@ namespace CommunityDeveloppers2ISAWinPhone
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class SujetPage : Page
+    public sealed partial class ReponsePage : Page
     {
-        private ViewModelCategorie _ViewModelcategorie = null;
-        public SujetPage()
+        private ViewModelSujet _ViewModelsujet = null;
+        public ReponsePage()
         {
             this.InitializeComponent();
             this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -37,22 +37,25 @@ namespace CommunityDeveloppers2ISAWinPhone
         /// Ce paramètre est généralement utilisé pour configurer la page.</param>
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // On récupère le ViewModel (ViewModelCategorie). UserViewModel est la source de données
-           
-            _ViewModelcategorie = (ViewModelCategorie)e.Parameter;
-            await _ViewModelcategorie.getSujetByCategorieID(); // il revient ici et exception 
-            // Binding de la source de données (ViewModelCategorie) avec le contexte de la page
-            DataContext = _ViewModelcategorie;
+            _ViewModelsujet = (ViewModelSujet)e.Parameter;
+            await _ViewModelsujet.getReponseBySujet();
 
+            //Binding de la source de donnée (ViewModelSujet) avec le contexte de la page
+            DataContext = _ViewModelsujet;
 
-            // On s'abonne à l'événement système 'HardwareButtons_BackPressed'          
+            //On s'abonne à l'événement système 'HardwareButtons_BackPressed'
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
-            e.Handled = true;
-            Frame.Navigate(typeof(MainPage));
+            if (Frame.CanGoBack)
+            {
+                e.Handled = true;
+                Frame.GoBack();
+            }
+            
+            
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -62,15 +65,10 @@ namespace CommunityDeveloppers2ISAWinPhone
 
         private void mnuFermer_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
-        }
-
-        private void ListView_Click(object sender, RoutedEventArgs e)
-        {
-            ViewModelSujet ViewModelsujet = (ViewModelSujet)((Button)sender).DataContext;
-            Frame.Navigate(typeof(ReponsePage), ViewModelsujet);
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
     }
 }
-    
-

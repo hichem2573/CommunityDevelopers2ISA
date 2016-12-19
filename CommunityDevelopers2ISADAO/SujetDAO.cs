@@ -38,10 +38,18 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idsujet;
             cmd.Parameters.Add(parm);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Sujet");
-            da.Fill(dt);
-            return dt;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Sujet");
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
 
         }
         /// <summary>
@@ -55,11 +63,19 @@ namespace CommunityDevelopers2ISADAO
             cmd.CommandText = "GetAllSujets";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("TousLesSujet");
-            da.Fill(dt);
-            //con.Close();
-            return dt;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("TousLesSujet");
+                da.Fill(dt);
+                //con.Close();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
 
         }
 
@@ -81,11 +97,19 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idcategorie;
             cmd.Parameters.Add(parm);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("TousLesSujet");
-            da.Fill(dt);
-            //con.Close();
-            return dt;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("TousLesSujet");
+                da.Fill(dt);
+                //con.Close();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
 
         }
 
@@ -124,10 +148,18 @@ namespace CommunityDevelopers2ISADAO
             parmDescr.Value = description;
             cmd.Parameters.Add(parmDescr);
 
-            con.Open();
-            int nbLigne = cmd.ExecuteNonQuery();
-            con.Close();
-            return nbLigne;
+            try
+            {
+                con.Open();
+                int nbLigne = cmd.ExecuteNonQuery();
+                con.Close();
+                return nbLigne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
         }
 
         /// <summary>
@@ -170,10 +202,18 @@ namespace CommunityDevelopers2ISADAO
             parmOldDescr.Value = oldDescription;
             cmd.Parameters.Add(parmOldDescr);
 
-            con.Open();
-            int nbLigne = cmd.ExecuteNonQuery();
-            con.Close();
-            return nbLigne;
+            try
+            {
+                con.Open();
+                int nbLigne = cmd.ExecuteNonQuery();
+                con.Close();
+                return nbLigne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
 
         }
 
@@ -193,11 +233,19 @@ namespace CommunityDevelopers2ISADAO
             parmIdSujet.Value = idSujet;
             cmd.Parameters.Add(parmIdSujet);
 
-            con.Open();
-            int nbLigne = cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                con.Open();
+                int nbLigne = cmd.ExecuteNonQuery();
+                con.Close();
 
-            return nbLigne;
+                return nbLigne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
         }
         #endregion
 

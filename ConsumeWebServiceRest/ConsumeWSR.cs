@@ -80,7 +80,7 @@ namespace ConsumeWebServiceRest
                 client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
 
                 // Appel du service Rest (en asynchrone)
-                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET+idcategorie.ToString(), CancellationToken.None))
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_SUJET + idcategorie.ToString(), CancellationToken.None))
                 {
                     if (wcfResponse.IsSuccessStatusCode)
                     {
@@ -119,7 +119,7 @@ namespace ConsumeWebServiceRest
                 client.DefaultRequestHeaders.IfModifiedSince = DateTimeOffset.Now;
 
                 // Appel du service Rest (en asynchrone)
-                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_REPONSE, CancellationToken.None))
+                using (HttpResponseMessage wcfResponse = await client.GetAsync(ADR_GET_REPONSE + idsujet.ToString(), CancellationToken.None))
                 {
                     if (wcfResponse.IsSuccessStatusCode)
                     {

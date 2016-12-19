@@ -96,9 +96,13 @@
     <Compile Include="MVVM\ViewModels\MonitorViewModel.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelBase.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelCategorie.cs" />
+    <Compile Include="MVVM\ViewModels\ViewModelReponse.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelSujet.cs" />
     <Compile Include="MVVM\Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\ReponsePage.xaml.cs">
+      <DependentUpon>ReponsePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Views\SujetPage.xaml.cs">
       <DependentUpon>SujetPage.xaml</DependentUpon>
@@ -132,6 +136,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MVVM\Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\ReponsePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

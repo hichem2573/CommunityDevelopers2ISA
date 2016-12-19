@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="CommunityDeveloppers2ISAWinPhone.SujetPage"
+    x:Class="CommunityDeveloppers2ISAWinPhone.ReponsePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CommunityDeveloppers2ISAWinPhone"
@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
             <AppBarButton x:Name="mnuFermer" x:Uid="DetailsPage_MnuFerm" Icon="Back" Label="Ferm" Click="mnuFermer_Click"/>
-           <!-- <AppBarButton x:Name="mnuSynchro" x:Uid="DetailsPage_MnuSync" Icon="Refresh" Label="Synchro" IsEnabled="{Binding IsLogged}" Click="mnuSynchro_Click"/>-->
-            <AppBarButton x:Name="mnuQuitter" x:Uid=""
+            <!-- <AppBarButton x:Name="mnuSynchro" x:Uid="DetailsPage_MnuSync" Icon="Refresh" Label="Synchro" IsEnabled="{Binding IsLogged}" Click="mnuSynchro_Click"/>-->
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -21,11 +21,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-       
-       
-        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des sujets" Grid.ColumnSpan="2" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
 
-        <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Sujet}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
+
+        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des reponses" Grid.ColumnSpan="2" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
+
+        <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Reponse}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -38,29 +38,29 @@
             </ListView.ItemContainerTransitions>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Click="ListView_Click" >
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
                         <Button.Content>
                             <StackPanel  Orientation="Horizontal">
-                                
-                                   <ListBox x:Name="ListeDeschamps">
-                                    <ListBoxItem x:Name="Titre" Content="{Binding Titre}" FontSize="13"/>
+
+                                <ListBox x:Name="ListeDeschamps">
+                                    <ListBoxItem x:Name="Titre" Content="{Binding Texte}" FontSize="13"/>
                                     <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
                                     <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
-                            <!-- <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
+                                    <!-- <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
                                 <TextBlock FontSize="20" Text="{Binding Auteur}" VerticalAlignment="Center"/>
-                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>-->    
+                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>-->
                                 </ListBox>
 
-                                
+
 
                             </StackPanel>
                         </Button.Content>
                     </Button>
-                  
+
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-       <!--xtBlock x:Name="txtErreur" Grid.Row="2" Text="Erreur de connexion " />-->
+        <TextBlock x:Name="txtErreur" Grid.Row="2" Text="Erreur de connexion " />
     </Grid>
 </Page>

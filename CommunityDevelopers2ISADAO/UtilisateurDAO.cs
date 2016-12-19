@@ -46,11 +46,19 @@ namespace CommunityDevelopers2ISADAO
             parMDP.Value = password;
             cmd.Parameters.Add(parMDP);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Login");
-            da.Fill(dt);
-            //con.Close();
-            return dt;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Login");
+                da.Fill(dt);
+                //con.Close();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
 
             
 
@@ -72,12 +80,20 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = iduser;
             cmd.Parameters.Add(parm);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Utilisateurs");
-            da.Fill(dt);
-            //con.Close();
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Utilisateurs");
+                da.Fill(dt);
+                //con.Close();
 
-            return dt;
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         /// <summary>
@@ -113,10 +129,18 @@ namespace CommunityDevelopers2ISADAO
             parPassword.Value = password;
             cmd.Parameters.Add(parPassword);
 
-            con.Open();
-            int nbligne = cmd.ExecuteNonQuery();
-            con.Close();
-            return nbligne;
+            try
+            {
+                con.Open();
+                int nbligne = cmd.ExecuteNonQuery();
+                con.Close();
+                return nbligne;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
         }
     }
         #endregion

@@ -31,12 +31,20 @@ namespace CommunityDevelopers2ISADAO
             cmd.CommandText = "GetAllCategories";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Categorie");
-            da.Fill(dt);
-            //con.Close();
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Categorie");
+                da.Fill(dt);
+                //con.Close();
 
-            return dt;
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public static DataTable GetCategorieByID(int idCategorie)
@@ -50,11 +58,21 @@ namespace CommunityDevelopers2ISADAO
             parm.ParameterName = "@IdCategorie";
             parm.Value = idCategorie;
             cmd.Parameters.Add(parm);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Categories");
-            da.Fill(dt);
-            //con.Close();
-            return dt;
+
+
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Categories");
+                da.Fill(dt);
+                //con.Close();
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                return null;  ;
+            }
            
 
         }
