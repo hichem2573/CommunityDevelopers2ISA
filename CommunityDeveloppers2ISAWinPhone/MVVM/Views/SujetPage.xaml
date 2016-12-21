@@ -15,18 +15,13 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid>
+    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>-->
 
         <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community" Grid.ColumnSpan="2"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
         <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des sujets" Grid.ColumnSpan="2"  FontSize="22" Foreground="#FF0EF1F1" HorizontalAlignment="Center"/>
@@ -46,12 +41,25 @@
                 <DataTemplate>
                     <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Click="ListView_Click" >
                         <Button.Content>
-                            <StackPanel  Orientation="Horizontal">
-                                <ListBox x:Name="ListeDeschamps">
+                            <StackPanel  Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Titre :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Titre}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Auteur :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Auteur}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Date :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Date}"/>
+                                </StackPanel>
+                                
+                                <!--<ListBox x:Name="ListeDeschamps">
                                     <ListBoxItem x:Name="Titre" Content="{Binding Titre}" FontSize="13"/>
                                     <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
                                     <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
-                                </ListBox>
+                                </ListBox>-->
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -60,6 +68,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-       <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" />
+       <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Foreground="Red" />
     </Grid>
 </Page>
