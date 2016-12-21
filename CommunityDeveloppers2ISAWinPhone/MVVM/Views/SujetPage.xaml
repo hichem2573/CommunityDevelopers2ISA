@@ -54,12 +54,6 @@
                                     <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Date :"/>
                                     <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Date}"/>
                                 </StackPanel>
-                                
-                                <!--<ListBox x:Name="ListeDeschamps">
-                                    <ListBoxItem x:Name="Titre" Content="{Binding Titre}" FontSize="13"/>
-                                    <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
-                                    <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
-                                </ListBox>-->
                             </StackPanel>
                         </Button.Content>
                     </Button>

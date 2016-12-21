@@ -42,13 +42,27 @@
                 <DataTemplate>
                     <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
                         <Button.Content>
-                            <StackPanel  Orientation="Horizontal">
+                            <!--<StackPanel  Orientation="Horizontal">
 
                                 <ListBox x:Name="ListeDeschamps">
                                     <ListBoxItem x:Name="Titre" Content="{Binding Texte}" FontSize="13"/>
                                     <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
                                     <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
                                 </ListBox>
+                            </StackPanel>-->
+                            <StackPanel  Orientation="Vertical">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Texte :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Texte}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Auteur :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Auteur}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto" FontWeight="ExtraBold" FontSize="19" Foreground="CadetBlue" Text="Date :"/>
+                                    <TextBlock FontSize="19" TextWrapping="Wrap" Text="{Binding Date}"/>
+                                </StackPanel>
                             </StackPanel>
                         </Button.Content>
                     </Button>
