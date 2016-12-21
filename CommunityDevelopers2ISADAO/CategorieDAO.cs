@@ -24,6 +24,10 @@ namespace CommunityDevelopers2ISADAO
 
         #region "Méthodes"
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static DataTable GetAllCategories()
         {
             //con.Open();
@@ -47,6 +51,11 @@ namespace CommunityDevelopers2ISADAO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idCategorie"></param>
+        /// <returns></returns>
         public static DataTable GetCategorieByID(int idCategorie)
         {
             //con.Open();
