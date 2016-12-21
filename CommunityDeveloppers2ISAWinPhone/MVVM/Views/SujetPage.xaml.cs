@@ -70,6 +70,16 @@ namespace CommunityDeveloppers2ISAWinPhone
             ViewModelSujet ViewModelsujet = (ViewModelSujet)((Button)sender).DataContext;
             Frame.Navigate(typeof(ReponsePage), ViewModelsujet);
         }
+
+        private void mnuQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Exit();
+        }
+
+        private async void mnuSynchro_Click(object sender, RoutedEventArgs e)
+        {
+            await _ViewModelcategorie.getSujetByCategorieID();
+        }
     }
 }
     

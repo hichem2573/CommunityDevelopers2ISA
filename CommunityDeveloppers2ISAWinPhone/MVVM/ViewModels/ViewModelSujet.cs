@@ -16,7 +16,7 @@ namespace CommunityDeveloppers2ISAWinPhone
         private string _Titre;
         private string _Auteur;
         private DateTime _Date;
-
+        private string _errorMessage;
         private ObservableCollection<ViewModelReponse> _colViewModelReponses;
 
 
@@ -87,6 +87,19 @@ namespace CommunityDeveloppers2ISAWinPhone
             }
         }
 
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            private set
+            {
+                if(_errorMessage != value)
+                {
+                    _errorMessage = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         public ReadOnlyObservableCollection<ViewModelReponse> Reponse
         {
             get { return new ReadOnlyObservableCollection<ViewModelReponse>(_colViewModelReponses); }
@@ -102,16 +115,24 @@ namespace CommunityDeveloppers2ISAWinPhone
 
         private void MAJ_Reponses(List<Reponse> reponses)
         {
-            _colViewModelReponses.Clear();
-            foreach (Reponse reponse in reponses)
+            if (reponses != null)
             {
-                ViewModelReponse reponseVM = new ViewModelReponse(reponse, _cdDAL);
-                if (!_colViewModelReponses.Contains(reponseVM))
+                _colViewModelReponses.Clear();
+                foreach (Reponse reponse in reponses)
                 {
-                    _colViewModelReponses.Add(reponseVM);
+                    ViewModelReponse reponseVM = new ViewModelReponse(reponse, _cdDAL);
+                    if (!_colViewModelReponses.Contains(reponseVM))
+                    {
+                        _colViewModelReponses.Add(reponseVM);
+                    }
                 }
             }
-        }
+            else
+            {
+                ErrorMessage = "Le sujet choisi ne contient pas de reponses !";
+            }
+            }
+            
         #endregion
 
     }

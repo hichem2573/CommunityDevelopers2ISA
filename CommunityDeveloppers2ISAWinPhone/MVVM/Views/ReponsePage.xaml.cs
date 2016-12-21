@@ -70,5 +70,15 @@ namespace CommunityDeveloppers2ISAWinPhone
                 Frame.GoBack();
             }
         }
+
+        private async void mnuSynchro_Click(object sender, RoutedEventArgs e)
+        {
+            await _ViewModelsujet.getReponseBySujet();
+        }
+
+        private void mnuQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Exit();
+        }
     }
 }

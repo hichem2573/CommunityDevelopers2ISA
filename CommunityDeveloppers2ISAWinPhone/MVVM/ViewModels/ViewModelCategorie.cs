@@ -15,7 +15,7 @@ namespace CommunityDeveloppers2ISAWinPhone
         private ConsumeWSR _cdDAL;
         private int _idCategorie;
         private string _Libelle;
-       
+        private string _errorMessage;
         private ObservableCollection<ViewModelSujet> _colViewModelSujets;
         
 
@@ -61,7 +61,20 @@ namespace CommunityDeveloppers2ISAWinPhone
             }
         }
 
-       
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            private set
+            {
+                if (_errorMessage != value)
+                {
+                    _errorMessage = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
         #endregion
         public ReadOnlyObservableCollection<ViewModelSujet> Sujet
         {
@@ -94,14 +107,16 @@ namespace CommunityDeveloppers2ISAWinPhone
                     if (!_colViewModelSujets.Contains(sujetVM))
                     {
                         _colViewModelSujets.Add(sujetVM);
+                       
                     }
+                    
                 }
             }
             else
             {
-                return ;
+                ErrorMessage = "Le sujet choisi ne contient pas de reponses !";
             }
-            
+
         }
         #endregion
     }

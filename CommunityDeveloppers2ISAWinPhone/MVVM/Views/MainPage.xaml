@@ -18,13 +18,15 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             
         </Grid.RowDefinitions>
 
-        <Button x:Name="btCategorie" Grid.Row="0" HorizontalAlignment="Center" Content="Choisissez votre catégorie" Click="btCategorie_Click"/>
+        <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
+        <Button x:Name="btCategorie" Grid.Row="1" HorizontalAlignment="Center" Content="Choisissez votre catégorie"  Click="btCategorie_Click"/>
 
-        <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Categorie}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
+        <ListView x:Name="lstvCategorie" Grid.Row="2" ItemsSource="{Binding Categorie}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />

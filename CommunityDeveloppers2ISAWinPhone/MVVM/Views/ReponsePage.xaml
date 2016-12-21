@@ -9,23 +9,25 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.BottomAppBar>
-        <CommandBar ClosedDisplayMode="Minimal">
+        <CommandBar ClosedDisplayMode="Minimal" Background="CadetBlue">
             <AppBarButton x:Name="mnuFermer" x:Uid="DetailsPage_MnuFerm" Icon="Back" Label="Ferm" Click="mnuFermer_Click"/>
-            <!-- <AppBarButton x:Name="mnuSynchro" x:Uid="DetailsPage_MnuSync" Icon="Refresh" Label="Synchro" IsEnabled="{Binding IsLogged}" Click="mnuSynchro_Click"/>-->
+            <AppBarButton x:Name="mnuSynchro" x:Uid="DetailsPage_MnuSync" Icon="Refresh" Label="Synchro" Click="mnuSynchro_Click"/>
+            <AppBarButton x:Name="mnuQuitter" x:Uid="mnuQuiter" Icon="Clear" Margin="55,0,0,0" Label="Quitter" Click="mnuQuitter_Click"/>
         </CommandBar>
     </Page.BottomAppBar>
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
+        <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des reponses" Foreground="#FF0EF1F1" FontSize="22"  HorizontalAlignment="Center"/>
 
-        <TextBlock x:Name="lblText" Grid.Row="0" Text="Liste des reponses" Grid.ColumnSpan="2" FontSize="22" Foreground="Azure" HorizontalAlignment="Center"/>
-
-        <ListView x:Name="lstvCategorie" Grid.Row="1" ItemsSource="{Binding Reponse}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
+        <ListView x:Name="lstvCategorie" Grid.Row="2" ItemsSource="{Binding Reponse}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -46,13 +48,7 @@
                                     <ListBoxItem x:Name="Titre" Content="{Binding Texte}" FontSize="13"/>
                                     <ListBoxItem x:Name="Auteur" Content="{Binding Auteur}" FontSize="12"/>
                                     <ListBoxItem x:Name="Date" Content="{Binding Date}" FontSize="11"/>
-                                    <!-- <TextBlock FontSize="22" Text="{Binding Titre}" VerticalAlignment="Center" />
-                                <TextBlock FontSize="20" Text="{Binding Auteur}" VerticalAlignment="Center"/>
-                                <TextBlock FontSize="19" Text="{Binding Date}" VerticalAlignment="Center"/>-->
                                 </ListBox>
-
-
-
                             </StackPanel>
                         </Button.Content>
                     </Button>
@@ -61,6 +57,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock x:Name="txtErreur" Grid.Row="2" Text="Erreur de connexion " />
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" />
     </Grid>
 </Page>
