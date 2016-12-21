@@ -62,6 +62,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-       <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Foreground="Red" />
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Foreground="Red" FontSize="20" />
     </Grid>
 </Page>
