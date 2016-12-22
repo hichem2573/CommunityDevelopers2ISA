@@ -113,6 +113,12 @@ namespace CommunityDevelopers2ISADAO
             return dt;
         }
 
+        /// <summary>
+        /// Méthode permettant à un utilisateur de changer son mot de passe 
+        /// </summary>
+        /// <param name="iduser">L'identifiant utilisateur</param>
+        /// <param name="password">Mot de passe utilisateur</param>
+        /// <returns>Retourne 1 quand ça se passe bien</returns>
         public static int EditPassword (int iduser, string password)
         {
             SqlCommand cmd = con.CreateCommand();

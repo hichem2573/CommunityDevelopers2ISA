@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAMeti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "TestUnitaire\TestUnitaire.csproj", "{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}"
 EndProject
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "CommunityDevelopers2ISADocumentation", "CommunityDevelopers2ISADocumentation\CommunityDevelopers2ISADocumentation.shfbproj", "{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,18 +131,6 @@ Global
 		{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}.Release|ARM.Build.0 = Release|Any CPU
 		{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}.Release|x86.Build.0 = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|ARM.Build.0 = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Debug|x86.Build.0 = Debug|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|ARM.ActiveCfg = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|ARM.Build.0 = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|x86.ActiveCfg = Release|Any CPU
-		{CDC2CCA3-6AFE-4656-BFEC-DE65CBDD37FE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
