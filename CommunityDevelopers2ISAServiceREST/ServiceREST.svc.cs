@@ -20,10 +20,10 @@ namespace CommunityDevelopers2ISAServiceREST
         }
 
         /// <summary>
-        /// 
+        /// Méthode de recupération de la liste des réponses d'un sujet
         /// </summary>
-        /// <param name="idsujet"></param>
-        /// <returns></returns>
+        /// <param name="idsujet">L'identifiant de sujet</param>
+        /// <returns>La liste de toutes les réponses pour un sujet donné</returns>
         public List<Reponse> GetAllReponseBySujet(string idsujet)
         {
             int res; 
@@ -39,6 +39,11 @@ namespace CommunityDevelopers2ISAServiceREST
 
         }
 
+        /// <summary>
+        /// Méthode de recupération de la liste de tous les sujets d'une catégorie 
+        /// </summary>
+        /// <param name="idcategorie">L'identifiant de la catégorie</param>
+        /// <returns>La liste des tous les sujets d'une catégorie</returns>
         public List<Sujet> GetSujetsByCategorieID(string idcategorie)
         {
             int res;
