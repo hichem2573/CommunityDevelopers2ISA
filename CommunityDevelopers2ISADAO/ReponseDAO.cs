@@ -27,7 +27,7 @@ namespace CommunityDevelopers2ISADAO
         /// Dont l'identifiant est passé en paramètre
         /// </summary>
         /// <param name="idSujet">L'identifiant du sujet</param>
-        /// <returns>Les reponses, concernant un sujet dont l'id est passé en param</returns>
+        /// <returns>DataTAble des reponses</returns>
         public static DataTable GetAllReponseBySujet(int idSujet)
         {
 

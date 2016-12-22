@@ -16,6 +16,7 @@ namespace CommunityDevelopers2ISADAO
     public static class CategorieDAO
     {
         #region "Property et attributs"
+        
         private static SqlConnection con = ConnexionSql.GetConnexion();
         #endregion
 
@@ -25,9 +26,10 @@ namespace CommunityDevelopers2ISADAO
         #region "Méthodes"
 
         /// <summary>
-        /// 
+        /// Méthode permettant de répresenter une table de donnée en mémoire
+        /// Pour toutes les catégories
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retourne un DATATABLE des catégories</returns>
         public static DataTable GetAllCategories()
         {
             //con.Open();
@@ -52,10 +54,11 @@ namespace CommunityDevelopers2ISADAO
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant d'obtenir une catégorie dans un datatable 
+        /// En lui passant l'identifiant de la catégorie en question en paramètre
         /// </summary>
-        /// <param name="idCategorie"></param>
-        /// <returns></returns>
+        /// <param name="idCategorie">L'identifiant de la catégorie</param>
+        /// <returns>Un DataTable</returns>
         public static DataTable GetCategorieByID(int idCategorie)
         {
             //con.Open();

@@ -16,9 +16,9 @@ namespace CommunityDevelopers2ISADLL
     {
         #region "Categories"
         /// <summary>
-        /// 
+        /// Méthode permettant de retourner la liste des catégories
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retourne la Liste des catégories, présent dans le forum</returns>
         public static List<Categorie> GetAllCategories()
         {
             DataTable dt = CategorieDAO.GetAllCategories();
@@ -37,10 +37,10 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de retourner une catégorie, en lui passant l'identifiant en paramètre
         /// </summary>
-        /// <param name="idCategorie"></param>
-        /// <returns></returns>
+        /// <param name="idCategorie">L'identifiant de la catégorie</param>
+        /// <returns>Une catégorie, en lui passant un Id en paramètre</returns>
         public static Categorie GetCategorieByID(int idCategorie)
         {
             DataTable dt = CategorieDAO.GetCategorieByID(idCategorie);
@@ -58,11 +58,11 @@ namespace CommunityDevelopers2ISADLL
 
         #region "Utilisateurs"
         /// <summary>
-        /// 
+        /// Méthode permettant de verifier le login et le mot de passe d'un utilisateur pour la connexion à l'application
         /// </summary>
-        /// <param name="login"></param>
-        /// <param name="password"></param>
-        /// <returns></returns>
+        /// <param name="login">Le pseudo de l'utilisateur</param>
+        /// <param name="password">Le mot de passe de l'utilisateur</param>
+        /// <returns>Retourne l'utilisateur, si le pseudo et mot de passe sont juste et que l'utilisateur est enregistré dans la BDD</returns>
         public static Utilisateur Login(string login, string password)
         {
             DataTable dt = UtilisateurDAO.Login(login, password);
@@ -75,10 +75,10 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de retourner un utilisateur et son rôle
         /// </summary>
-        /// <param name="iduser"></param>
-        /// <returns></returns>
+        /// <param name="iduser">L'identifiant de l'utilisateur</param>
+        /// <returns>Un utilisateur avec son rôle</returns>
         public static Utilisateur GetUtilisateurByID(int iduser)
         {
             DataTable dt = UtilisateurDAO.GetUtilisateurByID(iduser);
@@ -92,9 +92,9 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de retourner la liste des utilisateurs enregistrés la base de données
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La liste de tous les utrilisateur</returns>
         public static List<Utilisateur> GetAllUtilisateur()
         {
             DataTable dt = UtilisateurDAO.GetAllUtilisateur();
@@ -120,10 +120,10 @@ namespace CommunityDevelopers2ISADLL
         #region "Sujets"
 
         /// <summary>
-        /// 
+        /// Méthode permettant un sujet en lui passant l'identifiant en paramètre
         /// </summary>
-        /// <param name="idsujet"></param>
-        /// <returns></returns>
+        /// <param name="idsujet">L'identifiant du sujet</param>
+        /// <returns>Un sujet</returns>
         public static Sujet GetSujetByID(int idsujet)
         {
             DataTable dt = SujetDAO.GetSujetByID(idsujet);
@@ -138,9 +138,9 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de recuperer la liste des sujets
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Une liste de sujets </returns>
         public static List<Sujet> GetAllSujets()
         {
             DataTable dt = SujetDAO.GetAllSujets();
@@ -160,10 +160,11 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de recuperer tous les sujets d'une catégorie, en lui passant l'identifiant 
+        /// De la catégorie en paramètre
         /// </summary>
-        /// <param name="idcategorie"></param>
-        /// <returns></returns>
+        /// <param name="idcategorie">L'identifiant de la catégorie</param>
+        /// <returns>La liste des sujets de la catégorie</returns>
         public static List<Sujet> GetSujetsByCategorieID(int idcategorie)
         {
             DataTable dt = SujetDAO.GetSujetsByCategorieID(idcategorie);
@@ -183,37 +184,40 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant d'ajouter un nouveau sujet dans une catégorie
+        /// Avec le nom de l'auteur, le titre du sujet, la description et la date
         /// </summary>
-        /// <param name="idUtilisateur"></param>
-        /// <param name="idCategorie"></param>
-        /// <param name="titre"></param>
-        /// <param name="description"></param>
-        /// <returns></returns>
+        /// <param name="idUtilisateur">L'identifiant de l'utilisateur</param>
+        /// <param name="idCategorie">Identifiant de la catégorie</param>
+        /// <param name="titre">Le titre du sujet</param>
+        /// <param name="description">La description du sujet</param>
+        /// <returns>Retoure le chiffre 1 si tout ce passe bien</returns>
         public static int AddSujet(int idUtilisateur, int idCategorie, string titre, string description)
         {
             return SujetDAO.AddSujet(idUtilisateur, idCategorie, titre, description);
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant la modification d'un sujet
+        /// La modification concerne le titre ou la description, en lui passant l'identifiant du sujet à modifier 
         /// </summary>
-        /// <param name="idsujet"></param>
-        /// <param name="oldTitre"></param>
-        /// <param name="oldDescription"></param>
-        /// <param name="newTitre"></param>
-        /// <param name="newDescription"></param>
-        /// <returns></returns>
+        /// <param name="idsujet">L'identifiant du sujet</param>
+        /// <param name="oldTitre">L'ancien Titre</param>
+        /// <param name="oldDescription">L'ancienne discription</param>
+        /// <param name="newTitre">Le nouveau Titre</param>
+        /// <param name="newDescription">La nouvelle description</param>
+        /// <returns>Retourn 1 quand ca se passe bien</returns>
         public static int ModifierSujet(int idsujet, string oldTitre, string oldDescription, string newTitre, string newDescription)
         {
             return SujetDAO.ModifierSujet(idsujet, oldTitre, oldDescription, newTitre, newDescription);
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant la suppression d'un sujet
+        /// en lui passant l'identifiant du sujet
         /// </summary>
-        /// <param name="idSujet"></param>
-        /// <returns></returns>
+        /// <param name="idSujet">L'identifiant</param>
+        /// <returns>Retourn 1 quand ca se passe bien</returns>
         public static int DeleteSujet(int idSujet)
         {
             return SujetDAO.DeleteSujet(idSujet);
@@ -224,10 +228,11 @@ namespace CommunityDevelopers2ISADLL
         #region "Réponses"
 
         /// <summary>
-        /// 
+        /// Méthode permettant de recuperer la liste des réponses
+        /// Pour un sujet donné, en lui passant en paramètre l'identifiant du sujet
         /// </summary>
-        /// <param name="idSujet"></param>
-        /// <returns></returns>
+        /// <param name="idSujet">L'identifiant du sujet</param>
+        /// <returns>La liste des réponses </returns>
         public static List<Reponse> GetAllReponseBySujet(int idSujet)
         {
             DataTable dt = ReponseDAO.GetAllReponseBySujet(idSujet);
@@ -245,22 +250,24 @@ namespace CommunityDevelopers2ISADLL
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant l'ajout d'une réponse, avec le nom de l'auteur et la date de création
+        /// Dans un sujet donné en lui passant en paramètre l'identifiant de sujet 
         /// </summary>
-        /// <param name="idUtilisateur"></param>
-        /// <param name="idSujet"></param>
-        /// <param name="texte"></param>
-        /// <returns></returns>
+        /// <param name="idUtilisateur">L'identifiant de l'utilisateur</param>
+        /// <param name="idSujet">L'identifiant du sujet</param>
+        /// <param name="texte">Le texte de la réponse</param>
+        /// <returns>Retourne 1 si tout ce passe bien</returns>
         public static int AddReponse(int idUtilisateur, int idSujet, string texte)
         {
             return ReponseDAO.AddReponse(idUtilisateur, idSujet, texte);
         }
 
         /// <summary>
-        /// 
+        /// Méthode permettant de suppression d'une reponse
+        /// En lui passant l'identifiant de la réponse 
         /// </summary>
-        /// <param name="idReponse"></param>
-        /// <returns></returns>
+        /// <param name="idReponse">L'identifiant de la réponse</param>
+        /// <returns>Retourne 1 si tout ce passe bien</returns>
         public static int DeleteReponse(int idReponse)
         {
             return ReponseDAO.DeleteReponse(idReponse);

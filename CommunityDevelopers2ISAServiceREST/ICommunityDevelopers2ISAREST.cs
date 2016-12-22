@@ -13,7 +13,7 @@ namespace CommunityDevelopers2ISAServiceREST
     [ServiceContract]
     public interface ICommunityDevelopers2ISAREST
     {
-        //TODO
+        
         [OperationContract]
         [WebGet(UriTemplate = "Categorie")]
         List<Categorie> GetAllCategories();

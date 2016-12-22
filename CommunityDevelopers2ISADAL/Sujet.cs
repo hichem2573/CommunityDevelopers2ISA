@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace CommunityDevelopers2ISAMetiers
 {
+    // On spécifie que le type définit ou implémente un contrat et qu'il est sérialisable
     [DataContract]
-    /// <summary>
-    /// La classe sujet, permet de voir tous les sujets d'une rubrique
-    /// Pemet de voir les reponses, concernant un sujet
-    /// Elle comporte un identifiant, titre du sujet, la description, la rubrique et les reponses
-    /// </summary>
-
+   
     public class Sujet
     {
         #region "Property et Attributs"

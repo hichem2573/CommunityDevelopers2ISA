@@ -6,7 +6,9 @@ using System.Text;
 
 namespace CommunityDevelopers2ISAMetiers
 {
+    // On spécifie que le type définit ou implémente un contrat et qu'il est sérialisable
     [DataContract]
+  
     public class Categorie
     {
         #region "Property et Attributs"

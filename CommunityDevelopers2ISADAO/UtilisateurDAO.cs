@@ -28,7 +28,7 @@ namespace CommunityDevelopers2ISADAO
         /// </summary>
         /// <param name="login">Le login de l'utilisateur</param>
         /// <param name="mdp">Le mot de passe de l'utilisateur</param>
-        /// <returns></returns>
+        /// <returns>DataTable</returns>
         public static DataTable Login(string login, string password)
         {
             //con.Open();
@@ -68,7 +68,7 @@ namespace CommunityDevelopers2ISADAO
         /// On passant son id en parametre
         /// </summary>
         /// <param name="iduser">L'identidiant de l'urilisateur</param>
-        /// <returns>Un utilisateur</returns>
+        /// <returns>Un DataTable</returns>
         public static DataTable GetUtilisateurByID(int iduser)
         {
             SqlCommand cmd = con.CreateCommand();
@@ -99,7 +99,7 @@ namespace CommunityDevelopers2ISADAO
         /// <summary>
         /// La méthode GetAllUtilisateur, permet de récupérer tous les utilisateur
         /// </summary>
-        /// <returns>La liste des utilisateurs</returns>
+        /// <returns>DataTble de la liste des utilisateurs</returns>
         public static DataTable GetAllUtilisateur()
         {
             SqlCommand cmd = con.CreateCommand();

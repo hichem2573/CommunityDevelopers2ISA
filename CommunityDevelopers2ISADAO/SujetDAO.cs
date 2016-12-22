@@ -55,7 +55,7 @@ namespace CommunityDevelopers2ISADAO
         /// <summary>
         /// La méthode GetAllSujets, retourne tous les sujets
         /// </summary>
-        /// <returns>Tous les sujets</returns>
+        /// <returns>DataTable de tous les sujets</returns>
         public static DataTable GetAllSujets()
         {
             //con.Open();
@@ -84,7 +84,7 @@ namespace CommunityDevelopers2ISADAO
         /// Dont l'id est passé en parametre
         /// </summary>
         /// <param name="idcategorie">L'identifiant de la categorie</param>
-        /// <returns>La liste des sujets d'une categorie</returns>
+        /// <returns>DataTable des sujets d'une categorie</returns>
         public static DataTable GetSujetsByCategorieID(int idcategorie)
         {
             //con.Open();

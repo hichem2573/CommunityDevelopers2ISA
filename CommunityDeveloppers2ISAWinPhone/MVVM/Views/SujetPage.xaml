@@ -15,7 +15,7 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
+    <Grid Height="615" Margin="0,0,0,-0.333">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,8 +23,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community" Grid.ColumnSpan="2"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
-        <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des sujets" Grid.ColumnSpan="2"  FontSize="22" Foreground="#FF0EF1F1" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
+        <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des sujets"  FontSize="22" Foreground="#FF0EF1F1" HorizontalAlignment="Center"/>
+
 
         <ListView x:Name="lstvCategorie" Grid.Row="2" ItemsSource="{Binding Sujet}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
