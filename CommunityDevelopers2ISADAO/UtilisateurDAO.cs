@@ -27,7 +27,7 @@ namespace CommunityDevelopers2ISADAO
         /// La méthode Login, permet l'authantification d'un utilisateur
         /// </summary>
         /// <param name="login">Le login de l'utilisateur</param>
-        /// <param name="mdp">Le mot de passe de l'utilisateur</param>
+        /// <param name="password">Le mot de passe de l'utilisateur</param>
         /// <returns>DataTable</returns>
         public static DataTable Login(string login, string password)
         {

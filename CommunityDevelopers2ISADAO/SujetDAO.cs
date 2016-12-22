@@ -163,14 +163,14 @@ namespace CommunityDevelopers2ISADAO
         }
 
         /// <summary>
-        /// La méthode ModifierSujet, permet la modification d'un sujet en lui changeant le titre
-        /// On lui changeant le titre et/ou la description.
-        /// On passe l'ancien sujet en paramètre
+        /// Méthode permettant la modification de titre et/ou la description
         /// </summary>
-        /// <param name="sujet">Le sujet à modifier</param>
-        /// <param name="newTitre">Le nouveau titre du sujet</param>
-        /// <param name="newDescription">La nouvelle description</param>
-        /// <returns>le nombre de ligne modifier, nbligne = 1 si tout va bien</returns>
+        /// <param name="idsujet">L'identifiant du sujet</param>
+        /// <param name="oldTitre">l'ancien Titre</param>
+        /// <param name="oldDescription">L'ancienne description</param>
+        /// <param name="newTitre">Le nouveau Titre</param>
+        /// <param name="newDescription">La nouvelle Description</param>
+        /// <returns>return 1 si tout ce passe bien</returns>
         public static int ModifierSujet(int idsujet, string oldTitre, string oldDescription, string newTitre, string newDescription)
         {
             SqlCommand cmd = con.CreateCommand();
