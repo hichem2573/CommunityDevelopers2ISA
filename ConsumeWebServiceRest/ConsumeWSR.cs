@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 
 namespace ConsumeWebServiceRest
 {
+    /// <summary>
+    /// Cette classe permet d'appeler un service REST en asynchrone. C'est la méthode GET qui est utilisée pour l'appel du service
+    /// L'échange de donnée se fait en XML
+    /// </summary>
     public class ConsumeWSR
     {
         private const string ADR_GET_CATEGORIE = "http://user11.2isa.org/ServiceREST.svc/Categorie";
@@ -20,7 +24,9 @@ namespace ConsumeWebServiceRest
         private List<Sujet> _sujets = new List<Sujet>();
         private List<Reponse> _reponses = new List<Reponse>();
         
-
+        /// <summary>
+        /// Getteur de la liste des catégories
+        /// </summary>
         public List<Categorie> Categories
         {
             get
@@ -29,6 +35,10 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        /// <summary>
+        /// Appel d'un service REST qui retourne une liste en réponse
+        /// </summary>
+        /// <returns>Objet retourné par le service de type catégorie</returns>
         public async Task<List<Categorie>> getCategorie()
         {
 
@@ -54,6 +64,11 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        /// <summary>
+        /// Cette méthode permet de désérialiser un objet
+        /// </summary>
+        /// <param name="content">Objet à désérialialiser</param>
+        /// <returns>Objet désérialisé</returns>
         private List<Categorie> DeserializeHttpContent(HttpContent content)
         {
             using (Stream s = content.ReadAsStreamAsync().Result)
@@ -66,11 +81,19 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        /// <summary>
+        /// le getteur de la liste de sujet
+        /// </summary>
         public List<Sujet> sujets
         {
             get { return _sujets; }
         }
 
+        /// <summary>
+        /// Appel d'un service REST qui retourne une liste des sujets, pour une catégorie donnée
+        /// </summary>
+        /// <param name="idcategorie">L'identifiant de la catégorie</param>
+        /// <returns>Objet retourné par le service</returns>
         public async Task<List<Sujet>> getSujetByCategorieID(int idcategorie)
         {
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
@@ -93,6 +116,11 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        /// <summary>
+        /// Cette méthode permet de désérialiser un objet
+        /// </summary>
+        /// <param name="content">Objet à désérialialiser</param>
+        /// <returns>Objet désérialisé</returns>
         private List<Sujet> DeserializeHttpContentSujet(HttpContent content)
         {
             using (Stream s = content.ReadAsStreamAsync().Result)
@@ -105,11 +133,19 @@ namespace ConsumeWebServiceRest
             }
         }
 
-
+        /// <summary>
+        /// Getteur liste réponses
+        /// </summary>
         public List<Reponse> reponses
         {
             get { return _reponses; }
         }
+
+        /// <summary>
+        /// Appel d'un service REST qui retourne une liste des réponses, pour un sujet donné
+        /// </summary>
+        /// <param name="idsujet">L'identifiant du sujet</param>
+        /// <returns>Objet retourné par le service</returns>
         public async Task<List<Reponse>> getReponseBySujet(int idsujet)
         {
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
@@ -132,6 +168,11 @@ namespace ConsumeWebServiceRest
             }
         }
 
+        /// <summary>
+        /// Cette méthode permet de désérialiser un objet
+        /// </summary>
+        /// <param name="content">Objet à désérialialiser</param>
+        /// <returns>Objet désérialisé</returns>
         private List<Reponse> DeserializeHttpContentReponse(HttpContent content)
         {
             using (Stream s = content.ReadAsStreamAsync().Result)
