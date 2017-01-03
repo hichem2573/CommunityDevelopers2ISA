@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeWebServiceRest", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISAMetiers", "CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj", "{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "TestUnitaire\TestUnitaire.csproj", "{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityDevelopers2ISATestUnitaire", "TestUnitaire\CommunityDevelopers2ISATestUnitaire.csproj", "{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "DocumentationCommunityDevelopers2ISA", "DocumentationCommunityDevelopers2ISA\DocumentationCommunityDevelopers2ISA.shfbproj", "{C9373329-ABA0-4846-A410-1F02E2C4030B}"
 EndProject

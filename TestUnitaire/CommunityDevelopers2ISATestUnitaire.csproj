@@ -6,8 +6,8 @@
     <ProjectGuid>{625AE3BF-AD1A-4F6C-A377-C71ADCC475BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestUnitaire</RootNamespace>
-    <AssemblyName>TestUnitaire</AssemblyName>
+    <RootNamespace>CommunityDevelopers2ISATestUnitaire</RootNamespace>
+    <AssemblyName>CommunityDevelopers2ISATestUnitaire</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,8 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTestCategorie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommunityDevelopers2ISADAL\CommunityDevelopers2ISAMetiers.csproj">
+      <Project>{211FCB08-FC13-4F0D-AABF-C1D81BDA0625}</Project>
+      <Name>CommunityDevelopers2ISAMetiers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommunityDevelopers2ISADLL\CommunityDevelopers2ISABLL.csproj">
+      <Project>{ea7d37f8-940a-43ea-bad6-b42f111625a8}</Project>
+      <Name>CommunityDevelopers2ISABLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
