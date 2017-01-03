@@ -15,7 +15,7 @@ namespace CommunityDevelopers2ISATestUnitaire
         public void TestCreationCategorie()
         {
             string expectedString = "Categorie de test";
-            Categorie categorie = new Categorie(1, "Categorie de test");
+            Categorie categorie = new Categorie(2, "Categorie de test");
 
             Assert.AreEqual(categorie.Libelle, expectedString);
         }
