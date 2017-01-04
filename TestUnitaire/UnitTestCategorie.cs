@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CommunityDevelopers2ISAMetiers;
-using CommunityDevelopers2ISADLL;
+using CommunityDevelopers2ISABLL;
 
 namespace CommunityDevelopers2ISATestUnitaire
 {

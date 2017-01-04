@@ -46,17 +46,19 @@ namespace CommunityDevelopers2ISADAO
             parMDP.Value = password;
             cmd.Parameters.Add(parMDP);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Login");
                 da.Fill(dt);
-                //con.Close();
+                // si tout se passe bien on retourne le DataTable
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
 
@@ -80,18 +82,20 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = iduser;
             cmd.Parameters.Add(parm);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Utilisateurs");
                 da.Fill(dt);
-                //con.Close();
 
+                // si tout se passe bien on retourne le DataTable
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
         }
@@ -106,11 +110,23 @@ namespace CommunityDevelopers2ISADAO
             cmd.CommandText = "GetAllUtilisateurs";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable("Utilisateurs");
-            da.Fill(dt);
 
-            return dt;
+            // on ajout un bloc try catch pour gérer l'exception
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Utilisateurs");
+                da.Fill(dt);
+
+                // si tout se passe bien on retourne le DataTable
+                return dt;
+            }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
+            catch (Exception)
+            {
+                // Si exception on retourne null
+                return null;
+            }
         }
 
         /// <summary>
@@ -135,16 +151,20 @@ namespace CommunityDevelopers2ISADAO
             parPassword.Value = password;
             cmd.Parameters.Add(parPassword);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 con.Open();
                 int nbligne = cmd.ExecuteNonQuery();
                 con.Close();
+
+                // si tout se passe bien on retourne le nombre de ligne affectées
                 return nbligne;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
         }

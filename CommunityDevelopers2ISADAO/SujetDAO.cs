@@ -38,16 +38,21 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idsujet;
             cmd.Parameters.Add(parm);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Sujet");
                 da.Fill(dt);
+
+                // si tout se passe bien on retourne le DataTable
                 return dt;
             }
+
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
 
@@ -63,17 +68,22 @@ namespace CommunityDevelopers2ISADAO
             cmd.CommandText = "GetAllSujets";
             cmd.CommandType = CommandType.StoredProcedure;
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("TousLesSujet");
                 da.Fill(dt);
-                //con.Close();
+
+                // si tout se passe bien on retourne le DataTable
                 return dt;
             }
+
+            // Si exception on récupere l'exception ou on affiche un message ou on retourne quelque chose
+          
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
 
@@ -97,17 +107,20 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idcategorie;
             cmd.Parameters.Add(parm);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("TousLesSujet");
                 da.Fill(dt);
-                //con.Close();
+
+                // si tout se passe bien on retourne le DataTable
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
 
@@ -148,16 +161,21 @@ namespace CommunityDevelopers2ISADAO
             parmDescr.Value = description;
             cmd.Parameters.Add(parmDescr);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 con.Open();
                 int nbLigne = cmd.ExecuteNonQuery();
                 con.Close();
+
+                // si tout se passe bien on retourne le nombre de ligne affectées
                 return nbLigne;
             }
+
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
         }
@@ -202,16 +220,19 @@ namespace CommunityDevelopers2ISADAO
             parmOldDescr.Value = oldDescription;
             cmd.Parameters.Add(parmOldDescr);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 con.Open();
                 int nbLigne = cmd.ExecuteNonQuery();
                 con.Close();
+                // si tout se passe bien on le nombre de ligne affectées
                 return nbLigne;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
 
@@ -232,18 +253,20 @@ namespace CommunityDevelopers2ISADAO
             parmIdSujet.ParameterName = "@ID_SUJET";
             parmIdSujet.Value = idSujet;
             cmd.Parameters.Add(parmIdSujet);
-
+            // on ajout un bloc try catch pour gérer l'exception
             try
             {
                 con.Open();
                 int nbLigne = cmd.ExecuteNonQuery();
                 con.Close();
-
+                // si tout se passe bien on le nombre de ligne affectées
                 return nbLigne;
             }
+
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
         }

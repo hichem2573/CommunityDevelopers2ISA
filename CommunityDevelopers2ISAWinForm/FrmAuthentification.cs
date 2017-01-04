@@ -1,4 +1,5 @@
-﻿using CommunityDevelopers2ISADLL;
+﻿
+using CommunityDevelopers2ISABLL;
 using CommunityDevelopers2ISAMetiers;
 using System;
 using System.Collections.Generic;
@@ -28,13 +29,17 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void btValider_Click(object sender, EventArgs e)
         {
-            FrmAccueil.CurrentUtilisateur = Outils.Login(txtBoxLogin.Text, txtBoxPassword.Text);
             
+            FrmAccueil.CurrentUtilisateur = Outils.Login(txtBoxLogin.Text, txtBoxPassword.Text);
+
+        
             if (FrmAccueil.CurrentUtilisateur != null)
             {
+ 
                 FrmAccueil.Isconnected = true;
-                FrmAccueil.IsRmodo = FrmAccueil.CurrentUtilisateur.IsRmode;
+                FrmAccueil.IsRmodo = FrmAccueil.CurrentUtilisateur.IsRmode; 
                 this.Close();
+                
 
 
             }
@@ -45,7 +50,7 @@ namespace CommunityDevelopers2ISAWinForm
                
             }
 
-
+            
         }
     
     }

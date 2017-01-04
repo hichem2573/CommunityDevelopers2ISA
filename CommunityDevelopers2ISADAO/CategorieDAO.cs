@@ -37,18 +37,20 @@ namespace CommunityDevelopers2ISADAO
             cmd.CommandText = "GetAllCategories";
             cmd.CommandType = CommandType.StoredProcedure;
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Categorie");
                 da.Fill(dt);
-                //con.Close();
-
+                
+                // si tout se passe bien on retourne le DataTable 
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
         }
@@ -71,18 +73,19 @@ namespace CommunityDevelopers2ISADAO
             parm.Value = idCategorie;
             cmd.Parameters.Add(parm);
 
-
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Categories");
                 da.Fill(dt);
-                //con.Close();
+                // si tout se passe bien on retourne le DataTable 
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;  ;
             }
            

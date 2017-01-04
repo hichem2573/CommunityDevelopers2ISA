@@ -15,6 +15,7 @@ namespace CommunityDevelopers2ISADAO
     public static class ReponseDAO
     {
         #region "Property et attributs"
+
         private static SqlConnection con = ConnexionSql.GetConnexion();
         #endregion
 
@@ -39,18 +40,20 @@ namespace CommunityDevelopers2ISADAO
             parm.ParameterName = "@IdSujet";
             parm.Value = idSujet;
             cmd.Parameters.Add(parm);
-
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Reponses");
                 da.Fill(dt);
 
+                // si tout se passe bien on retourne le DataTable 
                 return dt;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne null
                 return null;
             }
         }
@@ -84,17 +87,20 @@ namespace CommunityDevelopers2ISADAO
             parmText.Value = texte;
             cmd.Parameters.Add(parmText);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 con.Open();
                 //Excute une action T-SQL sur la connection et retourne le nombres de lignes affectées
                 int nbLigne = cmd.ExecuteNonQuery();
                 con.Close();
+                // si tout se passe bien on le nombre de ligne affectes
                 return nbLigne;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
         }
@@ -116,16 +122,20 @@ namespace CommunityDevelopers2ISADAO
             parmIdReponse.Value = idReponse;
             cmd.Parameters.Add(parmIdReponse);
 
+            // on ajout un bloc try catch pour gérer l'exception 
             try
             {
                 con.Open();
                 int nbLigne = cmd.ExecuteNonQuery();
                 con.Close();
+
+                // si tout se passe bien on le nombre de ligne affectées
                 return nbLigne;
             }
+            // Si exception on récupere l'exception ou on affiche un message ou on retourn quelque chose
             catch (Exception)
             {
-
+                // Si exception on retourne 0
                 return 0;
             }
         }

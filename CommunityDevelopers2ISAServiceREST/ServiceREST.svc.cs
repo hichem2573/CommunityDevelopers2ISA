@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using CommunityDevelopers2ISAMetiers;
-using CommunityDevelopers2ISADLL;
+using CommunityDevelopers2ISABLL;
 
 namespace CommunityDevelopers2ISAServiceREST
 {

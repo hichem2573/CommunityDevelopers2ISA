@@ -115,7 +115,7 @@ namespace CommunityDevelopers2ISAMetiers
         [DataMember]
         private string _Auteur;
 
-
+       
         public string Auteur
         {
             get { return _Auteur; }

@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityDevelopers2ISADLL
+namespace CommunityDevelopers2ISABLL
 {
     /// <summary>
-    /// 
+    /// la BLL fait le lien entre la DAO et les classe Métiers, elle permet de recupéré les 
+    /// DataTable de chaque classe DAO et nous renvoie une liste
     /// </summary>
     public class Outils
     {

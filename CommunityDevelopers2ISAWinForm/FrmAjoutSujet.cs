@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CommunityDevelopers2ISADLL;
+using CommunityDevelopers2ISABLL;
 using CommunityDevelopers2ISAMetiers;
 
 namespace CommunityDevelopers2ISAWinForm
