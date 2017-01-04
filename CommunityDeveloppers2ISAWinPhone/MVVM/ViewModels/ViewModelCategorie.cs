@@ -114,7 +114,7 @@ namespace CommunityDeveloppers2ISAWinPhone
             }
             else
             {
-                ErrorMessage = "Le sujet choisi ne contient pas de reponses !";
+                ErrorMessage = "La catégorie choisi ne contient pas de sujets !";
             }
 
         }
