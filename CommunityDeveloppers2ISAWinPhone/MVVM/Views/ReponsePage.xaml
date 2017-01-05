@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="lblTitre" Grid.Row="0" Text="2ISA's Developers Community"  FontSize="22" Foreground="#FFF32319" HorizontalAlignment="Center" FontStyle="Oblique" />
-        <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des reponses" Foreground="#FF0EF1F1" FontSize="22"  HorizontalAlignment="Center"/>
+        <TextBlock x:Name="lblText" Grid.Row="1" Text="Liste des réponses" Foreground="#FF0EF1F1" FontSize="22"  HorizontalAlignment="Center"/>
 
         <ListView x:Name="lstvCategorie" Grid.Row="2" ItemsSource="{Binding Reponse}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="Aqua" >
             <ListView.ItemContainerStyle>
