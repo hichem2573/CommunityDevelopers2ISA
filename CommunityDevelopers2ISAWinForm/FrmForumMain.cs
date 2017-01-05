@@ -140,8 +140,6 @@ namespace CommunityDevelopers2ISAWinForm
 
         }
 
-
-
         /// <summary>
         /// Méthode permettant l'ouverture d'une nouvelle fenêtre 
         /// Pour ajouter une réponse dès qu'on clic sur le bouton ajouter réponse

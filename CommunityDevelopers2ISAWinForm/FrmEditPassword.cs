@@ -20,7 +20,12 @@ namespace CommunityDevelopers2ISAWinForm
         }
 
        
-
+        /// <summary>
+        /// Evénement clic permettant de valider le changement de mot de passe apres comparaison, des deux champs 
+        /// comparaison pour savoir si les deux nouveau mot de passe son identique ou non 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btValider_Click(object sender, EventArgs e)
         {
 
