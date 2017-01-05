@@ -58,11 +58,12 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="CommunityDevelopers2ISABLL" isDocumented="True">BLL comporte une classe Outils permettant de faire appel aux méthodes de la DAO, elle fait le lien entre ma couche métier et ma couche accès au données</NamespaceSummaryItem>
-<NamespaceSummaryItem name="CommunityDevelopers2ISADAO" isDocumented="True">Data Access Object DAO, est le patron de conception objet d'accès au données, permet de récupérer les données dans la BDD</NamespaceSummaryItem>
-<NamespaceSummaryItem name="CommunityDevelopers2ISAMetiers" isDocumented="True">Couche logique métier, permet de faire le lien entre ma couche IHM et ma classe Outils, qui elle fait appel aux méthodes de ma DAO qui récupére les données dans la BDD</NamespaceSummaryItem>
-<NamespaceSummaryItem name="CommunityDevelopers2ISAServiceREST" isDocumented="True">Web service REST ou couche d'accès au données. permet l'accès à chaque resource par une URI (Uniform Resource Identifier). Cette couche d'accès aux données communique avec la couche métiers qui elle communique avec la couche Présentation. le format de la présentation est en XML, il peut etre en JSON ou autre</NamespaceSummaryItem>
-<NamespaceSummaryItem name="ConsumeWebServiceRest" isDocumented="True">ConsumeWSR Permet d'appeler un service REST en asynchrone. C'est la méthode GET qui est utilisée pour l'appel du service
-L'échange de donnée se fait en XML</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="CommunityDevelopers2ISADAO" isDocumented="True">Data Access Object DAO, est le patron de conception objet d'accès au données, permet de récupérer les données dans la BDD</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="CommunityDevelopers2ISAMetiers" isDocumented="True">Couche logique métier, permet de faire le lien entre ma couche IHM et ma classe Outils, qui elle fait appel aux méthodes de ma DAO qui récupére les données dans la BDD</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="CommunityDevelopers2ISAServiceREST" isDocumented="True">Web service REST ou couche d'accès au données. permet l'accès à chaque resource par une URI (Uniform Resource Identifier). Cette couche d'accès aux données communique avec la couche métiers qui elle communique avec la couche Présentation. le format de la présentation est en XML, il peut etre en JSON ou autre</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ConsumeWebServiceRest" isDocumented="True">ConsumeWSR Permet d'appeler un service REST en asynchrone. C'est la méthode GET qui est utilisée pour l'appel du service
+L'échange de donnée se fait en XML</NamespaceSummaryItem>
+    </NamespaceSummaries>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

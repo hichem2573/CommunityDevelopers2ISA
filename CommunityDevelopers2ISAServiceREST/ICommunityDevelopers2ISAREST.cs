@@ -27,7 +27,11 @@ namespace CommunityDevelopers2ISAServiceREST
         [WebGet(UriTemplate = "Reponse/{idsujet}")]
 
         List<Reponse> GetAllReponseBySujet(string idsujet);
-        
-    }  
+
+
+       
+
+
+    }
 }
 

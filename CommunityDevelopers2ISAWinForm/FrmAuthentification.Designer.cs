@@ -171,6 +171,7 @@
             this.MinimumSize = new System.Drawing.Size(400, 401);
             this.Name = "FrmAuthentification";
             this.Text = "FrmAuthentification";
+            this.Load += new System.EventHandler(this.FrmAuthentification_Load);
             this.tlPanelAuthentification.ResumeLayout(false);
             this.plLoginPassword.ResumeLayout(false);
             this.gpAuthentification.ResumeLayout(false);

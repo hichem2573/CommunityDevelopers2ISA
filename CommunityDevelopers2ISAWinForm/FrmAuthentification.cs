@@ -52,7 +52,11 @@ namespace CommunityDevelopers2ISAWinForm
 
             
         }
-    
+
+        private void FrmAuthentification_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtBoxLogin;
+        }
     }
 
 }

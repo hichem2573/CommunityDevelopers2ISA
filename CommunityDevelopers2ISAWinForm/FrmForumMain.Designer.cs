@@ -77,7 +77,7 @@
             this.tlPanelFrmForumMain.ColumnCount = 3;
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.33957F));
             this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.66042F));
-            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tlPanelFrmForumMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
             this.tlPanelFrmForumMain.Controls.Add(this.dataGridViewReponses, 1, 2);
             this.tlPanelFrmForumMain.Controls.Add(this.plAuthentification, 1, 3);
             this.tlPanelFrmForumMain.Controls.Add(this.tblPanelCategorie, 0, 0);
@@ -107,14 +107,15 @@
             this.dataGridViewReponses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewReponses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReponses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewReponses.Location = new System.Drawing.Point(238, 117);
+            this.dataGridViewReponses.Location = new System.Drawing.Point(237, 117);
             this.dataGridViewReponses.Name = "dataGridViewReponses";
             this.dataGridViewReponses.ReadOnly = true;
+            this.dataGridViewReponses.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
+            this.dataGridViewReponses.RowTemplate.Height = 40;
             this.dataGridViewReponses.Size = new System.Drawing.Size(588, 317);
             this.dataGridViewReponses.TabIndex = 0;
             this.dataGridViewReponses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReponses_CellClick);
             this.dataGridViewReponses.SelectionChanged += new System.EventHandler(this.dataGridViewReponses_SelectionChanged);
-           // this.dataGridViewReponses.DoubleClick += new System.EventHandler(this.dataGridViewReponses_DoubleClick);
             // 
             // plAuthentification
             // 
@@ -122,7 +123,7 @@
             this.plAuthentification.Controls.Add(this.btEditPassword);
             this.plAuthentification.Controls.Add(this.btLogin);
             this.plAuthentification.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plAuthentification.Location = new System.Drawing.Point(238, 440);
+            this.plAuthentification.Location = new System.Drawing.Point(237, 440);
             this.plAuthentification.Name = "plAuthentification";
             this.plAuthentification.Size = new System.Drawing.Size(588, 66);
             this.plAuthentification.TabIndex = 2;
@@ -179,7 +180,7 @@
             this.tblPanelCategorie.Name = "tblPanelCategorie";
             this.tblPanelCategorie.RowCount = 1;
             this.tblPanelCategorie.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPanelCategorie.Size = new System.Drawing.Size(229, 91);
+            this.tblPanelCategorie.Size = new System.Drawing.Size(228, 91);
             this.tblPanelCategorie.TabIndex = 4;
             // 
             // gpBoxCategorie
@@ -187,7 +188,7 @@
             this.gpBoxCategorie.Controls.Add(this.cbBoxCategorie);
             this.gpBoxCategorie.Location = new System.Drawing.Point(3, 3);
             this.gpBoxCategorie.Name = "gpBoxCategorie";
-            this.gpBoxCategorie.Size = new System.Drawing.Size(223, 85);
+            this.gpBoxCategorie.Size = new System.Drawing.Size(222, 85);
             this.gpBoxCategorie.TabIndex = 0;
             this.gpBoxCategorie.TabStop = false;
             this.gpBoxCategorie.Text = "Categories :";
@@ -199,7 +200,7 @@
             this.cbBoxCategorie.FormattingEnabled = true;
             this.cbBoxCategorie.Location = new System.Drawing.Point(3, 16);
             this.cbBoxCategorie.Name = "cbBoxCategorie";
-            this.cbBoxCategorie.Size = new System.Drawing.Size(217, 21);
+            this.cbBoxCategorie.Size = new System.Drawing.Size(216, 21);
             this.cbBoxCategorie.TabIndex = 0;
             this.cbBoxCategorie.SelectedIndexChanged += new System.EventHandler(this.cbBoxCategorie_SelectedIndexChanged);
             // 
@@ -209,7 +210,7 @@
             this.tblPanelAdministration.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblPanelAdministration.Controls.Add(this.gpBoxAdministration, 0, 0);
             this.tblPanelAdministration.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPanelAdministration.Location = new System.Drawing.Point(238, 3);
+            this.tblPanelAdministration.Location = new System.Drawing.Point(237, 3);
             this.tblPanelAdministration.Name = "tblPanelAdministration";
             this.tblPanelAdministration.RowCount = 1;
             this.tblPanelAdministration.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -285,7 +286,7 @@
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.37855F));
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.62145F));
             this.tlPanelSujet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tlPanelSujet.Size = new System.Drawing.Size(229, 317);
+            this.tlPanelSujet.Size = new System.Drawing.Size(228, 317);
             this.tlPanelSujet.TabIndex = 6;
             // 
             // gpBoxSujet
@@ -294,7 +295,7 @@
             this.gpBoxSujet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxSujet.Location = new System.Drawing.Point(3, 3);
             this.gpBoxSujet.Name = "gpBoxSujet";
-            this.gpBoxSujet.Size = new System.Drawing.Size(223, 100);
+            this.gpBoxSujet.Size = new System.Drawing.Size(222, 100);
             this.gpBoxSujet.TabIndex = 0;
             this.gpBoxSujet.TabStop = false;
             this.gpBoxSujet.Text = "Sujets :";
@@ -306,7 +307,7 @@
             this.cbBoxSujet.FormattingEnabled = true;
             this.cbBoxSujet.Location = new System.Drawing.Point(3, 16);
             this.cbBoxSujet.Name = "cbBoxSujet";
-            this.cbBoxSujet.Size = new System.Drawing.Size(217, 21);
+            this.cbBoxSujet.Size = new System.Drawing.Size(216, 21);
             this.cbBoxSujet.TabIndex = 1;
             this.cbBoxSujet.SelectedIndexChanged += new System.EventHandler(this.cbBoxSujet_SelectedIndexChanged);
             // 
@@ -318,7 +319,7 @@
             this.lblPasDeSujet.ForeColor = System.Drawing.Color.White;
             this.lblPasDeSujet.Location = new System.Drawing.Point(3, 263);
             this.lblPasDeSujet.Name = "lblPasDeSujet";
-            this.lblPasDeSujet.Size = new System.Drawing.Size(223, 54);
+            this.lblPasDeSujet.Size = new System.Drawing.Size(222, 54);
             this.lblPasDeSujet.TabIndex = 1;
             this.lblPasDeSujet.Text = "Désolé ! La Categorie, ne contient aucun sujet";
             this.lblPasDeSujet.Visible = false;
@@ -329,7 +330,7 @@
             this.gpBoxDescSujet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxDescSujet.Location = new System.Drawing.Point(3, 109);
             this.gpBoxDescSujet.Name = "gpBoxDescSujet";
-            this.gpBoxDescSujet.Size = new System.Drawing.Size(223, 151);
+            this.gpBoxDescSujet.Size = new System.Drawing.Size(222, 151);
             this.gpBoxDescSujet.TabIndex = 2;
             this.gpBoxDescSujet.TabStop = false;
             this.gpBoxDescSujet.Text = "Description Sujet ;";
@@ -342,16 +343,16 @@
             this.txtBoxDescSujet.Multiline = true;
             this.txtBoxDescSujet.Name = "txtBoxDescSujet";
             this.txtBoxDescSujet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxDescSujet.Size = new System.Drawing.Size(217, 132);
+            this.txtBoxDescSujet.Size = new System.Drawing.Size(216, 132);
             this.txtBoxDescSujet.TabIndex = 2;
             // 
             // plAddSujetAddReponse
             // 
             this.plAddSujetAddReponse.Controls.Add(this.gpBoxAjoutSujetReponse);
             this.plAddSujetAddReponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plAddSujetAddReponse.Location = new System.Drawing.Point(832, 117);
+            this.plAddSujetAddReponse.Location = new System.Drawing.Point(831, 117);
             this.plAddSujetAddReponse.Name = "plAddSujetAddReponse";
-            this.plAddSujetAddReponse.Size = new System.Drawing.Size(232, 317);
+            this.plAddSujetAddReponse.Size = new System.Drawing.Size(233, 317);
             this.plAddSujetAddReponse.TabIndex = 7;
             // 
             // gpBoxAjoutSujetReponse
@@ -361,7 +362,7 @@
             this.gpBoxAjoutSujetReponse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpBoxAjoutSujetReponse.Location = new System.Drawing.Point(0, 0);
             this.gpBoxAjoutSujetReponse.Name = "gpBoxAjoutSujetReponse";
-            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(232, 317);
+            this.gpBoxAjoutSujetReponse.Size = new System.Drawing.Size(233, 317);
             this.gpBoxAjoutSujetReponse.TabIndex = 0;
             this.gpBoxAjoutSujetReponse.TabStop = false;
             this.gpBoxAjoutSujetReponse.Text = "Ajout Sujet ou réponse";
@@ -398,9 +399,9 @@
             // 
             this.pnlQuitter.Controls.Add(this.btQuitter);
             this.pnlQuitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlQuitter.Location = new System.Drawing.Point(832, 440);
+            this.pnlQuitter.Location = new System.Drawing.Point(831, 440);
             this.pnlQuitter.Name = "pnlQuitter";
-            this.pnlQuitter.Size = new System.Drawing.Size(232, 66);
+            this.pnlQuitter.Size = new System.Drawing.Size(233, 66);
             this.pnlQuitter.TabIndex = 8;
             // 
             // btQuitter
@@ -422,7 +423,7 @@
             this.lblPasDeReponse.AutoSize = true;
             this.lblPasDeReponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasDeReponse.ForeColor = System.Drawing.Color.White;
-            this.lblPasDeReponse.Location = new System.Drawing.Point(238, 97);
+            this.lblPasDeReponse.Location = new System.Drawing.Point(237, 97);
             this.lblPasDeReponse.Name = "lblPasDeReponse";
             this.lblPasDeReponse.Size = new System.Drawing.Size(443, 17);
             this.lblPasDeReponse.TabIndex = 9;

@@ -13,8 +13,11 @@ namespace CommunityDevelopers2ISAWinForm
 {
     public partial class FrmAccueil : Form
     {
+        // variable déterminant le rôle de l'utilisateur (soit modérateur ou utilisateur identifié)
         static internal bool IsRmodo;
+        // variable rendant le current utilisateur
         static internal Utilisateur CurrentUtilisateur;
+        // variable déterminant si l'utilisateur est connecté ou non 
         static internal bool Isconnected;
 
         public FrmAccueil()

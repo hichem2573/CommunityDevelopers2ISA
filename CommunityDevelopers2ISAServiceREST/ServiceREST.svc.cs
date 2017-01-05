@@ -31,15 +31,15 @@ namespace CommunityDevelopers2ISAServiceREST
         /// <returns>La liste de toutes les réponses pour un sujet donné</returns>
         public List<Reponse> GetAllReponseBySujet(string idsujet)
         {
-            int res; 
+            int res;
 
-            if (int.TryParse(idsujet , out res))
+            if (int.TryParse(idsujet, out res))
             {
-                return Outils.GetAllReponseBySujet(res);
+                 return Outils.GetAllReponseBySujet(res);
             }
             else
             {
-                return null; 
+                return null;
             }
 
         }
