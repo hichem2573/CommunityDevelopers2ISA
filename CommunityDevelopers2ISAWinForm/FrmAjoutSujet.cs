@@ -24,6 +24,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void FrmAjoutSujet_Load(object sender, EventArgs e)
         {
+           
             if(sujet == null)
             {
                 
@@ -37,25 +38,30 @@ namespace CommunityDevelopers2ISAWinForm
                 txtBoxDescSujet.Text = sujet.Desc;
                 btValidation.Text = "Valider la modif";
             }
+            
         }
 
         private void btValidation_Click(object sender, EventArgs e)
         {
+            
             if(sujet == null)
             {
+                
                 if (Outils.AddSujet(FrmAccueil.CurrentUtilisateur.Id, categorie.Id, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxAddSujetText, Properties.Resources.MsgBoxAddSujetTitre, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxErreurAddSujetText, Properties.Resources.MsgBoxErreurAddSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
+                
             }
             else
             {
-
+                
                 if (Outils.ModifierSujet(sujet.Id, sujet.Titre, sujet.Desc, txtBoxTitreSujet.Text, txtBoxDescSujet.Text) == 1)
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxEditSujetText, Properties.Resources.MsgBoxEditSujetText, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,6 +70,7 @@ namespace CommunityDevelopers2ISAWinForm
                 {
                     MessageBox.Show(Properties.Resources.MsgBoxErreurEditSujetText, Properties.Resources.MsgBoxErreurEditSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
+                
                 this.Close();
             }
         }
@@ -77,6 +84,6 @@ namespace CommunityDevelopers2ISAWinForm
             }
         }
 
-     
+        
     }
 }

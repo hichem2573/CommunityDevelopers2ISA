@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="AddReponse method" Url="html/35cea4e4-8ecc-5366-2403-06c9a48eb98a.htm" />
-  <HelpKINode Title="AddSujet method" Url="html/1bc48905-70ea-71fc-554a-b820c56528d6.htm" />
+  <HelpKINode Title="AddReponse method">
+    <HelpKINode Title="Outils.AddReponse Method " Url="html/9650a6e6-541f-db94-b04a-ab6ab2ca85d9.htm" />
+    <HelpKINode Title="ReponseDAO.AddReponse Method " Url="html/35cea4e4-8ecc-5366-2403-06c9a48eb98a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddSujet method">
+    <HelpKINode Title="Outils.AddSujet Method " Url="html/e1345a35-4f02-c789-50aa-b49a7ba8751a.htm" />
+    <HelpKINode Title="SujetDAO.AddSujet Method " Url="html/1bc48905-70ea-71fc-554a-b820c56528d6.htm" />
+  </HelpKINode>
   <HelpKINode Title="Auteur property">
     <HelpKINode Title="Reponse.Auteur Property " Url="html/fdc6324e-d883-97ba-3178-87122b4d4689.htm" />
     <HelpKINode Title="Sujet.Auteur Property " Url="html/5ab9b8a5-037d-cf6c-9ad8-03bafeac4ffb.htm" />
@@ -26,6 +32,8 @@
   <HelpKINode Title="CategorieDAO.GetAllCategories method" Url="html/799b2d55-20cf-8520-dca1-f1e38d1d5003.htm" />
   <HelpKINode Title="CategorieDAO.GetCategorieByID method" Url="html/05fe3a1c-92b9-cb0e-b01d-dbca76913d27.htm" />
   <HelpKINode Title="Categories property" Url="html/07f5a0b3-74a2-0213-1c50-31dca93876eb.htm" />
+  <HelpKINode Title="CommunityDevelopers2ISABLL namespace" Url="html/7c993d6b-6ab0-b7b7-efc0-06dbf1f33bcd.htm" />
+  <HelpKINode Title="CommunityDevelopers2ISABLL.Outils class" Url="html/8c36dcac-ea2f-62a1-051b-d576dd21816c.htm" />
   <HelpKINode Title="CommunityDevelopers2ISADAO namespace" Url="html/daa09ac5-8fdb-5a30-0627-7eb925aa8d7d.htm" />
   <HelpKINode Title="CommunityDevelopers2ISADAO.CategorieDAO class" Url="html/18525683-11c5-e528-fab5-715a1b83f9f0.htm" />
   <HelpKINode Title="CommunityDevelopers2ISADAO.ConnexionSql class" Url="html/e4a4cea7-da09-ea92-d163-db91d94a20fe.htm" />
@@ -37,6 +45,9 @@
   <HelpKINode Title="CommunityDevelopers2ISAMetiers.Reponse class" Url="html/e3895bea-f6a3-0bb3-e09c-74ef7027d397.htm" />
   <HelpKINode Title="CommunityDevelopers2ISAMetiers.Sujet class" Url="html/80658f06-090d-726e-5fe3-ecfb5a5fbbfb.htm" />
   <HelpKINode Title="CommunityDevelopers2ISAMetiers.Utilisateur class" Url="html/f299376f-d259-9940-75ff-a2e2ead926ea.htm" />
+  <HelpKINode Title="CommunityDevelopers2ISAServiceREST namespace" Url="html/9cbfde35-39c1-021d-45a8-4eebea03e375.htm" />
+  <HelpKINode Title="CommunityDevelopers2ISAServiceREST.ICommunityDevelopers2ISAREST interface" Url="html/d9d2fbb9-0eeb-3af3-76f0-853fd149229f.htm" />
+  <HelpKINode Title="CommunityDevelopers2ISAServiceREST.ServiceREST class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
   <HelpKINode Title="ConnexionSql class">
     <HelpKINode Title="ConnexionSql Class" Url="html/e4a4cea7-da09-ea92-d163-db91d94a20fe.htm" />
     <HelpKINode Title="about ConnexionSql class" Url="html/e4a4cea7-da09-ea92-d163-db91d94a20fe.htm" />
@@ -63,19 +74,47 @@
     <HelpKINode Title="Reponse.Date Property " Url="html/a1ec24db-968e-fe66-c460-e00c2ae26e04.htm" />
     <HelpKINode Title="Sujet.Date Property " Url="html/0726d270-becf-91e8-700b-322f4afffde1.htm" />
   </HelpKINode>
-  <HelpKINode Title="DeleteReponse method" Url="html/28fc3b71-7ac8-f2e7-3931-688a92d63e8f.htm" />
-  <HelpKINode Title="DeleteSujet method" Url="html/08527f90-9fad-fe11-1980-7e063e471964.htm" />
+  <HelpKINode Title="DeleteReponse method">
+    <HelpKINode Title="Outils.DeleteReponse Method " Url="html/8ff3761d-289c-390e-1b48-e104ee1e6b95.htm" />
+    <HelpKINode Title="ReponseDAO.DeleteReponse Method " Url="html/28fc3b71-7ac8-f2e7-3931-688a92d63e8f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeleteSujet method">
+    <HelpKINode Title="Outils.DeleteSujet Method " Url="html/7199150a-6df1-fd5c-e704-bab34f6243f9.htm" />
+    <HelpKINode Title="SujetDAO.DeleteSujet Method " Url="html/08527f90-9fad-fe11-1980-7e063e471964.htm" />
+  </HelpKINode>
   <HelpKINode Title="Desc property">
     <HelpKINode Title="Categorie.Desc Property " Url="html/ec577cdd-328a-943e-6678-f4c15ee9f44b.htm" />
     <HelpKINode Title="Sujet.Desc Property " Url="html/a95deaa9-68fb-6cca-d265-59ad8414f61e.htm" />
   </HelpKINode>
-  <HelpKINode Title="EditPassword method" Url="html/922310db-8807-414a-e9ae-9447298b1b00.htm" />
-  <HelpKINode Title="GetAllCategories method" Url="html/799b2d55-20cf-8520-dca1-f1e38d1d5003.htm" />
-  <HelpKINode Title="GetAllReponseBySujet method" Url="html/5e2beb94-6c3e-9273-208d-237993618fad.htm" />
-  <HelpKINode Title="GetAllSujets method" Url="html/fa68f0cd-7d6d-abd7-6861-5937d3733c64.htm" />
-  <HelpKINode Title="GetAllUtilisateur method" Url="html/501b4f08-131f-c04d-5a36-37ad7ce52508.htm" />
+  <HelpKINode Title="EditPassword method">
+    <HelpKINode Title="Outils.EditPassword Method " Url="html/68c3bd3c-819c-1641-3fb6-df7ca7e7b460.htm" />
+    <HelpKINode Title="UtilisateurDAO.EditPassword Method " Url="html/922310db-8807-414a-e9ae-9447298b1b00.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetAllCategories method">
+    <HelpKINode Title="CategorieDAO.GetAllCategories Method " Url="html/799b2d55-20cf-8520-dca1-f1e38d1d5003.htm" />
+    <HelpKINode Title="ICommunityDevelopers2ISAREST.GetAllCategories Method " Url="html/d0a60b7b-9f4c-73eb-437b-d4ca12e3cc32.htm" />
+    <HelpKINode Title="Outils.GetAllCategories Method " Url="html/e48dc217-0e62-d034-d10f-6de5e89227ae.htm" />
+    <HelpKINode Title="ServiceREST.GetAllCategories Method " Url="html/5a27306c-2d54-b11f-6911-3704dc9b08a4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetAllReponseBySujet method">
+    <HelpKINode Title="ICommunityDevelopers2ISAREST.GetAllReponseBySujet Method " Url="html/34110b6b-1beb-337a-86c3-74deb85f77e9.htm" />
+    <HelpKINode Title="Outils.GetAllReponseBySujet Method " Url="html/600fc74d-ab1d-bb12-08d0-b410cab333da.htm" />
+    <HelpKINode Title="ReponseDAO.GetAllReponseBySujet Method " Url="html/5e2beb94-6c3e-9273-208d-237993618fad.htm" />
+    <HelpKINode Title="ServiceREST.GetAllReponseBySujet Method " Url="html/b99dcd72-efc7-140b-3aff-ffd47749fcb8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetAllSujets method">
+    <HelpKINode Title="Outils.GetAllSujets Method " Url="html/87b6ee74-4afd-d0ab-1976-80c82ab51aed.htm" />
+    <HelpKINode Title="SujetDAO.GetAllSujets Method " Url="html/fa68f0cd-7d6d-abd7-6861-5937d3733c64.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetAllUtilisateur method">
+    <HelpKINode Title="Outils.GetAllUtilisateur Method " Url="html/251f85b1-e2d3-4569-a342-df5d74cda361.htm" />
+    <HelpKINode Title="UtilisateurDAO.GetAllUtilisateur Method " Url="html/501b4f08-131f-c04d-5a36-37ad7ce52508.htm" />
+  </HelpKINode>
   <HelpKINode Title="getCategorie method" Url="html/f9b4dcff-bc80-c3c8-19a7-897fe5f8f246.htm" />
-  <HelpKINode Title="GetCategorieByID method" Url="html/05fe3a1c-92b9-cb0e-b01d-dbca76913d27.htm" />
+  <HelpKINode Title="GetCategorieByID method">
+    <HelpKINode Title="CategorieDAO.GetCategorieByID Method " Url="html/05fe3a1c-92b9-cb0e-b01d-dbca76913d27.htm" />
+    <HelpKINode Title="Outils.GetCategorieByID Method " Url="html/7bdf9a8d-8065-74d8-d1bc-c32d762b4864.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetConnexion method" Url="html/aafe7fa6-6460-3b92-c6a3-69e432ded4b0.htm" />
   <HelpKINode Title="GetNomUtilisateur method">
     <HelpKINode Title="Reponse.GetNomUtilisateur Method " Url="html/bf780d79-ee2d-7972-9916-d892c782bbf1.htm" />
@@ -83,9 +122,28 @@
   </HelpKINode>
   <HelpKINode Title="getReponseBySujet method" Url="html/3a95a4aa-bd20-36c2-9ce6-4687605d83ca.htm" />
   <HelpKINode Title="getSujetByCategorieID method" Url="html/369edd3d-f56e-2dc4-ac86-a33f04139750.htm" />
-  <HelpKINode Title="GetSujetByID method" Url="html/f600e127-c340-b511-3e89-a03307f1e872.htm" />
-  <HelpKINode Title="GetSujetsByCategorieID method" Url="html/4be782e0-d5cd-80d1-5809-b0f339815497.htm" />
-  <HelpKINode Title="GetUtilisateurByID method" Url="html/c1038fb4-8ab2-55dc-147a-e54ff4c808d3.htm" />
+  <HelpKINode Title="GetSujetByID method">
+    <HelpKINode Title="Outils.GetSujetByID Method " Url="html/66a80ee2-cc45-d73f-61b2-f2dd72a2ca57.htm" />
+    <HelpKINode Title="SujetDAO.GetSujetByID Method " Url="html/f600e127-c340-b511-3e89-a03307f1e872.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetSujetsByCategorieID method">
+    <HelpKINode Title="ICommunityDevelopers2ISAREST.GetSujetsByCategorieID Method " Url="html/b0e3188f-e546-10da-5372-4410a0ca5fb6.htm" />
+    <HelpKINode Title="Outils.GetSujetsByCategorieID Method " Url="html/b728ff35-498c-3284-8b35-0b7673024798.htm" />
+    <HelpKINode Title="ServiceREST.GetSujetsByCategorieID Method " Url="html/640b7d1e-b5c1-41eb-8904-88d97a979436.htm" />
+    <HelpKINode Title="SujetDAO.GetSujetsByCategorieID Method " Url="html/4be782e0-d5cd-80d1-5809-b0f339815497.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetUtilisateurByID method">
+    <HelpKINode Title="Outils.GetUtilisateurByID Method " Url="html/3eafe1ad-df24-de87-04b2-609f44444da4.htm" />
+    <HelpKINode Title="UtilisateurDAO.GetUtilisateurByID Method " Url="html/c1038fb4-8ab2-55dc-147a-e54ff4c808d3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommunityDevelopers2ISAREST interface">
+    <HelpKINode Title="ICommunityDevelopers2ISAREST Interface" Url="html/d9d2fbb9-0eeb-3af3-76f0-853fd149229f.htm" />
+    <HelpKINode Title="about ICommunityDevelopers2ISAREST interface" Url="html/d9d2fbb9-0eeb-3af3-76f0-853fd149229f.htm" />
+    <HelpKINode Title="methods" Url="html/010b711c-291c-0530-34ec-a5faba13e74b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommunityDevelopers2ISAREST.GetAllCategories method" Url="html/d0a60b7b-9f4c-73eb-437b-d4ca12e3cc32.htm" />
+  <HelpKINode Title="ICommunityDevelopers2ISAREST.GetAllReponseBySujet method" Url="html/34110b6b-1beb-337a-86c3-74deb85f77e9.htm" />
+  <HelpKINode Title="ICommunityDevelopers2ISAREST.GetSujetsByCategorieID method" Url="html/b0e3188f-e546-10da-5372-4410a0ca5fb6.htm" />
   <HelpKINode Title="Id property">
     <HelpKINode Title="Categorie.Id Property " Url="html/a0c07b84-b774-d4db-7907-0aeb64366438.htm" />
     <HelpKINode Title="Reponse.Id Property " Url="html/e291e100-bb49-5dbd-1a0a-0ba6f461cea0.htm" />
@@ -94,10 +152,38 @@
   </HelpKINode>
   <HelpKINode Title="IsRmode property" Url="html/c8b133cf-a168-05be-c03d-e3704de16076.htm" />
   <HelpKINode Title="Libelle property" Url="html/57a4028b-9d89-fb2d-577d-d76878167b2f.htm" />
-  <HelpKINode Title="Login method" Url="html/d8ed44de-936b-6eeb-4060-e084c8174e77.htm" />
+  <HelpKINode Title="Login method">
+    <HelpKINode Title="Outils.Login Method " Url="html/3ad60235-1116-619f-0225-924e2e636dcd.htm" />
+    <HelpKINode Title="UtilisateurDAO.Login Method " Url="html/d8ed44de-936b-6eeb-4060-e084c8174e77.htm" />
+  </HelpKINode>
   <HelpKINode Title="Login property" Url="html/ff69fe84-3e2b-7578-7d46-48ccfb697401.htm" />
   <HelpKINode Title="Mdp property" Url="html/3b9502a6-58a0-9a1a-e588-bac0c58d0d4a.htm" />
-  <HelpKINode Title="ModifierSujet method" Url="html/87383ef7-5fdb-cead-a768-d63efbe9f2bd.htm" />
+  <HelpKINode Title="ModifierSujet method">
+    <HelpKINode Title="Outils.ModifierSujet Method " Url="html/05eccf7e-56f8-9188-b721-635d03971ae5.htm" />
+    <HelpKINode Title="SujetDAO.ModifierSujet Method " Url="html/87383ef7-5fdb-cead-a768-d63efbe9f2bd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Outils class">
+    <HelpKINode Title="Outils Class" Url="html/8c36dcac-ea2f-62a1-051b-d576dd21816c.htm" />
+    <HelpKINode Title="about Outils class" Url="html/8c36dcac-ea2f-62a1-051b-d576dd21816c.htm" />
+    <HelpKINode Title="constructor" Url="html/d2901ff0-d477-256c-25b8-5030b0bc66f3.htm" />
+    <HelpKINode Title="methods" Url="html/51a3c85c-7ed0-26b5-4f69-8b6845b5437f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Outils.AddReponse method" Url="html/9650a6e6-541f-db94-b04a-ab6ab2ca85d9.htm" />
+  <HelpKINode Title="Outils.AddSujet method" Url="html/e1345a35-4f02-c789-50aa-b49a7ba8751a.htm" />
+  <HelpKINode Title="Outils.DeleteReponse method" Url="html/8ff3761d-289c-390e-1b48-e104ee1e6b95.htm" />
+  <HelpKINode Title="Outils.DeleteSujet method" Url="html/7199150a-6df1-fd5c-e704-bab34f6243f9.htm" />
+  <HelpKINode Title="Outils.EditPassword method" Url="html/68c3bd3c-819c-1641-3fb6-df7ca7e7b460.htm" />
+  <HelpKINode Title="Outils.GetAllCategories method" Url="html/e48dc217-0e62-d034-d10f-6de5e89227ae.htm" />
+  <HelpKINode Title="Outils.GetAllReponseBySujet method" Url="html/600fc74d-ab1d-bb12-08d0-b410cab333da.htm" />
+  <HelpKINode Title="Outils.GetAllSujets method" Url="html/87b6ee74-4afd-d0ab-1976-80c82ab51aed.htm" />
+  <HelpKINode Title="Outils.GetAllUtilisateur method" Url="html/251f85b1-e2d3-4569-a342-df5d74cda361.htm" />
+  <HelpKINode Title="Outils.GetCategorieByID method" Url="html/7bdf9a8d-8065-74d8-d1bc-c32d762b4864.htm" />
+  <HelpKINode Title="Outils.GetSujetByID method" Url="html/66a80ee2-cc45-d73f-61b2-f2dd72a2ca57.htm" />
+  <HelpKINode Title="Outils.GetSujetsByCategorieID method" Url="html/b728ff35-498c-3284-8b35-0b7673024798.htm" />
+  <HelpKINode Title="Outils.GetUtilisateurByID method" Url="html/3eafe1ad-df24-de87-04b2-609f44444da4.htm" />
+  <HelpKINode Title="Outils.Login method" Url="html/3ad60235-1116-619f-0225-924e2e636dcd.htm" />
+  <HelpKINode Title="Outils.ModifierSujet method" Url="html/05eccf7e-56f8-9188-b721-635d03971ae5.htm" />
+  <HelpKINode Title="Outils.Outils constructor" Url="html/d2901ff0-d477-256c-25b8-5030b0bc66f3.htm" />
   <HelpKINode Title="Reponse class">
     <HelpKINode Title="Reponse Class" Url="html/e3895bea-f6a3-0bb3-e09c-74ef7027d397.htm" />
     <HelpKINode Title="about Reponse class" Url="html/e3895bea-f6a3-0bb3-e09c-74ef7027d397.htm" />
@@ -121,8 +207,18 @@
   <HelpKINode Title="ReponseDAO.AddReponse method" Url="html/35cea4e4-8ecc-5366-2403-06c9a48eb98a.htm" />
   <HelpKINode Title="ReponseDAO.DeleteReponse method" Url="html/28fc3b71-7ac8-f2e7-3931-688a92d63e8f.htm" />
   <HelpKINode Title="ReponseDAO.GetAllReponseBySujet method" Url="html/5e2beb94-6c3e-9273-208d-237993618fad.htm" />
-  <HelpKINode Title="reponses property" Url="html/5d0e86e3-56c3-4c00-db89-ce9ab99908f5.htm" />
   <HelpKINode Title="Reponses property" Url="html/e2716ee5-6510-6971-b8f7-9440c362994d.htm" />
+  <HelpKINode Title="reponses property" Url="html/5d0e86e3-56c3-4c00-db89-ce9ab99908f5.htm" />
+  <HelpKINode Title="ServiceREST class">
+    <HelpKINode Title="ServiceREST Class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
+    <HelpKINode Title="about ServiceREST class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
+    <HelpKINode Title="constructor" Url="html/e678fb24-e1ca-cef1-3490-c03e6a75bbfe.htm" />
+    <HelpKINode Title="methods" Url="html/23728c6f-aadd-c4d1-03a2-9bdbbcace87a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ServiceREST.GetAllCategories method" Url="html/5a27306c-2d54-b11f-6911-3704dc9b08a4.htm" />
+  <HelpKINode Title="ServiceREST.GetAllReponseBySujet method" Url="html/b99dcd72-efc7-140b-3aff-ffd47749fcb8.htm" />
+  <HelpKINode Title="ServiceREST.GetSujetsByCategorieID method" Url="html/640b7d1e-b5c1-41eb-8904-88d97a979436.htm" />
+  <HelpKINode Title="ServiceREST.ServiceREST constructor" Url="html/e678fb24-e1ca-cef1-3490-c03e6a75bbfe.htm" />
   <HelpKINode Title="Sujet class">
     <HelpKINode Title="Sujet Class" Url="html/80658f06-090d-726e-5fe3-ecfb5a5fbbfb.htm" />
     <HelpKINode Title="about Sujet class" Url="html/80658f06-090d-726e-5fe3-ecfb5a5fbbfb.htm" />

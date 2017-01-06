@@ -191,7 +191,7 @@ namespace CommunityDevelopers2ISAWinForm
         private void btDeleteSujet_Click(object sender, EventArgs e)
         {
             DialogResult dr = new DialogResult();
-            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if(dr == DialogResult.OK)
             {
                 if(Outils.DeleteSujet((int)cbBoxSujet.SelectedValue) != 1)
@@ -395,10 +395,19 @@ namespace CommunityDevelopers2ISAWinForm
         /// <param name="reponses">liste de reponse</param>
         private void remplirDataGridReponses(List<Reponse> reponses)
         {
-            dataGridViewReponses.DataSource = reponses;
-            dataGridViewReponses.Columns["ID"].Visible = false;
-            dataGridViewReponses.Columns["SUJET"].Visible = false;
-            dataGridViewReponses.Columns["UTILISATEUR"].Visible = false;
+            //if(dataGridViewReponses.DataSource == null)
+            //{
+            //    PanelReponseInvisible();
+            //}
+            //else
+            if(reponses !=null)
+            {
+                dataGridViewReponses.DataSource = reponses;
+                dataGridViewReponses.Columns["ID"].Visible = false;
+                dataGridViewReponses.Columns["SUJET"].Visible = false;
+                dataGridViewReponses.Columns["UTILISATEUR"].Visible = false;
+            }
+           
         }
 
         /// <summary>

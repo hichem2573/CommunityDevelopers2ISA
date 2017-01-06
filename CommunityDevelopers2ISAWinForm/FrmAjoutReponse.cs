@@ -37,6 +37,7 @@ namespace CommunityDevelopers2ISAWinForm
 
         private void btAnnuler_Click(object sender, EventArgs e)
         {
+
             DialogResult res = MessageBox.Show(Properties.Resources.MsgBoxCancelText, Properties.Resources.MsgBoxCancelTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
             if (res == DialogResult.OK)
