@@ -64,6 +64,7 @@
       <NamespaceSummaryItem name="ConsumeWebServiceRest" isDocumented="True">ConsumeWSR Permet d'appeler un service REST en asynchrone. C'est la méthode GET qui est utilisée pour l'appel du service
 L'échange de donnée se fait en XML</NamespaceSummaryItem>
     </NamespaceSummaries>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

@@ -15,6 +15,7 @@ namespace CommunityDevelopers2ISAWinForm
     public partial class FrmAjoutReponse : Form
     {
         internal Sujet sujet;
+        
 
         public FrmAjoutReponse()
         {
@@ -44,6 +45,23 @@ namespace CommunityDevelopers2ISAWinForm
             {
                 this.Close();
             }
+        }
+        /// <summary>
+        /// Evénement TextChanged pour la txtBoxeReponse, qui appel la méthode grésage pour griser ou dégriser le bouton d'aout reponse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void txtBoxReponse_TextChanged(object sender, EventArgs e)
+        {            
+            Gresagebt();
+        }
+        /// <summary>
+        /// méthode de dégrisage du bouton ajouter réponse
+        /// </summary>
+       private void Gresagebt()
+        {
+            btAjoutReponse.Enabled = !string.IsNullOrWhiteSpace(txtBoxReponse.Text);
         }
     }
 }

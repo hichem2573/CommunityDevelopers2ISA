@@ -79,6 +79,7 @@
             this.txtBoxReponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBoxReponse.Size = new System.Drawing.Size(320, 150);
             this.txtBoxReponse.TabIndex = 0;
+            this.txtBoxReponse.TextChanged += new System.EventHandler(this.txtBoxReponse_TextChanged);
             // 
             // floLayPan
             // 
@@ -93,6 +94,7 @@
             // btAjoutReponse
             // 
             this.btAjoutReponse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btAjoutReponse.Enabled = false;
             this.btAjoutReponse.Image = global::CommunityDevelopers2ISAWinForm.Properties.Resources.ajouter_un_message;
             this.btAjoutReponse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAjoutReponse.Location = new System.Drawing.Point(19, 19);

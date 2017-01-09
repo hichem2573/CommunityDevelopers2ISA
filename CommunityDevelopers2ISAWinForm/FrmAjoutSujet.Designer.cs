@@ -83,7 +83,7 @@
             this.txtBoxTitreSujet.Size = new System.Drawing.Size(368, 20);
             this.txtBoxTitreSujet.TabIndex = 0;
             this.txtBoxTitreSujet.Text = " Veuillez saisir votre titre";
-           
+            this.txtBoxTitreSujet.TextChanged += new System.EventHandler(this.txtBoxTitreSujet_TextChanged);
             // 
             // grBoxDescSujet
             // 
@@ -105,7 +105,7 @@
             this.txtBoxDescSujet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBoxDescSujet.Size = new System.Drawing.Size(368, 130);
             this.txtBoxDescSujet.TabIndex = 0;
-            
+            this.txtBoxDescSujet.TextChanged += new System.EventHandler(this.txtBoxDescSujet_TextChanged);
             // 
             // floLayPanAjout
             // 

@@ -84,6 +84,14 @@ namespace CommunityDevelopers2ISAWinForm
             }
         }
 
-        
+        private void txtBoxTitreSujet_TextChanged(object sender, EventArgs e)
+        {
+            btValidation.Enabled = !(string.IsNullOrWhiteSpace(txtBoxTitreSujet.Text) && string.IsNullOrWhiteSpace(txtBoxDescSujet.Text));
+        }
+
+        private void txtBoxDescSujet_TextChanged(object sender, EventArgs e)
+        {
+            btValidation.Enabled = !(string.IsNullOrWhiteSpace(txtBoxDescSujet.Text));
+        }
     }
 }
