@@ -90,6 +90,7 @@
     <HelpKINode Title="Outils.EditPassword Method " Url="html/68c3bd3c-819c-1641-3fb6-df7ca7e7b460.htm" />
     <HelpKINode Title="UtilisateurDAO.EditPassword Method " Url="html/922310db-8807-414a-e9ae-9447298b1b00.htm" />
   </HelpKINode>
+  <HelpKINode Title="Equals method" Url="html/f22fd085-4de6-bc84-6fae-7c3215a28d8d.htm" />
   <HelpKINode Title="GetAllCategories method">
     <HelpKINode Title="CategorieDAO.GetAllCategories Method " Url="html/799b2d55-20cf-8520-dca1-f1e38d1d5003.htm" />
     <HelpKINode Title="ICommunityDevelopers2ISAREST.GetAllCategories Method " Url="html/d0a60b7b-9f4c-73eb-437b-d4ca12e3cc32.htm" />
@@ -207,8 +208,8 @@
   <HelpKINode Title="ReponseDAO.AddReponse method" Url="html/35cea4e4-8ecc-5366-2403-06c9a48eb98a.htm" />
   <HelpKINode Title="ReponseDAO.DeleteReponse method" Url="html/28fc3b71-7ac8-f2e7-3931-688a92d63e8f.htm" />
   <HelpKINode Title="ReponseDAO.GetAllReponseBySujet method" Url="html/5e2beb94-6c3e-9273-208d-237993618fad.htm" />
-  <HelpKINode Title="Reponses property" Url="html/e2716ee5-6510-6971-b8f7-9440c362994d.htm" />
   <HelpKINode Title="reponses property" Url="html/5d0e86e3-56c3-4c00-db89-ce9ab99908f5.htm" />
+  <HelpKINode Title="Reponses property" Url="html/e2716ee5-6510-6971-b8f7-9440c362994d.htm" />
   <HelpKINode Title="ServiceREST class">
     <HelpKINode Title="ServiceREST Class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
     <HelpKINode Title="about ServiceREST class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
@@ -231,6 +232,7 @@
   <HelpKINode Title="Sujet.Categorie property" Url="html/b2461ffe-c793-85df-0c15-624bc3e61bb6.htm" />
   <HelpKINode Title="Sujet.Date property" Url="html/0726d270-becf-91e8-700b-322f4afffde1.htm" />
   <HelpKINode Title="Sujet.Desc property" Url="html/a95deaa9-68fb-6cca-d265-59ad8414f61e.htm" />
+  <HelpKINode Title="Sujet.Equals method" Url="html/f22fd085-4de6-bc84-6fae-7c3215a28d8d.htm" />
   <HelpKINode Title="Sujet.GetNomUtilisateur method" Url="html/6ca3b4fc-16ca-ca76-67b9-b55d4b1fec93.htm" />
   <HelpKINode Title="Sujet.Id property" Url="html/1cea04ea-7a41-05c4-b3a8-9f86e69503f1.htm" />
   <HelpKINode Title="Sujet.Reponses property" Url="html/e2716ee5-6510-6971-b8f7-9440c362994d.htm" />

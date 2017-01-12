@@ -178,6 +178,19 @@ namespace CommunityDevelopers2ISAMetiers
         #endregion
 
         #region "Méthodes héritées et substituées "
+
+        public override bool Equals(object obj)
+        {
+            if(obj == null || obj.GetType() != this.GetType())
+
+            {
+                return false;
+            }
+
+            Sujet suj = (Sujet)obj;
+
+            return Id == suj.Id;
+        }
         #endregion
 
         #region "Méthodes à implementer pour les interfaces"
