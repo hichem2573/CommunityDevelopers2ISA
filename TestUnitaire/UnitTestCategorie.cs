@@ -22,10 +22,12 @@ namespace CommunityDevelopers2ISATestUnitaire
         [TestMethod]
         public void TestGetCategorieByID()
         {
-            string expectedString = "Adresse Utiles";
-            Categorie categorie = Outils.GetCategorieByID(2);
+            string expectedString = "Développement";
+            Categorie categorie = Outils.GetCategorieByID(7);
 
             Assert.AreEqual(categorie.Libelle, expectedString);
         }
+
+
     }
 }

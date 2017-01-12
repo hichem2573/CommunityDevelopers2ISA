@@ -52,13 +52,18 @@ namespace CommunityDeveloppers2ISAWinPhone
         }
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
+            // On interdit la sortie de l'application par ce bouton
             e.Handled = true;
         }
 
         private async void btCategorie_Click(object sender, RoutedEventArgs e)
         {
             btCategorie.Visibility = Visibility.Collapsed;
+            prCategorie.IsActive = true;
+            prCategorie.Visibility = Visibility.Visible;
             await _monitorViewModel.GetCategorie();
+            prCategorie.IsActive = false;
+            prCategorie.Visibility = Visibility.Collapsed;
             btCategorie.Visibility = Visibility.Visible;
         }
 

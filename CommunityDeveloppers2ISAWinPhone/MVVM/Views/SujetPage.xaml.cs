@@ -37,14 +37,12 @@ namespace CommunityDeveloppers2ISAWinPhone
         /// Ce paramètre est généralement utilisé pour configurer la page.</param>
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // On récupère le ViewModel (ViewModelCategorie). UserViewModel est la source de données
+            // On récupère le ViewModel (ViewModelCategorie) ViewModelCategorie est la source de données
            
             _ViewModelcategorie = (ViewModelCategorie)e.Parameter;
-            await _ViewModelcategorie.getSujetByCategorieID(); // il revient ici et exception 
+            await _ViewModelcategorie.getSujetByCategorieID(); 
             // Binding de la source de données (ViewModelCategorie) avec le contexte de la page
             DataContext = _ViewModelcategorie;
-
-
             // On s'abonne à l'événement système 'HardwareButtons_BackPressed'          
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
@@ -73,11 +71,13 @@ namespace CommunityDeveloppers2ISAWinPhone
 
         private void mnuQuitter_Click(object sender, RoutedEventArgs e)
         {
+            // Fermeture de l'application
             App.Current.Exit();
         }
 
         private async void mnuSynchro_Click(object sender, RoutedEventArgs e)
         {
+            // On rafraichi la liste des sujet
             await _ViewModelcategorie.getSujetByCategorieID();
         }
     }

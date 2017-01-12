@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace CommunityDeveloppers2ISAWinPhone
 {
+    /// <summary>
+    /// classe métier qui répresente catégorie et integre le DataBinding
+    /// </summary>
     public class ViewModelCategorie : ViewModelBase
     {
 
@@ -16,23 +19,24 @@ namespace CommunityDeveloppers2ISAWinPhone
         private int _idCategorie;
         private string _Libelle;
         private string _errorMessage;
+        // Répresente une collection de données dynamiquement, qui fournit des notification lorsque les éléments sont ajoutés, supprimer 
+        // Ou lorsque la liste entière est actualisée
         private ObservableCollection<ViewModelSujet> _colViewModelSujets;
         
 
         #region "Constructeur"
 
+        // Constructeur internal car c'est la classe MonitorViewModel qui construit les catégories
         internal ViewModelCategorie(Categorie categorie, ConsumeWSR cdDAL)
         {
             _idCategorie = categorie.Id;
             _Libelle = categorie.Libelle;
             _cdDAL = cdDAL;
-            _colViewModelSujets = new ObservableCollection<ViewModelSujet>();
+            // Initialisation d'une nouvelle instance de la classe ObservableCollection
+            _colViewModelSujets = new ObservableCollection<ViewModelSujet>(); 
 
         }
-            #endregion
-
-        #region "Propriétés Bindables"
-
+            
         public int IdCategorie
         {
             get { return _idCategorie; }
@@ -60,26 +64,29 @@ namespace CommunityDeveloppers2ISAWinPhone
                
             }
         }
+        #endregion
 
-        public string ErrorMessage
-        {
-            get { return _errorMessage; }
-            private set
+
+        #region "propriétés Bindables"
+
+        public ReadOnlyObservableCollection<ViewModelSujet> Sujet
             {
-                if (_errorMessage != value)
+                get { return new ReadOnlyObservableCollection<ViewModelSujet>(_colViewModelSujets); }
+            }
+
+            public string ErrorMessage
+            {
+                get { return _errorMessage; }
+                private set
                 {
-                    _errorMessage = value;
-                    RaisePropertyChanged();
+                    if (_errorMessage != value)
+                    {
+                        _errorMessage = value;
+                        RaisePropertyChanged();
+                    }
                 }
             }
-        }
-
-
         #endregion
-        public ReadOnlyObservableCollection<ViewModelSujet> Sujet
-        {
-            get { return new ReadOnlyObservableCollection<ViewModelSujet>(_colViewModelSujets); }
-        }
 
         #region "Méthodes"
 
