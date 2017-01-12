@@ -11,6 +11,9 @@ namespace CommunityDevelopers2ISATestUnitaire
     [TestClass]
     public class UnitTestCategorie
     {
+        /// <summary>
+        /// Test avant démmarage de mon projet
+        /// </summary>
         [TestMethod]
         public void TestCreationCategorie()
         {
@@ -19,6 +22,9 @@ namespace CommunityDevelopers2ISATestUnitaire
 
             Assert.AreEqual(categorie.Libelle, expectedString);
         }
+        /// <summary>
+        /// Test après la création de la classe CategorieDAO
+        /// </summary>
         [TestMethod]
         public void TestGetCategorieByID()
         {
@@ -27,7 +33,5 @@ namespace CommunityDevelopers2ISATestUnitaire
 
             Assert.AreEqual(categorie.Libelle, expectedString);
         }
-
-
     }
 }

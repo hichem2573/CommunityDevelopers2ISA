@@ -124,6 +124,14 @@ namespace CommunityDevelopers2ISAMetiers
         #endregion
 
         #region "Constructeurs"
+
+        /// <summary>
+        /// Constructeur par defaut
+        /// </summary>
+        public Sujet()
+        {
+
+        }
         /// <summary>
         /// Constructeur d'un nouveau sujet, sans reponse
         /// </summary>

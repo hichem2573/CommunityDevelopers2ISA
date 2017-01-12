@@ -111,7 +111,12 @@ namespace CommunityDevelopers2ISABLL
             }
             return null;
         }
-
+        /// <summary>
+        /// La méthode EditPassword, permet à un utilisateur identifié ou modérateur, le changement de leur mot de passe
+        /// </summary>
+        /// <param name="iduser">L'identifiant de l'utilisateur </param>
+        /// <param name="password">Nouveau mot de passe</param>
+        /// <returns>Retourne 1 quand ça se passe bien</returns>
         public static int EditPassword(int iduser, string password)
         {
             return UtilisateurDAO.EditPassword(iduser, password);

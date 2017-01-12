@@ -207,8 +207,8 @@
   <HelpKINode Title="ReponseDAO.AddReponse method" Url="html/35cea4e4-8ecc-5366-2403-06c9a48eb98a.htm" />
   <HelpKINode Title="ReponseDAO.DeleteReponse method" Url="html/28fc3b71-7ac8-f2e7-3931-688a92d63e8f.htm" />
   <HelpKINode Title="ReponseDAO.GetAllReponseBySujet method" Url="html/5e2beb94-6c3e-9273-208d-237993618fad.htm" />
-  <HelpKINode Title="reponses property" Url="html/5d0e86e3-56c3-4c00-db89-ce9ab99908f5.htm" />
   <HelpKINode Title="Reponses property" Url="html/e2716ee5-6510-6971-b8f7-9440c362994d.htm" />
+  <HelpKINode Title="reponses property" Url="html/5d0e86e3-56c3-4c00-db89-ce9ab99908f5.htm" />
   <HelpKINode Title="ServiceREST class">
     <HelpKINode Title="ServiceREST Class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
     <HelpKINode Title="about ServiceREST class" Url="html/74a08f21-c495-bd84-500c-26ae0fc5fe80.htm" />
