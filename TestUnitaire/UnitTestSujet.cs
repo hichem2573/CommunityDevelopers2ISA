@@ -21,7 +21,7 @@ namespace CommunityDevelopers2ISATestUnitaire
             // La liste de sujets attendus, vide pour le moment
             List<Sujet> sujetsAtt = new List<Sujet>();
 
-            // la requête doit renvoyé 1 sujet dont l'id 16 est et le titre "Sortie resto"
+            // la requête doit renvoyé 1 sujet dont l'id 5 et 1 est et le titre "Microsoft Teams" et "AngularJS 2"
             Sujet sujAtt = new Sujet();
             sujAtt.Id = 5;
 
