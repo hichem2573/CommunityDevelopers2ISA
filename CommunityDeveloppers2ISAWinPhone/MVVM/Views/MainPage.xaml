@@ -8,12 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-      <!-- <Page.BottomAppBar>
-        <CommandBar ClosedDisplayMode="Minimal">
-         <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" Click="mnuSynchro_Click" />
-            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="ViewAll" Label="Quit" Margin="55,0,0,0" Click="mnuQuitter_Click" /> 
-        </CommandBar>
-    </Page.BottomAppBar>-->
     <Grid>
 
         <Grid.RowDefinitions>
