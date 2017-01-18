@@ -123,7 +123,7 @@ namespace CommunityDevelopers2ISAWinForm
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
-        private void dataGridViewReponses_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewReponses_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int CurrentRow = e.RowIndex;
 
@@ -137,8 +137,23 @@ namespace CommunityDevelopers2ISAWinForm
                 frmReponse.lblDatecreation.Text += row.Cells["Date"].Value.ToString();
                 frmReponse.ShowDialog();
             }
-
         }
+        //private void dataGridViewReponses_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    int CurrentRow = e.RowIndex;
+
+        //    DataGridViewRow row = dataGridViewReponses.Rows[CurrentRow];
+
+        //    création de la fenêtre Reponse dans un bloc using
+        //    using (FrmReponse frmReponse = new FrmReponse())
+        //    {
+        //        frmReponse.txtBoxReponse.Text = row.Cells["Texte"].Value.ToString();
+        //        frmReponse.lblAuteur.Text += row.Cells["Auteur"].Value.ToString();
+        //        frmReponse.lblDatecreation.Text += row.Cells["Date"].Value.ToString();
+        //        frmReponse.ShowDialog();
+        //    }
+
+        //}
 
         /// <summary>
         /// Méthode permettant l'ouverture d'une nouvelle fenêtre 
@@ -456,8 +471,7 @@ namespace CommunityDevelopers2ISAWinForm
 
 
 
-        #endregion
 
-       
+        #endregion
     }
 }
