@@ -314,8 +314,7 @@ namespace CommunityDevelopers2ISAWinForm
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void dataGridViewReponses_SelectionChanged(object sender, EventArgs e)
-        {
-            
+        {  
             if (visibiliteReponse())
             {
                 PanelReponseVisible();
@@ -325,7 +324,6 @@ namespace CommunityDevelopers2ISAWinForm
                 PanelReponseInvisible();
             }
         }
-
         #endregion
 
         #region "Visibilite méthodes"
@@ -334,8 +332,7 @@ namespace CommunityDevelopers2ISAWinForm
         /// si un utilisateur connecté et suivant son rôle certaines zones vont s'afficher ou non 
         /// </summary>
         private void visibiliteModerateur()
-        {
-            
+        {    
             plAddSujetAddReponse.Visible = FrmAccueil.Isconnected;
             btEditPassword.Visible = FrmAccueil.Isconnected;
             btLogout.Visible = FrmAccueil.Isconnected;
@@ -349,8 +346,7 @@ namespace CommunityDevelopers2ISAWinForm
         /// </summary>
         /// <returns>Vrai si le sujet existe et qu'il contient des réponses</returns>
         private bool visibiliteReponse()
-        {
-            
+        {  
             if(cbBoxSujet.SelectedIndex != -1)
             {
                 // On récupere la liste des réponses, en lui passant l'identifiant du sujet en paramètre 
@@ -400,8 +396,7 @@ namespace CommunityDevelopers2ISAWinForm
             cbBoxSujet.ValueMember = "Id";
             cbBoxSujet.DisplayMember = "Titre";
             cbBoxSujet.DataSource = sujets;
-            Sujet sujet = (Sujet)cbBoxSujet.SelectedItem;
-            
+            Sujet sujet = (Sujet)cbBoxSujet.SelectedItem;    
         }
 
         /// <summary>
@@ -468,10 +463,6 @@ namespace CommunityDevelopers2ISAWinForm
             btEditSujet.Enabled = false;
             btDeleteSujet.Enabled = false;
         }
-
-
-
-
         #endregion
     }
 }
